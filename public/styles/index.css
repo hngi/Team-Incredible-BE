@@ -93,89 +93,85 @@ select {
 
 /* @Abdussami and @stvyn navbar start */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 
 /*************************************************
 =================NAVBAR===========================
 *************************************************/
 
 body {
-    margin: 0;
-    background: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
+  margin: 0;
+  background: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
+header {
+  padding: 1rem 0;
 }
 
 .logo {
-    float: left;
-    padding: .2rem 0;
+  margin-bottom: 1rem;
+}
+
+.logo h2 {
+  color: #0062ff;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 nav {
-    float: right;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav ul {
+  padding: 0;
+  list-style: none;
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 3rem;
-    padding-top: 1.6rem;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 nav a {
-     color: black;
-     text-decoration: none;
-     font-size: 1rem;
+  color: rgb(95, 95, 95);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
 }
 
 nav a:hover {
-    color: #0062FF;
+  color: #0062ff;
 }
 
 .btn {
-    display: inline-block;
-    padding: 0.6em 1.3em;
-    border-radius: .7em;
-    background: #0062FF;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;    
+  display: inline-block;
+  padding: 0.6em 1.3em;
+  border-radius: 0;
+  background: #0062ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 nav a::before {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: #0062FF;
-
-    position: absolute;
-    top: 40%;
-    width: 0%;
-
-    transition: all ease-in-out 200ms;
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #0062ff;
+  position: absolute;
+  top: 120%;
+  left: 35%;
+  width: 0%;
+  transition: all ease-in-out 200ms;
 }
 
 nav a:hover::before {
-    width: 100%;
+  width: 30%;
 }
-
 
 /***** @Abdussami and @stvyn navbar end ****/
 
@@ -209,93 +205,44 @@ nav a:hover::before {
   .container {
     margin-left: auto;
     margin-right: auto;
-    width: 768px;
+    width: 90%;
   }
 
   /* @Abdussami and @stvyn navbar start */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 
-/*************************************************
+  /*************************************************
 =================NAVBAR===========================
 *************************************************/
+  nav {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
 
-body {
-    margin: 0;
-    background: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.logo {
-    float: left;
-    padding: .2rem 0;
-}
-
-nav {
-    float: right;
-}
-
-nav ul{
-    margin: 0;
+  nav ul {
+    /* margin: 0; */
     padding: 0;
     list-style: none;
-}
+    margin-left: auto;
+  }
 
-nav li {
+  nav li {
     display: inline-block;
-    margin-left: 3rem;
-    padding-top: 1.6rem;
+    margin-left: 2rem;
     position: relative;
-}
+  }
 
-nav a {
-     color: black;
-     text-decoration: none;
-     font-size: 1rem;
-}
+  nav a {
+    color: rgb(95, 95, 95);
+    text-decoration: none;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+  }
 
-nav a:hover {
-    color: #0062FF;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.6em 1.3em;
-    border-radius: .7em;
-    background: #0062FF;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;    
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: #0062FF;
-
-    position: absolute;
-    top: 40%;
-    width: 0%;
-
-    transition: all ease-in-out 200ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
+  .logo {
+    margin-bottom: 0;
+  }
 
   /* @Abdussami and @stvyn navbar end */
 
@@ -312,89 +259,11 @@ nav a:hover::before {
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   /* @Abdussami and @stvyn navbar start */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 
-/*************************************************
+  /*************************************************
 =================NAVBAR===========================
 *************************************************/
-
-body {
-    margin: 0;
-    background: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.logo {
-    float: left;
-    padding: .2rem 0;
-}
-
-nav {
-    float: right;
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 3rem;
-    padding-top: 1.6rem;
-    position: relative;
-}
-
-nav a {
-     color: black;
-     text-decoration: none;
-     font-size: 1rem;
-}
-
-nav a:hover {
-    color: #0062FF;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.6em 1.3em;
-    border-radius: .7em;
-    background: #0062FF;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;    
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: #0062FF;
-
-    position: absolute;
-    top: 40%;
-    width: 0%;
-
-    transition: all ease-in-out 200ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
 
   /* @Abdussami and @stvyn navbar end */
   /* @AugustaEhihebolo and @DevOlajide hero section start */
@@ -408,90 +277,11 @@ nav a:hover::before {
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   /* @Abdussami and @stvyn navbar start */
- @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 
-/*************************************************
+  /*************************************************
 =================NAVBAR===========================
 *************************************************/
-
-body {
-    margin: 0;
-    background: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.logo {
-    float: left;
-    padding: .2rem 0;
-}
-
-nav {
-    float: right;
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 3rem;
-    padding-top: 1.6rem;
-    position: relative;
-}
-
-nav a {
-     color: black;
-     text-decoration: none;
-     font-size: 1rem;
-}
-
-nav a:hover {
-    color: #0062FF;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.6em 1.3em;
-    border-radius: .7em;
-    background: #0062FF;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;    
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: #0062FF;
-
-    position: absolute;
-    top: 40%;
-    width: 0%;
-
-    transition: all ease-in-out 200ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
-
 
   /* @Abdussami and @stvyn navbar end */
   /* @AugustaEhihebolo and @DevOlajide hero section start */
@@ -511,92 +301,41 @@ nav a:hover::before {
   }
 
   /* @Abdussami and @stvyn navbar start */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap");
 
-/*************************************************
+  /*************************************************
 =================NAVBAR===========================
 *************************************************/
+  nav {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
 
-body {
-    margin: 0;
-    background: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.logo {
-    float: left;
-    padding: .2rem 0;
-}
-
-nav {
-    float: right;
-}
-
-nav ul{
-    margin: 0;
+  nav ul {
     padding: 0;
     list-style: none;
-}
+    margin-left: auto;
+  }
 
-nav li {
+  nav li {
     display: inline-block;
-    margin-left: 3rem;
-    padding-top: 1.6rem;
+    margin-left: 2rem;
     position: relative;
-}
+  }
 
-nav a {
-     color: black;
-     text-decoration: none;
-     font-size: 1rem;
-}
+  nav a {
+    color: rgb(95, 95, 95);
+    text-decoration: none;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+  }
 
-nav a:hover {
-    color: #0062FF;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.6em 1.3em;
-    border-radius: .7em;
-    background: #0062FF;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;    
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 2px;
-    background-color: #0062FF;
-
-    position: absolute;
-    top: 40%;
-    width: 0%;
-
-    transition: all ease-in-out 200ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
-
-
+  .logo {
+    margin-bottom: 0;
+  }
   /* @Abdussami and @stvyn navbar end */
+
   /* @AugustaEhihebolo and @DevOlajide hero section start */
   /* @AugustaEhihebolo and @DevOlajide hero section end */
   /* @Innovarto  and @Kelvinakpobome - about us section start */
