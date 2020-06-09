@@ -4,7 +4,10 @@
   "description": "backend with node(express)",
   "main": "server.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "mocha",
+=======
+>>>>>>> 30afd96af532f4b707c262fd257a117cf8c44901
     "start": "node server",
     "dev": "nodemon server"
   },
