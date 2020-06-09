@@ -4,7 +4,7 @@
   "description": "backend with node(express)",
   "main": "server.js",
   "scripts": {
-    "tests":"mocha",
+    "tests": "mocha",
     "start": "node server",
     "dev": "nodemon server",
     "test": "mocha ./test/unit/register"
@@ -21,13 +21,14 @@
     "mocha": "^7.2.0",
     "request": "^2.88.2",
     "should": "^13.2.3",
+    "supertest": "^4.0.2",
     "uuid": "^8.1.0"
   },
   "devDependencies": {
     "ejs-lint": "^1.1.0",
-    "nodemon": "^2.0.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.21.1"
+    "eslint-plugin-import": "^2.21.1",
+    "nodemon": "^2.0.4"
   }
 }
