@@ -1,8 +1,6 @@
 # Pull latest node image from docker
 FROM node:latest
 
-# Maintainer Michael Olatunji @imyke ID: HNG-05739 
-MAINTAINER imykel
 LABEL maintainer='tundexmike@gmail.com'
 
 # Creating ad work directory for the application
