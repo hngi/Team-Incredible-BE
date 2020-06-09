@@ -6,4 +6,4 @@ appRoute.post('/api/v1/login/', user.login);
 //register new user route
 appRoute.post('/api/v1/register/', user.create);
 
-module.exports=appRoute
+module.exports=appRoute;

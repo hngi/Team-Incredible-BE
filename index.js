@@ -32,3 +32,7 @@ console.log('something went wrong sorry');
 
 const PORT=process.env.PORT || 3000;
 app.listen(PORT, ()=>console.log(`server running on ${PORT}`));
+
+
+//Exporting index function (app) for use in test files
+module.exports = app;
