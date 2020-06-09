@@ -28,6 +28,18 @@ app.get('/', (req, res) => {
   res.render('index', { variable: 'Hello Guys' });
 });
 
+app.get('/about', (req, res) => {
+  res.render('Pages/About');
+});
+
+app.get('/login', (req, res) => {
+  res.render('Pages/Login');
+});
+
+app.get('/register', (req, res) => {
+  res.render('Pages/Register');
+});
+
 app.use('/api/v1', mainRoute);
 
 module.exports = app;
