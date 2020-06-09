@@ -4,7 +4,6 @@ This is the Backend Task
 
 ## Getting Started
 
-### Run the Merchant Service
 
 After cloning the repo and cd to the root directory
 
@@ -15,8 +14,10 @@ $ yarn install
 #### Node server
 ```
 $ yarn start
-Listening on [::]:6000
+Listening on [::]:3000
 ```
+
+point your brower to `localhost:3000`
 
 ### Curl the Login API
 make sure you cd in the root dir to locate testLogin.json file
