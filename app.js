@@ -25,7 +25,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.get('/', (req, res) => {
-  res.render('index', { varible: 'hello Guys' });
+  res.render('index', { variable: 'hello Guys' });
+});
+
+app.get('/about', (req, res) => {
+  res.render('about', { variable: 'This is the about page' });
 });
 
 app.use('/api/v1', mainRoute);
