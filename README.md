@@ -29,4 +29,12 @@ curl -X POST -H "Content-Type: application/json" -d @testLogin.json http://local
 {"message":"Success","Token":"deb49c38-484b-4a96-a4ea-21c1eab20a2d","found":true}
 ```
 
+### Postman Test Result (LOGIN)
+![login result](https://res.cloudinary.com/olanetsoft/image/upload/v1591710366/postmanimage.png)
+
+
+### Postman Test Result (SIGNUP)
+![login result](https://res.cloudinary.com/olanetsoft/image/upload/v1591711242/postmanimageSignup.png)
+
+
 ##TODO check for registration route
