@@ -1,68 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
 
-*{
-    box-sizing: border-box;
+/*************************************************
+=================NAVBAR===========================
+*************************************************/
+
+body {
+    margin: 0;
+    background: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: .2rem 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul{
     margin: 0;
     padding: 0;
-    background-color: white;
-}
-
-li ,a {
-    font-family: "Montserrat",sans-serif;
-    font-weight: 500;
-    font: 16px;
-    color: black;
-    text-decoration: none;
-}
-button{
-    font-family: "Montserrat",sans-serif;
-    font-weight: 500;
-    font: 16px;
-    color: white;
-    text-decoration: none;
-}
-
-header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-
-}
-
-.nav__links{
     list-style: none;
 }
 
-.nav__links li {
+nav li {
     display: inline-block;
-    padding: 0px 20px;
+    margin-left: 3rem;
+    padding-top: 1.6rem;
+    position: relative;
 }
 
-.nav__links li a{
-    transition: all 0.3s ease 0s;
-
-} 
-
-
-.nav__links li a :hover{
-    color: darksalmon;
-
-    
-} 
-
-button {
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: rgb(218, 165, 32,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s
-     
+nav a {
+     color: black;
+     text-decoration: none;
+     font-size: 1rem;
 }
 
-button :hover {
-    background-color: rgb(218, 165, 32,0.8);
-
+nav a:hover {
+    color: #0062FF;
 }
+
+.btn {
+    display: inline-block;
+    padding: 0.6em 1.3em;
+    border-radius: .7em;
+    background: #0062FF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #0062FF;
+
+    position: absolute;
+    top: 40%;
+    width: 0%;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+
+
+
