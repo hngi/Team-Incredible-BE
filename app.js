@@ -15,6 +15,12 @@ app.use((req, res, next) => {
 // app.use(cors());
 
 app.use(bodyParser.json());
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('index', { varible: 'hello Guys' });
+});
 
 // app.use((req, res) => {
 //   res.json({ message: 'Your request was successful!' });
