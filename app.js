@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 
 const app = express();
@@ -16,7 +17,12 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
+
+//Registering and setting  the view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.get('/', (req, res) => {
   res.render('index', { varible: 'hello Guys' });
