@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 // const cors = require('cors');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const mainRoute = require('./routes/route');
 
 app.use((req, res, next) => {
@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 // app.use(cors());
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static('public'));
 
 
@@ -25,11 +25,15 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 app.get('/', (req, res) => {
+<<<<<<< HEAD
   res.render('index', { variable: 'hello Guys' });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', { variable: 'This is the about page' });
+=======
+  res.render('index', { variable: 'Hello Guys' });
+>>>>>>> upstream/develop
 });
 
 app.use('/api/v1', mainRoute);
