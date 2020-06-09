@@ -1,7 +1,7 @@
 //require assert to confirm test cases
 const assert = require('assert');
 //require functions from index.js
-const app = require('../index');
+const app = require('../../app');
 
 
 
