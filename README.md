@@ -28,3 +28,5 @@ curl -X POST -H "Content-Type: application/json" -d @testLogin.json http://local
 
 {"message":"Success","Token":"deb49c38-484b-4a96-a4ea-21c1eab20a2d","found":true}
 ```
+
+##TODO check for registration route
