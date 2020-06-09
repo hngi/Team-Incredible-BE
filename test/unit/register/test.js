@@ -51,6 +51,23 @@ describe('POST /api/v1/registration', function() {
         done();
     });
 
+    it('verify if it sends an error message if first name field contains only strings', function(done) { 
+      request.agent(app)
+      .post('/register')
+      .send({
+        "first_name": "123Jane",
+        "last_name": "Doe",
+        "email": 'johndoe@gmail.com',
+        "phone": '07023455569',
+        'password': 'garyTheSnail',
+        "cpassword": 'garyTheSnail'
+      })
+        .expect(400)
+        .expect('Content-Type', /json/)
+        .expect('msg', 'please include all fields')
+        done();
+    });
+
 
     it('verify if it sends an error message if last name field is not filled and entered', function(done) { 
       request.agent(app)
@@ -64,6 +81,23 @@ describe('POST /api/v1/registration', function() {
         "cpassword": 'garyTheSnail'
       })
       .expect(400)
+        .expect('Content-Type', /json/)
+        .expect('msg', 'please include all fields')
+        done();
+    });
+
+    it('verify if it sends an error message if last name field contains only strings', function(done) { 
+      request.agent(app)
+      .post('/register')
+      .send({
+        "first_name": "123Jane",
+        "last_name": "D3546oe",
+        "email": 'johndoe@gmail.com',
+        "phone": '07023455569',
+        'password': 'garyTheSnail',
+        "cpassword": 'garyTheSnail'
+      })
+        .expect(400)
         .expect('Content-Type', /json/)
         .expect('msg', 'please include all fields')
         done();
