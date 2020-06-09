@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello ejs</title>
+    <%- include('template/head') %> 
 </head>
 <body>
-  <h2><%= varible %> this is the ejs engine rendering</h2>
+    <header>
+        <%- include('template/header') %>
+    </header>
+    <h1><%= variable %> this is the ejs engine rendering</h1>
+    <div class="container">
+        Welcome to Home page
+    </div>
+    
+    <footer>
+        <%- include('template/footer') %>
+    </footer> 
 </body>
-</html>
