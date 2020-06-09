@@ -22,10 +22,6 @@ app.get('/', (req, res) => {
   res.render('index', { varible: 'hello Guys' });
 });
 
-// app.use((req, res) => {
-//   res.json({ message: 'Your request was successful!' });
-// });
-
 app.use('/api/v1', mainRoute);
 
 module.exports = app;
