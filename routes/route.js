@@ -1,9 +1,14 @@
-const user=require('../controllers/user_controller')
-const exp=require('express')
-const appRoute=exp.Router()
+const exp = require('express');
+const user = require('../controllers/user_controller');
 
-appRoute.post('/api/v1/login/', user.login);
-//register new user route
-appRoute.post('/api/v1/register/', user.create);
+const appRoute = exp.Router();
 
+<<<<<<< HEAD
 module.exports=appRoute;
+=======
+appRoute.post('/login', user.login);
+// register new user route
+appRoute.post('/register', user.create);
+
+module.exports = appRoute;
+>>>>>>> 30afd96af532f4b707c262fd257a117cf8c44901

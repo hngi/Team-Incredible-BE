@@ -1,1 +1,29 @@
 # Team-Incredible-BE
+
+This is the Backend Task
+
+## Getting Started
+
+### Run the Merchant Service
+
+After cloning the repo and cd to the root directory
+
+```
+$ yarn install
+```
+
+#### Node server
+```
+$ yarn start
+Listening on [::]:6000
+```
+
+### Curl the Login API
+make sure you cd in the root dir to locate testLogin.json file
+
+Test the create api
+```
+curl -X POST -H "Content-Type: application/json" -d @testLogin.json http://localhost:6000/api/v1/login/
+
+{"message":"Success","Token":"deb49c38-484b-4a96-a4ea-21c1eab20a2d","found":true}
+```
