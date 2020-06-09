@@ -3,7 +3,6 @@ const express = require('express');
 
 const app = express();
 // const cors = require('cors');
-// const bodyParser = require('body-parser');
 const mainRoute = require('./routes/route');
 
 app.use((req, res, next) => {
@@ -16,6 +15,7 @@ app.use((req, res, next) => {
 // app.use(cors());
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
