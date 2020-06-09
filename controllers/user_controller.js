@@ -27,16 +27,15 @@ module.exports = {
       }
 
       if (password !== cpassword) {
-        return res.status(400).json({ msg: 'Password didnt ocorrespond' });
+        return res.status(400).json({ msg: "Password didn't correspond" });
       }
-
-
+      
       users.push(newUser);
       fs.writeFileSync('models/userdata.json', JSON.stringify(users));
       // return res.status(400).send({message:"failed to register"})
 
 
-      return res.json({ message: 'Registration succesful', data: users });
+      return res.status(200).json({ message: 'Registration succesful', data: users });
     } catch (error) {
       return res.status(500).send(error);
     }

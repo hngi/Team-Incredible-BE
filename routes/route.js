@@ -1,7 +1,7 @@
-const exp = require('express');
+const express = require('express');
 const user = require('../controllers/user_controller');
 
-const appRoute = exp.Router();
+const appRoute = express.Router();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
