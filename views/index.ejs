@@ -2,33 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MicroApi | Strength in Collaboration</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <%- include('./template/head') %>
 </head>
 
 <body>
   <!-- @Abdussami and @stvyn navbar start -->
   <header>
-    <div class="container">
-      <nav>
-
-        <div class="logo">
-          <h2>MicroAPI</h2>
-        </div>
-
-        <ul>
-          <li><a class="nav-link" href="#">Home</a></li>
-          <li><a class="nav-link" href="#">About</a></li>
-          <li><a class="nav-link" href="#">Login</a></li>
-          <li> <a href="#" class="btn btn-main">Register</a></li>
-        </ul>
-      </nav>
-    </div>
-
-
-
+    <%- include('./template/header') %>
   </header>
   <!-- @Abdussami and @stvyn navbar end -->
 
@@ -40,8 +20,8 @@
         <div class="intro-sect">
           <p class="hero-title">Strength in<br>Collaboration</p>
           <p class="hero-summmary">Working cooperatively with others<br>to work towards common goals</p>
-          <a type="button" class="hero-btn btn-outline">How It Works</a>
-          <a type="button" class="hero-btn">Get Started</a>
+          <a href="/about" class="hero-btn btn-outline">How It Works</a>
+          <a href="/register" class="hero-btn">Get Started</a>
         </div>
         <div class="img-sect">
           <img class="hero-img" src="./images/hero-image.png" alt="">
@@ -69,7 +49,7 @@
             functionalities. By leveraging the endpoints of our documented and easy-to-use microservice APIs, you can
             speed up your development process and deliver quick and efficient products.
           </p>
-          <a href="#" class="btn btn-main">Read more</a>
+          <a href="/about" class="btn btn-main">Read more</a>
         </div>
       </div>
     </div>
@@ -80,15 +60,12 @@
   <div class="amplified">
     <p>Get Amplified Now</p>
     <div class="action">
-      <button class="btn btn-main"> Register </button>
-      <button class="btn btn-main btn-main--outline">Log In</button>
+      <a href="/register" class="btn btn-main"> Register </a>
+      <a href="/login" class="btn btn-main btn-main--outline">Log In</a>
     </div>
 
   </div>
-  <footer>
-    <p>&copy; Copyright 2020</p>
-    <p>Designed By Team Incredible</p>
-  </footer>
+  <%- include('./template/footer') %>
   <!-- @tomii and @charles onuorah - footer section end -->
 
 
