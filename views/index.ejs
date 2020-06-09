@@ -19,10 +19,10 @@
         </div>
 
         <ul>
-          <li class="nav-links"><a href="#">Home</a></li>
-          <li class="nav-links"><a href="#">About</a></li>
-          <li class="nav-links"><a href="#">Login</a></li>
-          <li class="btn btn-main">Register</li>
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">About</a></li>
+          <li><a class="nav-link" href="#">Login</a></li>
+          <li> <a href="#" class="btn btn-main">Register</a></li>
         </ul>
       </nav>
     </div>
@@ -40,8 +40,8 @@
         <div class="intro-sect">
           <p class="hero-title">Strength in<br>Collaboration</p>
           <p class="hero-summmary">Working cooperatively with others<br>to work towards common goals</p>
-          <button type="button" class="hero-btn btn-outline">How It Works</button>
-          <button type="button" class="hero-btn">Get Started</button>
+          <a type="button" class="hero-btn btn-outline">How It Works</a>
+          <a type="button" class="hero-btn">Get Started</a>
         </div>
         <div class="img-sect">
           <img class="hero-img" src="./images/hero-image.png" alt="">
@@ -52,25 +52,46 @@
   <!-- @AugustaEhihebolo and @DevOlajide hero section end -->
 
   <!-- @Innovarto  and @Kelvinakpobome - about us section start -->
-
+  <section class="about-us">
+    <div class="container">
+      <div class="about-us__wrapper">
+        <div class="img-sect">
+          <img src="/images/people.png" alt="">
+        </div>
+        <div class="story-sect">
+          <div class="about-us_title">
+            <p>About us</p>
+            <div class="short-bar"></div>
+          </div>
+          <p class="desc">A Brief About MicroAPI</p>
+          <p class="content">
+            We provide microservices for Sign Up, Login, file management, email/SMS notifications and other useful
+            functionalities. By leveraging the endpoints of our documented and easy-to-use microservice APIs, you can
+            speed up your development process and deliver quick and efficient products.
+          </p>
+          <a href="#" class="btn btn-main">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- @Innovarto  and @Kelvinakpobome - about us section end -->
 
   <!-- @tomii and @charles onuorah - footer section start -->
-
-  <!-- @tomii and @charles onuorah - footer section end -->
-  
-    <div class="footer-container">
-        <div class="row-1">
-         <p>Get Amplified Now</p>
-            <div class="wrapper">
-                <button class= "btn btn-main"> Register </button>
-                <button class = "btn"></button>Log In</button>
-            </div>
-        </div>
-        <div class="row-2">
-            <p>Coded By Team Incredible</p> 
-        </div>
+  <div class="amplified">
+    <p>Get Amplified Now</p>
+    <div class="action">
+      <button class="btn btn-main"> Register </button>
+      <button class="btn btn-main btn-main--outline">Log In</button>
     </div>
+
+  </div>
+  <footer>
+    <p>&copy; Copyright 2020</p>
+    <p>Designed By Team Incredible</p>
+  </footer>
+  <!-- @tomii and @charles onuorah - footer section end -->
+
+
 </body>
 
 </html>
