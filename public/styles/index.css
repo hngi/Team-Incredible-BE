@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 /* THIS IS RESET STYLES */
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    background-color: white;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background-color: white;
+  box-sizing: border-box;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 article,
@@ -31,61 +31,61 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 nav ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: "";
+  content: "";
 }
 
 a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 abbr[title],
 dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 input,
 select {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /****** OTHER STYLES BEGINS HERE **************8*/
@@ -93,77 +93,71 @@ select {
 
 /* @Abdussami and @stvyn navbar start */
 
-li, a {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
+li,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
 }
 
 button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
 }
 
 header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
 }
 
 .nav__links {
-    list-style: none;
+  list-style: none;
 }
 
 .nav__links li {
-    display: inline-block;
-    padding: 0 20px;
+  display: inline-block;
+  padding: 0 20px;
 }
 
 .nav__links li a {
-    transition: all 0.3s ease 0s;
-
+  transition: all 0.3s ease 0s;
 }
 
-
 .nav__links li a :hover {
-    color: darksalmon;
-
-
+  color: darksalmon;
 }
 
 button {
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: rgba(218, 165, 32, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s
-
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(218, 165, 32, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
 button:hover {
-    background-color: rgba(218, 165, 32, 0.8);
-
+  background-color: rgba(218, 165, 32, 0.8);
 }
 
 /***** @Abdussami and @stvyn navbar end ****/
 
 /***** @Eleam container here*****/
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    margin: 16px 18px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  margin: 16px 18px;
+  width: 100%;
 }
 
 /* @AugustaEhihebolo and @DevOlajide hero section start */
@@ -178,312 +172,234 @@ button:hover {
 
 /* @tomii and @charles onuorah - footer section end */
 
-
 /******************** MEDIA QUERIES *******************/
 /* TABLETS  */
 
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-        width: 768px;
-    }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+  }
 
-    /* @Abdussami and @stvyn navbar start */
-    li, a {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
-    }
+  /* @Abdussami and @stvyn navbar start */
 
-    button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-    }
+  /* @Abdussami and @stvyn navbar end */
 
-    header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 10%;
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
 
-    }
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
 
-    .nav__links {
-        list-style: none;
-    }
-
-    .nav__links li {
-        display: inline-block;
-        padding: 0 20px;
-    }
-
-    .nav__links li a {
-        transition: all 0.3s ease 0s;
-
-    }
-
-
-    .nav__links li a :hover {
-        color: darksalmon;
-
-
-    }
-
-    button {
-        margin-left: 20px;
-        padding: 9px 25px;
-        background-color: rgba(218, 165, 32, 1);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s
-
-    }
-
-    button:hover {
-        background-color: rgba(218, 165, 32, 0.8);
-
-    }
-
-
-    /* @Abdussami and @stvyn navbar end */
-    /* @AugustaEhihebolo and @DevOlajide hero section start */
-    /* @AugustaEhihebolo and @DevOlajide hero section end */
-    /* @Innovarto  and @Kelvinakpobome - about us section start */
-    /* @Innovarto  and @Kelvinakpobome - about us section end */
-    /* @tomii and @charles onuorah - footer section start */
-    /* @tomii and @charles onuorah - footer section end */
+  /* @tomii and @charles onuorah - footer section start */
+  /* @tomii and @charles onuorah - footer section end */
 }
 
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-    /* @Abdussami and @stvyn navbar start */
-    li, a {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
-    }
+  /* @Abdussami and @stvyn navbar start */
+  li,
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
 
-    button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-    }
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+  }
 
-    header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 10%;
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+  }
 
-    }
+  .nav__links {
+    list-style: none;
+  }
 
-    .nav__links {
-        list-style: none;
-    }
+  .nav__links li {
+    display: inline-block;
+    padding: 0 20px;
+  }
 
-    .nav__links li {
-        display: inline-block;
-        padding: 0 20px;
-    }
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
 
-    .nav__links li a {
-        transition: all 0.3s ease 0s;
+  .nav__links li a :hover {
+    color: darksalmon;
+  }
 
-    }
+  button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(218, 165, 32, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
 
+  button :hover {
+    background-color: rgba(218, 165, 32, 0.8);
+  }
 
-    .nav__links li a :hover {
-        color: darksalmon;
-
-
-    }
-
-    button {
-        margin-left: 20px;
-        padding: 9px 25px;
-        background-color: rgba(218, 165, 32, 1);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s
-
-    }
-
-    button :hover {
-        background-color: rgba(218, 165, 32, 0.8);
-
-    }
-
-    /* @Abdussami and @stvyn navbar end */
-    /* @AugustaEhihebolo and @DevOlajide hero section start */
-    /* @AugustaEhihebolo and @DevOlajide hero section end */
-    /* @Innovarto  and @Kelvinakpobome - about us section start */
-    /* @Innovarto  and @Kelvinakpobome - about us section end */
-    /* @tomii and @charles onuorah - footer section start */
-    /* @tomii and @charles onuorah - footer section end */
+  /* @Abdussami and @stvyn navbar end */
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+  /* @tomii and @charles onuorah - footer section start */
+  /* @tomii and @charles onuorah - footer section end */
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-    /* @Abdussami and @stvyn navbar start */
-    li, a {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
-    }
+  /* @Abdussami and @stvyn navbar start */
+  li,
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
 
-    button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-    }
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+  }
 
-    header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 10%;
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+  }
 
-    }
+  .nav__links {
+    list-style: none;
+  }
 
-    .nav__links {
-        list-style: none;
-    }
+  .nav__links li {
+    display: inline-block;
+    padding: 0 20px;
+  }
 
-    .nav__links li {
-        display: inline-block;
-        padding: 0 20px;
-    }
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
 
-    .nav__links li a {
-        transition: all 0.3s ease 0s;
+  .nav__links li a :hover {
+    color: darksalmon;
+  }
 
-    }
+  button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(218, 165, 32, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
 
+  button :hover {
+    background-color: rgba(218, 165, 32, 0.8);
+  }
 
-    .nav__links li a :hover {
-        color: darksalmon;
-
-
-    }
-
-    button {
-        margin-left: 20px;
-        padding: 9px 25px;
-        background-color: rgba(218, 165, 32, 1);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s
-
-    }
-
-    button :hover {
-        background-color: rgba(218, 165, 32, 0.8);
-
-    }
-
-    /* @Abdussami and @stvyn navbar end */
-    /* @AugustaEhihebolo and @DevOlajide hero section start */
-    /* @AugustaEhihebolo and @DevOlajide hero section end */
-    /* @Innovarto  and @Kelvinakpobome - about us section start */
-    /* @Innovarto  and @Kelvinakpobome - about us section end */
-    /* @tomii and @charles onuorah - footer section start */
-    /* @tomii and @charles onuorah - footer section end */
+  /* @Abdussami and @stvyn navbar end */
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+  /* @tomii and @charles onuorah - footer section start */
+  /* @tomii and @charles onuorah - footer section end */
 }
 
 /* LARGE SCREENS */
 @media only screen and (min-device-width: 1025px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1025px;
+  }
 
-    .container{
-        margin-left: auto;
-        margin-right: auto;
-        width: 1025px;
-    }
+  /* @Abdussami and @stvyn navbar start */
+  li,
+  a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
 
-    /* @Abdussami and @stvyn navbar start */
-    li, a {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
-    }
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+  }
 
-    button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-    }
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+  }
 
-    header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 10%;
+  .nav__links {
+    list-style: none;
+  }
 
-    }
+  .nav__links li {
+    display: inline-block;
+    padding: 0 20px;
+  }
 
-    .nav__links {
-        list-style: none;
-    }
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
 
-    .nav__links li {
-        display: inline-block;
-        padding: 0 20px;
-    }
+  .nav__links li a :hover {
+    color: darksalmon;
+  }
 
-    .nav__links li a {
-        transition: all 0.3s ease 0s;
+  button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(218, 165, 32, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
 
-    }
+  button :hover {
+    background-color: rgba(218, 165, 32, 0.8);
+  }
 
-
-    .nav__links li a :hover {
-        color: darksalmon;
-
-
-    }
-
-    button {
-        margin-left: 20px;
-        padding: 9px 25px;
-        background-color: rgba(218, 165, 32, 1);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s
-
-    }
-
-    button :hover {
-        background-color: rgba(218, 165, 32, 0.8);
-
-    }
-
-    /* @Abdussami and @stvyn navbar end */
-    /* @AugustaEhihebolo and @DevOlajide hero section start */
-    /* @AugustaEhihebolo and @DevOlajide hero section end */
-    /* @Innovarto  and @Kelvinakpobome - about us section start */
-    /* @Innovarto  and @Kelvinakpobome - about us section end */
-    /* @tomii and @charles onuorah - footer section start */
-    /* @tomii and @charles onuorah - footer section end */
+  /* @Abdussami and @stvyn navbar end */
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+  /* @tomii and @charles onuorah - footer section start */
+  /* @tomii and @charles onuorah - footer section end */
 }
