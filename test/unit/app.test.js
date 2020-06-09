@@ -1,18 +1,18 @@
 //require assert to confirm test cases
 const assert = require('assert');
-//require functions from index.js
+//require functions from app.js
 const app = require('../../app');
 
 
 
-//READ ME
-//This test should simulate the use of API to consume data and 
-//push to auth.microapi.dev sucessfully
-// using the app() in index.js
-//cmd> npm run test 
+/*READ ME
+This test should simulate the use of API to consume data and 
+push to auth.microapi.dev sucessfully
+using the app() in index.js
+cmd> npm run test 
 
-//Note! this test would not pass until the condition is satisfied, 
-//modification may still be required. Ref (Gafar_01)
+Note! this test would not pass until the condition is satisfied, 
+modification may still be required. Ref (Gafar_01)*/
 
 describe('POST /login', ()=>{
     //sample correct JSON data which is in database
