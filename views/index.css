@@ -1,0 +1,181 @@
+/* THIS IS RESET STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* OTHER STYLES BEGINS HERE */
+/* REMEMBER TO STYLE FOR MOBILE DEVICES FIRST */
+
+/* @Abdussami and @stvyn navbar start */
+
+/* @Abdussami and @stvyn navbar end */
+
+/* @AugustaEhihebolo and @DevOlajide hero section start */
+
+/* @AugustaEhihebolo and @DevOlajide hero section end */
+
+/* @Innovarto  and @Kelvinakpobome - about us section start */
+
+/* @Innovarto  and @Kelvinakpobome - about us section end */
+
+/* @tomii and @charles onuorah - footer section start */
+
+/* @tomii and @charles onuorah - footer section end */
+
+/* MEDIA QUERIES */
+/* TABLETS  */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* @Abdussami and @stvyn navbar start */
+
+  /* @Abdussami and @stvyn navbar end */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+
+  /* @tomii and @charles onuorah - footer section start */
+
+  /* @tomii and @charles onuorah - footer section end */
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  /* @Abdussami and @stvyn navbar start */
+
+  /* @Abdussami and @stvyn navbar end */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+
+  /* @tomii and @charles onuorah - footer section start */
+
+  /* @tomii and @charles onuorah - footer section end */
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  /* @Abdussami and @stvyn navbar start */
+
+  /* @Abdussami and @stvyn navbar end */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+
+  /* @tomii and @charles onuorah - footer section start */
+
+  /* @tomii and @charles onuorah - footer section end */
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-device-width: 1025px) {
+  /* @Abdussami and @stvyn navbar start */
+
+  /* @Abdussami and @stvyn navbar end */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section start */
+
+  /* @AugustaEhihebolo and @DevOlajide hero section end */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section start */
+
+  /* @Innovarto  and @Kelvinakpobome - about us section end */
+
+  /* @tomii and @charles onuorah - footer section start */
+
+  /* @tomii and @charles onuorah - footer section end */
+}
