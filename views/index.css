@@ -87,6 +87,75 @@ select {
 
 /* @Abdussami and @stvyn navbar start */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li ,a {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: black;
+    text-decoration: none;
+}
+button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+
+} 
+
+
+.nav__links li a :hover{
+    color: darksalmon;
+
+    
+} 
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(218, 165, 32,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s
+     
+}
+
+button :hover {
+    background-color: rgb(218, 165, 32,0.8);
+
+}
+
 /* @Abdussami and @stvyn navbar end */
 
 /* @AugustaEhihebolo and @DevOlajide hero section start */
@@ -107,6 +176,76 @@ select {
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   /* @Abdussami and @stvyn navbar start */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li ,a {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: black;
+    text-decoration: none;
+}
+button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+
+} 
+
+
+.nav__links li a :hover{
+    color: darksalmon;
+
+    
+} 
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(218, 165, 32,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s
+     
+}
+
+button :hover {
+    background-color: rgb(218, 165, 32,0.8);
+
+}
+
 
   /* @Abdussami and @stvyn navbar end */
 
@@ -126,6 +265,75 @@ select {
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   /* @Abdussami and @stvyn navbar start */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li ,a {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: black;
+    text-decoration: none;
+}
+button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+
+} 
+
+
+.nav__links li a :hover{
+    color: darksalmon;
+
+    
+} 
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(218, 165, 32,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s
+     
+}
+
+button :hover {
+    background-color: rgb(218, 165, 32,0.8);
+
+}
 
   /* @Abdussami and @stvyn navbar end */
 
@@ -145,6 +353,76 @@ select {
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   /* @Abdussami and @stvyn navbar start */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li ,a {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: black;
+    text-decoration: none;
+}
+button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+
+} 
+
+
+.nav__links li a :hover{
+    color: darksalmon;
+
+    
+} 
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(218, 165, 32,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s
+     
+}
+
+button :hover {
+    background-color: rgb(218, 165, 32,0.8);
+
+}
+
 
   /* @Abdussami and @stvyn navbar end */
 
@@ -164,6 +442,74 @@ select {
 /* LARGE SCREENS */
 @media only screen and (min-device-width: 1025px) {
   /* @Abdussami and @stvyn navbar start */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+li ,a {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: black;
+    text-decoration: none;
+}
+button{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+
+} 
+
+
+.nav__links li a :hover{
+    color: darksalmon;
+
+    
+} 
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(218, 165, 32,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s
+     
+}
+
+button :hover {
+    background-color: rgb(218, 165, 32,0.8);
+
+}
 
   /* @Abdussami and @stvyn navbar end */
 
