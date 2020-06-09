@@ -187,6 +187,63 @@ nav a:hover::before {
 
 /* @AugustaEhihebolo and @DevOlajide hero section start */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  
+  .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      padding: 1rem;
+  }
+  .hero-title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      margin: 2rem 0;
+  }
+  .hero-summmary {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+  }
+  .hero-btn {
+      color: white;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      background-color: #31AA52;
+      border: 2px solid #31AA52;
+      border-radius: .5rem;
+      padding: .75rem 1.5rem;
+      margin-left: 2rem;
+  }
+  .hero-btn:hover {
+      background-color: #268228;
+      border: 2px solid #268228;
+      cursor: pointer;
+  }
+  .hero-btn.btn-outline {
+      color: #31AA52;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid #31AA52;
+      border-radius: .5rem;
+      padding: .75rem 1.5rem;
+      margin-left: 0;
+  }
+  .hero-btn.btn-outline:hover {
+      color: white;
+      background-color: #31AA52;
+      border: 2px solid #31AA52;
+      cursor: pointer;
+  }
+  .hero-img {
+      margin: 4rem 0;
+      width: 100%;
+      height: auto;
+  }
 /* @AugustaEhihebolo and @DevOlajide hero section end */
 
 /* @Innovarto  and @Kelvinakpobome - about us section start */
@@ -267,6 +324,9 @@ nav a:hover::before {
 
   /* @Abdussami and @stvyn navbar end */
   /* @AugustaEhihebolo and @DevOlajide hero section start */
+  .hero {
+    flex-direction: column;
+  }
   /* @AugustaEhihebolo and @DevOlajide hero section end */
   /* @Innovarto  and @Kelvinakpobome - about us section start */
   /* @Innovarto  and @Kelvinakpobome - about us section end */
@@ -285,6 +345,9 @@ nav a:hover::before {
 
   /* @Abdussami and @stvyn navbar end */
   /* @AugustaEhihebolo and @DevOlajide hero section start */
+  .hero {
+    flex-direction: row;
+  }
   /* @AugustaEhihebolo and @DevOlajide hero section end */
   /* @Innovarto  and @Kelvinakpobome - about us section start */
   /* @Innovarto  and @Kelvinakpobome - about us section end */
@@ -337,6 +400,25 @@ nav a:hover::before {
   /* @Abdussami and @stvyn navbar end */
 
   /* @AugustaEhihebolo and @DevOlajide hero section start */
+  .hero {
+    flex-direction: row;
+}
+.hero-title {
+    font-size: 4rem;
+    line-height: 5.4rem;
+    margin-bottom: 2rem;
+}
+.hero-summmary {
+    font-size: 2rem;
+    line-height: 3.4rem;
+    margin-bottom: 3rem;
+}
+.hero-btn {
+    font-size: 1.4rem;
+}
+.hero-btn-outline {
+    font-size: 1.4rem;
+}
   /* @AugustaEhihebolo and @DevOlajide hero section end */
   /* @Innovarto  and @Kelvinakpobome - about us section start */
   /* @Innovarto  and @Kelvinakpobome - about us section end */
