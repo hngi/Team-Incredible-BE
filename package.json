@@ -23,6 +23,7 @@
     "uuid": "^8.1.0"
   },
   "devDependencies": {
+    "ejs-lint": "^1.1.0",
     "nodemon": "^2.0.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
