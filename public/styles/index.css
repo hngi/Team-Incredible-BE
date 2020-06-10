@@ -771,6 +771,11 @@ footer p:not(:last-child) {
   margin-bottom: 50px;
 }
 
+.signup-btn:hover {
+  background-color: #2dc556;
+
+}
+
 .form-link {
   text-align: center;
   font-weight: 600;
@@ -784,7 +789,7 @@ footer p:not(:last-child) {
 
 .signup-img {
   width: 50%;
-  background-image: url(/images/flower.png);
+  background-image: url(https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804693/incredible%20project/flower_twa5ig.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
