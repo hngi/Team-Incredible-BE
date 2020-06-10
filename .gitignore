@@ -116,7 +116,6 @@ dist
 
 # IDE hidden folders for configuration
 
-
-node_modules
 .idea/
 .vscode
+package-lock.json
