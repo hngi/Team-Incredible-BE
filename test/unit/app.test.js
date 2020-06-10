@@ -1,10 +1,16 @@
 const request = require("supertest");
 var should = require("should");
 const expect = require("chai").expect;
-var app = require('../../app');
-
+var app = require('../../server');
 
 describe('POST api/v1/login', ()=>{
+  beforeEach(() => {
+    app = require('../../server');
+  });
+
+  afterEach(async () => {
+    await app.close();
+  });
     //sample correct JSON data which is in database
     describe('Signing in with a verified email and password', ()=>{
         it('should respond 200', (done)=>{
