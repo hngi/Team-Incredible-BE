@@ -685,6 +685,7 @@ footer p:not(:last-child) {
 .signup-form-container {
   width: 100%;
   display: flex;
+  padding: 80px 0;
 }
 
 .signup-container {
@@ -695,7 +696,7 @@ footer p:not(:last-child) {
 }
 
 .signup-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -705,11 +706,17 @@ footer p:not(:last-child) {
   background-color: transparent;
   border: 2px solid red;
   border-radius: 10px;
-  font-size: 20px;
-  width: 70%;
+  font-size: 18px;
   color: red;
   font-weight: 700;
-  padding-left: 50px;
+  padding-left: 70px;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  border: 2px solid #bf2c2c;
+  color: #bf2c2c;
+  transition: .5s all;
 }
 
 .google-signup-btn img {
@@ -737,7 +744,7 @@ footer p:not(:last-child) {
 
 .or span {
   padding: 0px 20px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -745,20 +752,21 @@ footer p:not(:last-child) {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 45px;
+  padding: 15px;
 }
 
 .signup-form label {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
 .signup-input {
-  border: 2px solid #B8B8B8;
-  padding: 20px;
+  border: 1px solid #B8B8B8;
+  padding: 10px;
   border-radius: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
+  height: 50px;
 }
 
 .signup-btn {
@@ -769,11 +777,12 @@ footer p:not(:last-child) {
   color: #fff;
   font-weight: 600;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .signup-btn:hover {
   background-color: #2dc556;
-
+  transition: .5s background-color;
 }
 
 .form-link {
