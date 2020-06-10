@@ -82,7 +82,7 @@
         height: 40vh;
     }
 
-    .head-text{
+    .head-text {
         margin-top: 70px;
         font-size: 40px;
         width: 350px;
@@ -91,10 +91,49 @@
     .section1 {
         width: 50%;
         padding: 30px;
-        top:-60px;
+        top: -60px;
     }
 
-    .section2{
+    .section2 {
         width: 40%;
+    }
+}
+
+/* @fosajeff - managing users microservice section */
+
+.about-us__wrapper .img-1 {
+    margin-top: auto;
+    margin-bottom: 0;
+    margin-left: 0.8rem;
+}
+
+.about-us__wrapper .mg-r {
+    margin-right: 2rem;
+}
+
+.micro-service-desc {
+    margin-top: 7rem;
+}
+
+/* Media query */
+
+@media (max-width: 768px) {
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .about-us__wrapper .img-1 img {
+        display: none;
+    }
+
+    .about-us__wrapper .img-2 {
+        margin-bottom: 2rem;
+    }
+
+    .micro-service-desc {
+        padding: 1rem 0;
     }
 }
