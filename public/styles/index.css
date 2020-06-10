@@ -819,6 +819,7 @@ footer p:not(:last-child) {
   background-size: cover;
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .google-btn {
     font-size: 18px;
@@ -962,10 +963,6 @@ footer p:not(:last-child) {
   .signup-form-container {
     flex-direction: column;
   }
-
-  /* .signup-input {
-    width: auto;
-  } */
 
   .signup-container {
     width: 85%;
