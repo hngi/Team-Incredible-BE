@@ -1,98 +1,56 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/style.css">
-        <title>Login page</title>
-    </head>
-    <body>
 
-        <div class="container-fluid">
-            <div class="row">
+<!-- @olanetsoft -->
+<%- include('../template/head') %>
+<!-- @olanetsoft -->
 
-                <!--        form half-->
-                <div class="col-md-7 col-">            <div id="form-half" style="">
+<body>
+    <!-- @olanetsoft -->
+    <header>
+        <%- include('../template/header') %>
+    </header>
+    <!-- @olanetsoft -->
 
-                        <div class="form-half-item">
-                            <div id="head-text">
-                                <div id="dash" class="bg-danger">
-                                </div>
-                                <div>
-                                    Login to MicroAPI
-                                </div>
-                            </div>
-                        </div>
+    <div class="login-form-container">
+        <div class="login-container">
 
-                        <div class="form-half-item">
-                            <div class="" id="googlediv">
-                                <button id="googlebtn">
-                                    <span id="googlebtn-text">
-                                        <span id="google-img"><img src="/img/google-icon.png" alt=""></span>
-                                        Login with Google
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="form-half-item" id="row-text">
-                            <div id="or-row">
-                                <div class="grey-dash">
-
-                                </div>
-                                <div id="or-text">
-                                    or
-                                </div>
-                                <div class="grey-dash">
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="form-half-item" id="form-div">
-                            <form action="" id="login-form">
-                                <div id="input-div-top">
-                                    <label for="email-box">Email</label><br>
-                                    <input type="email" name="email" id="email-box" class="input-boxes"><br>
-                                </div>
-                                <div id="input-div-bottom">
-                                    <label for="password-box">Password</label><br>
-                                    <input type="password" name="password" class="input-boxes" id="password-box"><br>
-                                </div>
-                                <div id="forgot-div">
-                                    <div id="forgot">Forgot Password?</div>
-                                </div>
-                                <div id="submit-btn-div">
-                                    <button id="submit-btn">Login</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="form-half-item">
-                            <div id="no-account-text">
-                                Dont have an account? <span id="signup-text"><a href="#">Signup</a></span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!--        image half-->
-                <div class="col-md-5 bg-danger"  style="padding: 0;">
-                    <div class=" pa-0 ma-0" id="image-div" >
-                        <img id="half-image" class="pa-0 ma-0" src="/img/flower.png" alt="">
-                    </div>
-                </div>
+            <h1 class="login-title">
+                Welcome ! 
+            </h1>
+            <div class="google-login-btn">
+                <img class="login-icon"
+                    src="https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804664/incredible%20project/giigke_t85qnf.png" />
+                <button class="google-btn">Login with Google</button>
+            </div>
+            <div class="or">
+                <hr />
+                <span>OR</span>
+                <hr />
+            </div>
+            <div class="form">
+                <form class="login-form" action="/login" method="POST">
+                    <label for="email">Email</label>
+                    <input class="login-input" type="email" id="email" name="email" />
+                    <label for="password">Password</label>
+                    <input class="login-input" type="password" id="password" name="password" />
+                    <a class="form-link" href="/register">Forgot Password?</a>
+                    <br>
+                    <button class="login-btn" type="submit">Login</button>
+                    <p class="form-link">Don't have an account? <a class="form-link" href="/register">Click to
+                            Register</a></p>
+                </form>
             </div>
         </div>
+        <!-- @olanetsoft -->
+        <div class="login-img">
 
-        <!--js files-->
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-    </body>
+        </div>
+    </div>
+
+    <!-- @olanetsoft -->
+    <%- include('../template/footer') %>
+    <!-- @olanetsoft -->
+</body>
+
 </html>

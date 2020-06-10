@@ -250,7 +250,7 @@ nav a.nav-link:hover::before {
   border: 2px solid #31aa52;
   border-radius: 0.5rem;
   padding: 0.75rem 1.2rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   transition: all 200ms;
   text-decoration: none;
   display: inline-block;
@@ -689,33 +689,51 @@ footer p:not(:last-child) {
 
 .signup-container {
   width: 50%;
-  padding: 50px 20px;
+  padding: 30px 0px 30px 0px;
   margin: 0 auto;
   text-align: center;
 }
 
 .signup-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.google-btn {
-  padding: 20px;
+.signup-icon {
+  position: absolute;
+  padding: 16px 16px 16px 13px;
+  width: 50px;
+}
+
+.google-signup-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.g-btn {
+  height: 55px;
+  padding: 0 20px;
   background-color: transparent;
   border: 2px solid red;
   border-radius: 10px;
-  font-size: 20px;
-  width: 70%;
+  font-size: 14px;
   color: red;
   font-weight: 700;
   padding-left: 50px;
+  cursor: pointer;
+}
+
+.g-btn:hover {
+  border: 2px solid #bf2c2c;
+  color: #bf2c2c;
+  transition: .5s all;
 }
 
 .google-signup-btn img {
   position: absolute;
-  padding: 18px 12px 12px 18px;
-  width: 60px;
+  padding: 18px 13px 0px 15px;
+  width: 45px;
 }
 
 .google-signup-btn {
@@ -737,7 +755,7 @@ footer p:not(:last-child) {
 
 .or span {
   padding: 0px 20px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -745,20 +763,24 @@ footer p:not(:last-child) {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 45px;
+  padding: 15px;
 }
 
 .signup-form label {
   font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto 15px auto;
+
 }
 
 .signup-input {
-  border: 2px solid #B8B8B8;
-  padding: 20px;
+  border: 1px solid #B8B8B8;
+  padding: 10px;
   border-radius: 10px;
-  margin-bottom: 50px;
+  height: 40px;
+  margin: 0 auto 25px auto;
+  width: 80%;
 }
 
 .signup-btn {
@@ -769,6 +791,14 @@ footer p:not(:last-child) {
   color: #fff;
   font-weight: 600;
   margin-bottom: 50px;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto 35px auto;
+}
+
+.signup-btn:hover {
+  background-color: #2dc556;
+  transition: .5s background-color;
 }
 
 .form-link {
@@ -784,7 +814,7 @@ footer p:not(:last-child) {
 
 .signup-img {
   width: 50%;
-  background-image: url(/images/flower.png);
+  background-image: url(https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804693/incredible%20project/flower_twa5ig.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -857,7 +887,7 @@ footer p:not(:last-child) {
     display: none;
   }
 
-  .google-btn {
+  .g-btn {
     padding: 15px;
     font-size: 16px;
     height: 50px;
@@ -908,14 +938,14 @@ footer p:not(:last-child) {
   }
 
   .signup-container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .signup-img {
     display: none;
   }
 
-  .google-btn {
+  .g-btn {
     padding: 15px;
     font-size: 16px;
     height: 50px;
@@ -964,15 +994,19 @@ footer p:not(:last-child) {
     flex-direction: column;
   }
 
+  /* .signup-input {
+    width: auto;
+  } */
+
   .signup-container {
-    width: 100%;
+    width: 85%;
   }
 
   .signup-img {
     display: none;
   }
 
-  .google-btn {
+  .g-btn {
     padding: 15px;
     font-size: 16px;
     height: 50px;
