@@ -1,8 +1,8 @@
+const path = require('path');
 const express = require('express');
 
 const app = express();
 // const cors = require('cors');
-const bodyParser = require('body-parser');
 const mainRoute = require('./routes/route');
 
 app.use((req, res, next) => {
@@ -14,12 +14,30 @@ app.use((req, res, next) => {
 
 // app.use(cors());
 
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
+
+//Registering and setting  the view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.get('/', (req, res) => {
-  res.render('index', { varible: 'hello Guys' });
+  res.render('index', { variable: 'Hello Guys' });
+});
+
+app.get('/about', (req, res) => {
+  res.render('Pages/About');
+});
+
+app.get('/login', (req, res) => {
+  res.render('Pages/Login');
+});
+
+app.get('/register', (req, res) => {
+  res.render('Pages/Register');
 });
 
 app.use('/api/v1', mainRoute);
