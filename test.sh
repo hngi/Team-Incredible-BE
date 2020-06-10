@@ -8,7 +8,7 @@ inspect() {
   fi
 }
 
-# docker-compose run microservice npm test
+# docker-compose run microservice yarn test
 
 inspect $? make test
 
