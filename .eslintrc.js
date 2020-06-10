@@ -4,9 +4,7 @@ module.exports = {
     commonjs: true,
     es2020: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base'],
   parserOptions: {
     ecmaVersion: 11,
   },
@@ -15,7 +13,10 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'no-console': ['warn', { allow: ['clear', 'info', 'error', 'dir', 'trace', 'log'] }],
+    'no-console': [
+      'warn',
+      { allow: ['clear', 'info', 'error', 'dir', 'trace', 'log'] },
+    ],
     curly: 'error',
     'no-else-return': 'error',
     'no-unneeded-ternary': 'error',
