@@ -1,0 +1,23 @@
+version: '2.1'
+
+services:
+  develop:
+    image: node:latest
+    volumes:
+      - .:/usr/src/service
+    working_dir: /usr/src/service
+  
+  install:
+    extends:
+      service: develop
+    command: yarn install
+
+  build:
+    extends:
+      service: develop
+    command: yarn build
+  
+  test:
+    extends:
+      service: develop
+    command: yarn test
