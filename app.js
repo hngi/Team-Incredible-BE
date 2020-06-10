@@ -32,12 +32,13 @@ app.get('/about', (req, res) => {
   res.render('Pages/About');
 });
 
-app.get('/login', (req, res) => {
-  res.render('Pages/Login');
-});
-
 app.get('/register', (req, res) => {
   res.render('Pages/Register');
+});
+
+// login route
+app.get('/login', (req, res) => {
+  res.render('Pages/Login');
 });
 
 app.use('/api/v1', mainRoute);
