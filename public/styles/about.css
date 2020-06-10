@@ -80,7 +80,6 @@
 }
 
 @media (min-width:768px) {
-
     .head-img {
         height: 40vh;
     }
@@ -102,6 +101,7 @@
     }
 }
 
+
 /* @fosajeff - managing users microservice section */
 
 .about-us__wrapper .img-1 {
@@ -118,10 +118,10 @@
     margin-top: 5rem;
 }
 
+
 /* Media query */
 
 @media (max-width: 952px) {
-
     .container {
         margin-left: auto;
         margin-right: auto;
