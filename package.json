@@ -4,10 +4,9 @@
   "description": "backend with node(express)",
   "main": "server.js",
   "scripts": {
-    "tests": "mocha",
     "start": "node server",
     "dev": "nodemon server",
-    "test": "mocha ./test/unit/register"
+    "test": "mocha ./test/unit/**"
   },
   "author": "",
   "license": "ISC",
