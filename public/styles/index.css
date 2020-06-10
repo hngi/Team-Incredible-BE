@@ -784,7 +784,7 @@ footer p:not(:last-child) {
 
 .signup-img {
   width: 50%;
-  background-image: url(/images/flower.png);
+  background-image: url(https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804693/incredible%20project/flower_twa5ig.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
