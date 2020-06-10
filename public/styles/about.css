@@ -22,6 +22,7 @@
     font-weight: bold;
     left: 0;
     right: 0;
+    z-index:2;
 }
 
 .section1 {
@@ -30,7 +31,7 @@
     margin-right: auto;
     padding: 20px;
     position: relative;
-    top: -40px;
+    top: 30px;
     background-color: white;
     box-shadow: 0px 0px 5px rgb(214, 212, 212);
     font-family: "Poppins", sans-serif;
@@ -42,6 +43,7 @@
     margin-right: auto;
     padding: 20px;
     margin-bottom: 30px;
+    margin-top:30px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -61,15 +63,15 @@
 }
 
 .sec1-h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding: 10px;
     padding-bottom: 20px;
 }
 
 .sec2-h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .sec1-text {
@@ -112,7 +114,7 @@
 }
 
 .micro-service-desc {
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 /* Media query */
