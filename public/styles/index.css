@@ -979,11 +979,11 @@ footer p:not(:last-child) {
   }
 
   .signup-input {
-    width: 320px;
+    width: auto;
   }
 
   .signup-container {
-    width: 50%;
+    width: 65%;
   }
 
   .signup-img {
