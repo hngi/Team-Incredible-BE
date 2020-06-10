@@ -685,6 +685,7 @@ footer p:not(:last-child) {
 .signup-form-container {
   width: 100%;
   display: flex;
+  padding: 80px 0;
 }
 
 .signup-container {
