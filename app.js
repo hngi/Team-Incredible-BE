@@ -28,6 +28,11 @@ app.get('/', (req, res) => {
   res.render('index', { varible: 'hello Guys' });
 });
 
+// login route
+app.get('/login', (req, res) => {
+  res.render('Pages/Login');
+});
+
 app.use('/api/v1', mainRoute);
 
 module.exports = app;
