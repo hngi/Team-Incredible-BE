@@ -685,31 +685,31 @@ footer p:not(:last-child) {
 .signup-form-container {
   width: 100%;
   display: flex;
-  padding: 80px 0;
 }
 
 .signup-container {
   width: 50%;
-  padding: 50px 20px;
+  padding: 30px 0px 30px 0px;
   margin: 0 auto;
   text-align: center;
 }
 
 .signup-title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
 .google-btn {
-  padding: 20px;
+  height: 55px;
+  padding: 0 20px;
   background-color: transparent;
   border: 2px solid red;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 14px;
   color: red;
   font-weight: 700;
-  padding-left: 70px;
+  padding-left: 50px;
   cursor: pointer;
 }
 
@@ -721,8 +721,8 @@ footer p:not(:last-child) {
 
 .google-signup-btn img {
   position: absolute;
-  padding: 18px 12px 12px 18px;
-  width: 60px;
+  padding: 18px 13px 0px 15px;
+  width: 45px;
 }
 
 .google-signup-btn {
@@ -758,15 +758,18 @@ footer p:not(:last-child) {
 .signup-form label {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 15px;
+  width: 80%;
+  margin: 0 auto 15px auto;
+
 }
 
 .signup-input {
   border: 1px solid #B8B8B8;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 35px;
-  height: 50px;
+  height: 40px;
+  margin: 0 auto 25px auto;
+  width: 80%;
 }
 
 .signup-btn {
@@ -778,6 +781,8 @@ footer p:not(:last-child) {
   font-weight: 600;
   margin-bottom: 50px;
   cursor: pointer;
+  width: 80%;
+  margin: 0 auto 35px auto;
 }
 
 .signup-btn:hover {
@@ -922,7 +927,7 @@ footer p:not(:last-child) {
   }
 
   .signup-container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .signup-img {
@@ -978,12 +983,12 @@ footer p:not(:last-child) {
     flex-direction: column;
   }
 
-  .signup-input {
+  /* .signup-input {
     width: auto;
-  }
+  } */
 
   .signup-container {
-    width: 65%;
+    width: 85%;
   }
 
   .signup-img {
