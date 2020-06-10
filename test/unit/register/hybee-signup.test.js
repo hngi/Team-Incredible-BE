@@ -1,7 +1,5 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-// const server = require('../signup');
-
 const express = require('express');
 const app = express();
 const jwt = require('jsonwebtoken');
@@ -86,7 +84,7 @@ app.post('/api/v1/users', (req, res) => {
 });
 
 // Assertion Style
-chai.should();
+chai.Should();
 chai.use(chaiHttp);
 
 describe('User API', () => {

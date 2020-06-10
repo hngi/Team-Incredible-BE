@@ -68,7 +68,7 @@ const functions = {
 };
 
 // Assertion Style
-chai.should();
+chai.Should();
 
 describe('Signup Fields Tests', () => {
   it('it should get the first name', (done) => {
