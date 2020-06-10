@@ -978,8 +978,12 @@ footer p:not(:last-child) {
     flex-direction: column;
   }
 
+  .signup-input {
+    width: 320px;
+  }
+
   .signup-container {
-    width: 100%;
+    width: 50%;
   }
 
   .signup-img {
