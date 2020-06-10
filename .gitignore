@@ -116,8 +116,7 @@ dist
 
 # IDE hidden folders for configuration
 
-
-node_modules
 .idea/
 .vscode
 nbproject
+package-lock.json
