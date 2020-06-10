@@ -735,6 +735,7 @@ footer p:not(:last-child) {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  width: 100%;
 }
 
 .or hr {
@@ -984,6 +985,9 @@ footer p:not(:last-child) {
 
   .signup-container {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .signup-img {
@@ -1035,11 +1039,4 @@ footer p:not(:last-child) {
     font-size: 18px;
   }
 }
-
-
-
-
-
-
-
 
