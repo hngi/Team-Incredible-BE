@@ -19,13 +19,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-//Registering and setting  the view engine
+// Registering and setting  the view engine
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
 app.get('/', (req, res) => {
-  res.render('index', { variable: 'Hello Guys' });
+  res.render('index');
 });
 
 app.get('/about', (req, res) => {
