@@ -129,6 +129,9 @@ nav {
 nav ul {
   padding: 0;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav li {
@@ -245,10 +248,11 @@ nav a.nav-link:hover::before {
   background-color: #31aa52;
   border: 2px solid #31aa52;
   border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.2rem;
   margin-left: 2rem;
   transition: all 200ms;
   text-decoration: none;
+  display: inline-block;
 }
 .hero-btn:hover {
   background-color: #268228;
@@ -261,7 +265,6 @@ nav a.nav-link:hover::before {
   background-color: white;
   border: 2px solid #31aa52;
   border-radius: 0.5rem;
-  padding: 0.75rem 1.5rem;
   margin-left: 0;
 }
 .hero-btn.btn-outline:hover {
@@ -298,8 +301,8 @@ section.about-us {
   width: 100%;
 }
 
-.about-us__wrapper .story-sect {
-}
+/* .about-us__wrapper .story-sect {
+} */
 
 .about-us__wrapper .story-sect .about-us_title {
   margin-bottom: 1rem;
