@@ -1,40 +1,38 @@
-# Team-Incredible-BE
+# Team-Incredible-BE 
 
-This is the Backend Task
+![Node.js CI](https://github.com/hngi/Team-Incredible-BE/workflows/Node.js%20CI/badge.svg?branch=develop)
 
-## Getting Started
+-   [:notebook_with_decorative_cover: Overview](#notebook_with_decorative_cover-overview)
+-   [:gear: Installation and running server (Development)](#gear-installation-and-running-server)
+-   [:cloud: API](#cloud-api)
+-   [:eight_spoked_asterisk: Docker(Production)](#eight_spoked_asterisk-docker)
 
+## :notebook_with_decorative_cover: Overview
+This is a the microdev.api website designed by Team-Incredibles
 
-After cloning the repo and cd to the root directory
-
+## :gear: Installation and running server
+* Clone the repo to your local machine using your _terminal_ or _command prompt_, and afterwards, navigate into the root folder  
+```shell script
+$ cd Team-Incredible-BE
 ```
+
+* Install necessary dependencies for the project to run successfully
+```shell script
 $ yarn install
 ```
 
-#### Node server
-```
+* After installing, you can now start the server
+```shell script
 $ yarn start
-Listening on [::]:3000
+Listening on port 3000
 ```
 
-point your brower to `localhost:3000`
+point your browser to ```localhost:3000```
 
-### Curl the Login API
-make sure you cd in the root dir to locate testLogin.json file
+## :cloud: API
+Two API's were consumed for the development of this project
+* Login API
+* Registration API  
+...
 
-Test the create api
-```
-curl -X POST -H "Content-Type: application/json" -d @testLogin.json http://localhost:6000/api/v1/login/
-
-{"message":"Success","Token":"deb49c38-484b-4a96-a4ea-21c1eab20a2d","found":true}
-```
-
-### Postman Test Result (LOGIN)
-![login result](https://res.cloudinary.com/olanetsoft/image/upload/v1591710366/postmanimage.png)
-
-
-### Postman Test Result (SIGNUP)
-![login result](https://res.cloudinary.com/olanetsoft/image/upload/v1591711242/postmanimageSignup.png)
-
-
-##TODO check for registration route
+##  :eight_spoked_asterisk: Docker
