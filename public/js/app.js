@@ -9,7 +9,7 @@ form.addEventListener('submit',(e)=>{
     //get the values of the forms items
     const txtEmail = document.getElementById('email').value
     const txtpassword=document.getElementById('password').value
-    const txtcpassword=document.getElementById('cpassword').value
+    const txtcpassword=document.getElementById('confirmPassword').value
 
     //validation point or you can create a function for validation
     if(txtEmail === '' || txtpassword === ''){
