@@ -784,3 +784,24 @@ footer p:not(:last-child) {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* kukere mini chochop */
+.sucus{
+  padding:1.5rem;
+  background-color: #0c9d2bee;
+  margin-bottom: 1rem;
+  widows: 100%;
+  color:#fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error{
+  padding:1.5rem;
+  background-color: #c72e2e;
+  margin-bottom: 1rem;
+  widows: 100%;
+  color:#fff;
+  font-weight: bold;
+  text-align: center;
+}

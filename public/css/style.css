@@ -116,9 +116,9 @@ margin-top: 40px;
 margin-top: 40px;
 }
 
-#image-div{
+/* #image-div{
 
-}
+} */
 
 #form-half{
     display: flex;
@@ -151,9 +151,6 @@ margin-top: 40px;
     justify-content: flex-end;
 }
 
-#submit-btn-div{
-
-}
 
 #submit-btn{
     width: 100%;
@@ -172,12 +169,19 @@ margin-top: 40px;
     font-weight: 100;
     margin-top: 10px;
 }
-
+/* 
 #signup-text{
     /*color: #31AA52;*/
+*/
+.sucus{
+    padding:0.77rem;
+    background-color: #03851f;
+    margin: auto;
+    margin: 1rem;
 }
-
 #signup-text > a{
     color: #31AA52;
     text-decoration: none;
 }
+
+/* success message kukere */
