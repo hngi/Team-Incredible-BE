@@ -16,7 +16,7 @@ RUN yarn install
 COPY . .
 
 # expose ports
-EXPOSE 3000 8080 80 443
+EXPOSE 80 443 3000 8001 8080 8100 8200
 
 # start app
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

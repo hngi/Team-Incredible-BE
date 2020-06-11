@@ -16,12 +16,18 @@
         <div class="login-container">
 
             <h1 class="login-title">
-                Welcome ! 
+                Welcome !
             </h1>
             <div class="google-login-btn">
+
                 <img class="login-icon"
                     src="https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804664/incredible%20project/giigke_t85qnf.png" />
-                <button class="google-btn">Login with Google</button>
+
+                <button class="google-btn">
+                    <a href='/googleauth'>
+                        Login with Google
+                    </a>
+                </button>
             </div>
             <div class="or">
                 <hr />
@@ -29,12 +35,24 @@
                 <hr />
             </div>
             <div class="form">
+                <%if (successMsg !== null) { %>
+                <div style="color: green;"><%= successMsg %></div>
+                <% } %>
                 <form class="login-form" action="/login" method="POST">
+                    <%if (error && typeof error.response === 'string') { %>
+                    <div  class='login-error-response'><%= error.response %></div>
+                    <% } %>
                     <label for="email">Email</label>
-                    <input class="login-input" type="email" id="email" name="email" />
+                    <%if (error !== null) { %>
+                    <div class='login-error'><%= error.response.email %></div>
+                    <% } %>
+                    <input class="login-input" type="email" id="email" name="email" required />
                     <label for="password">Password</label>
-                    <input class="login-input" type="password" id="password" name="password" />
-                    <a class="form-link" href="/register">Forgot Password?</a>
+                    <%if (error !== null) { %>
+                    <div class='login-error'><%= error.response.password %></div>
+                    <% } %>
+                    <input class="login-input" type="password" id="password" name="password" required/>
+                    <a class="form-link forgot-password" href="/register">Forgot Password?</a>
                     <br>
                     <button class="login-btn" type="submit">Login</button>
                     <p class="form-link">Don't have an account? <a class="form-link" href="/register">Click to
