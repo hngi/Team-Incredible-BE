@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const apiUrl = 'https://hngi7-team-avengers.herokuapp.com/api/v1';
 
-// This will be an external dashborad url to task 9
+// This will be an external dashboard url to task 9
 
 const dashboardUrl = 'https://dashboard.microapi.dev/';
 
@@ -47,7 +47,7 @@ exports.login = (req, res) => {
   ).then((response) => {
     const { token } = response.data;
     res.cookie('auth', token);
-    res.redirect(`/dashboard?token=${token}`);
+    return res.redirect(`/dashboard?token=${token}`);
   }).catch((err) => {
     res.render('Pages/Login', {
       error: err.response ? err.response.data : '',
