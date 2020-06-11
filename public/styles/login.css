@@ -19,7 +19,7 @@
   margin-top: -30px;
 }
 
-.google-btn {
+.google-l-btn {
   padding: 20px;
   background-color: transparent;
   border: 2px solid red;
@@ -31,7 +31,7 @@
   padding-left: 50px;
 }
 
-.google-login-btn img {
+.google-l-btn img {
   position: absolute;
   padding: 18px 12px 12px 18px;
   width: 60px;
@@ -113,7 +113,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .google-btn {
+  .google-l-btn {
     font-size: 18px;
     padding-left: 60px;
     width: auto;
@@ -167,23 +167,26 @@
   } */
 
 @media(min-width: 570px) {
-  .login-form-container, .signup-form-container {
+
+  .login-form-container {
     width: 60% !important;
     margin-left: auto !important;
     margin-right: auto !important;
     height: 100vh !important;
   }
-  .login-form, .signup-form {
+
+  .login-form {
     padding: 5px !important;
     /* text-align: center !important; */
   }
 
-  .login-input, .signup-input {
+  .login-input {
     height: 40px !important;
     padding: 6px !important;
     margin-bottom: 10px !important;
   }
-  .login-title, .signup-title {
+
+  .login-title {
     margin-top: 70px !important;
   }
 }
