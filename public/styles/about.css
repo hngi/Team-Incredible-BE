@@ -110,13 +110,20 @@
     margin-left: 0.8rem;
 }
 
+.about-us__wrapper .img-2 {
+    margin-top: auto;
+    margin-bottom: 0;
+    margin-left: 0.8rem;
+}
+
 .about-us__wrapper .mg-r {
-    margin-right: 1.8rem;
+    margin-right: 2rem;
 }
 
 .micro-service-desc {
     margin-top: 7rem;
 }
+
 
 
 /* Media query */
@@ -128,8 +135,8 @@
         width: 90%;
     }
 
-
     .about-us__wrapper .img-1 img {
+        margin: auto;
         display: none;
     }
 
@@ -137,7 +144,37 @@
         margin-bottom: 2rem;
     }
 
+    .about-us__wrapper .mg-r {
+        margin-right: auto
+    }
+
     .micro-service-desc {
         padding: 1rem 0;
+        margin: auto;
+    }
+
+    .micro-service-desc .desc,
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .micro-service-desc .desc {
+        line-height: 2rem;
+    }
+
+    .micro-service-desc .story-sec {
+        order: 1;
+    }
+
+    .micro-service-desc .sect-2 {
+        order: 2;
+    }
+}
+
+@media (min-width: 830px) and (max-width:952px) {
+    .micro-service-desc .sect-2 {
+        margin-right: 0rem;
     }
 }

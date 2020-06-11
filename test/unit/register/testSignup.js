@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 app.use(express.json());
 
 const port = process.env.PORT;
+
 const server = app.listen(port, () =>
   console.log(`Listening on port ${port}...`)
 );
