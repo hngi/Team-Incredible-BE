@@ -47,7 +47,7 @@ exports.login = (req, res) => {
   ).then((response) => {
     const { token } = response.data;
     res.cookie('auth', token);
-    res.redirect(`/dashboard?token=${token}`);
+    res.redirect('/dashboard');
   }).catch((err) => {
     res.render('Pages/Login', {
       error: err.response.data,
