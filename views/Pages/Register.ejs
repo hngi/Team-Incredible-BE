@@ -16,12 +16,17 @@
         <div class="signup-container">
 
             <h1 class="signup-title">
-                SignUP To MicroAPI
+                SignUp To MicroAPI
             </h1>
             <div class="google-signup-btn">
-                <img class="signup-icon" src="<%= ('../images/giigke.png')%>" />
+                <img class="signup-icon"
+                    src="https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804664/incredible%20project/giigke_t85qnf.png" />
                 <!-- <i class="fab fa-google signup-icon"></i> -->
-                <input class="google-btn" type="submit" value="Signup with Google">
+                <button class="google-btn">
+                    <a href='/googleauth'>
+                       Signup with Google
+                    </a>
+                </button>
             </div>
             <div class="or">
                 <hr />
@@ -29,15 +34,25 @@
                 <hr />
             </div>
             <div class="form">
-                <form id="regis" class="signup-form" action="/register" method="POST">
-                    <label for="fullName">Full Name</label>
-                    <input class="signup-input" type="text" id="fullName" name="fullName" />
+                <form class="signup-form" action="/register" method="POST">
+
                     <label for="email">Email</label>
-                    <input class="signup-input" type="email" id="email" name="email" />
+                     <%if (error !== null) { %>
+                    <div style="color: red;"><%= error.response.email %></div>
+                    <% } %>
+                    <input class="signup-input" type="text" id="email" name="email" <%- (data) &&  `value=${data.email}` %>>
+                   
                     <label for="password">Password</label>
+                     <%if (error !== null) { %>
+                    <div style="color: red;"><%= error.response.password %></div>
+                    <% } %>
                     <input class="signup-input" type="password" id="password" name="password" />
-                    <label for="cpassword">Confirm Password</label>
-                    <input class="signup-input" type="password" id="cpassword" name="password" />
+                   
+                    <label for="confirmPassword">Confirm Password</label>
+                    <%if (error !== null) { %>
+                    <div style="color: red;"><%= error.response.confirmPassword %></div>
+                    <% } %>
+                    <input class="signup-input" type="password" id="confirmPassword" name="confirmPassword" />
                     <button class="signup-btn" type="submit">Sign Up</button>
 
                     <div class="messages">
