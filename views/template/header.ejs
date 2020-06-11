@@ -1,31 +1,18 @@
 <div class="container">
     <nav>
         <div class="logo">
-<<<<<<< HEAD
-            <h2>MicroAPI</h2>
+            <h2><a class="nav-link" href="/">MicroAPI</a></h2>
         </div>
         <ul>
             <li><a class="nav-link" href="/">Home</a></li>
             <li><a class="nav-link" href="/about">About</a></li>
+            <%if(isAuthenticated) { %>
+            <li> <a href="/dashboard" class="btn btn-main">Dashboard</a></li>
+            <li> <a href="/logout" class="nav-link">Logout</a></li>
+            <% } else { %>
             <li><a class="nav-link" href="/login">Login</a></li>
             <li> <a href="/register" class="btn btn-main">Register</a></li>
+            <% } %>
         </ul>
     </nav>
 </div>
-=======
-            <h2><a class="nav-link" href="/">MicroAPI</a></h2>
-        </div>
-        <ul>
-        	<li><a class="nav-link" href="/">Home</a></li>
-        	<li><a class="nav-link" href="/about">About</a></li>
-        	<%if(isAuthenticated) { %>
-			<li> <a href="/dashboard" class="btn btn-main">Dashboard</a></li>
-			<li> <a href="/logout" class="nav-link">Logout</a></li>
-			<% } else { %>
-			<li><a class="nav-link" href="/login">Login</a></li>
-			<li> <a href="/register" class="btn btn-main">Register</a></li>
-			<% } %>
-		</ul>
-    </nav>
-</div>
->>>>>>> 90500199c41818a7d219beaffa76d4ba54fff2ba
