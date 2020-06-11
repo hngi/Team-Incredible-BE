@@ -679,6 +679,10 @@ footer p:not(:last-child) {
   /* @tomii and @charles onuorah - footer section end */
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 90500199c41818a7d219beaffa76d4ba54fff2ba
 /* @Xemicolon & @OlufemiPio */
 
 .signup-form-container {
@@ -699,7 +703,18 @@ footer p:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.google-btn {
+.signup-icon {
+  position: absolute;
+  padding: 16px 16px 16px 13px;
+  width: 50px;
+}
+
+.google-signup-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.g-btn {
   height: 55px;
   padding: 0 20px;
   background-color: transparent;
@@ -712,15 +727,10 @@ footer p:not(:last-child) {
   cursor: pointer;
 }
 
-.google-btn a {
-  text-decoration: none;
-  color: red;
-}
-
-.google-btn:hover {
+.g-btn:hover {
   border: 2px solid #bf2c2c;
   color: #bf2c2c;
-  transition: 0.5s all;
+  transition: .5s all;
 }
 
 .google-signup-btn img {
@@ -764,10 +774,11 @@ footer p:not(:last-child) {
   font-size: 16px;
   width: 80%;
   margin: 0 auto 15px auto;
+
 }
 
 .signup-input {
-  border: 1px solid #b8b8b8;
+  border: 1px solid #B8B8B8;
   padding: 10px;
   border-radius: 10px;
   height: 40px;
@@ -777,7 +788,7 @@ footer p:not(:last-child) {
 
 .signup-btn {
   padding: 25px;
-  background-color: #31aa52;
+  background-color: #31AA52;
   border-radius: 10px;
   font-size: 18px;
   color: #fff;
@@ -790,7 +801,7 @@ footer p:not(:last-child) {
 
 .signup-btn:hover {
   background-color: #2dc556;
-  transition: 0.5s background-color;
+  transition: .5s background-color;
 }
 
 .form-link {
@@ -800,7 +811,7 @@ footer p:not(:last-child) {
 }
 
 .form-link a {
-  color: #31aa52;
+  color: #31AA52;
   text-decoration: none;
 }
 
@@ -811,15 +822,17 @@ footer p:not(:last-child) {
   background-size: cover;
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .google-btn {
+    font-size: 18px;
     padding-left: 60px;
     width: auto;
   }
 
   .google-signup-btn img {
-    padding: 15px;
-    width: 53px;
+    padding: 20px;
+    width: 65px;
   }
 
   .signup-form {
@@ -829,40 +842,10 @@ footer p:not(:last-child) {
   .signup-form label {
     font-size: 16px;
     margin-bottom: 10px;
+
   }
 }
 
-/* @media screen and (min-width: 320px) and (max-width: 767px) {
-  .signup-form-container {
-    flex-direction: column;
-  }
-
-  .signup-container {
-    width: 100%;
-  }
-
-  .signup-img {
-    display: none;
-  }
-
-  .google-btn {
-    padding: 15px;
-    font-size: 16px;
-    height: 50px;
-    padding-left: 55px;
-    width: auto;
-  }
-
-  .google-signup-btn img {
-    padding: 12px;
-    width: 50px;
-  }
-
-  .signup-form {
-    padding: 45px;
-  }
-
-} */
 
 @media screen and (max-width: 320px) {
   .signup-form-container {
@@ -877,8 +860,9 @@ footer p:not(:last-child) {
     display: none;
   }
 
-  .google-btn {
+  .g-btn {
     padding: 15px;
+    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
@@ -933,8 +917,9 @@ footer p:not(:last-child) {
     display: none;
   }
 
-  .google-btn {
+  .g-btn {
     padding: 15px;
+    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
@@ -981,10 +966,6 @@ footer p:not(:last-child) {
     flex-direction: column;
   }
 
-  /* .signup-input {
-    width: auto;
-  } */
-
   .signup-container {
     width: 85%;
   }
@@ -993,8 +974,9 @@ footer p:not(:last-child) {
     display: none;
   }
 
-  .google-btn {
+  .g-btn {
     padding: 15px;
+    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;

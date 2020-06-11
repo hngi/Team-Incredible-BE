@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-
-    <%- include('../template/head') %>
-</head>
+<!-- @olanetsoft -->
+<%- include('../template/head') %>
+<!-- @olanetsoft -->
 
 <body>
+    <!-- @olanetsoft -->
     <header>
         <%- include('../template/header') %>
     </header>
-    <div class="signup-form-container">
-        <div class="signup-container">
-            <h1 class="signup-title">
-                Login To MicroAPI
+    <!-- @olanetsoft -->
+
+    <div class="login-form-container">
+        <div class="login-container">
+
+            <h1 class="login-title">
+                Welcome !
             </h1>
-            <div class="google-signup-btn">
-                <img class="signup-icon"
+            <div class="google-login-btn">
+                <img class="login-icon"
                     src="https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804664/incredible%20project/giigke_t85qnf.png" />
-                <!-- <i class="fab fa-google signup-icon"></i> -->
                 <button class="google-btn">
                     <a href='/googleauth'>
                         Login with Google
@@ -33,29 +33,40 @@
                 <hr />
             </div>
             <div class="form">
-                <form class="signup-form" action="/login" method="POST">
+                <%if (successMsg !== null) { %>
+                <div style="color: green;"><%= successMsg %></div>
+                <% } %>
+                <form class="login-form" action="/login" method="POST">
+                    <%if (error && typeof error.response === 'string') { %>
+                    <div style="color: red;"><%= error.response %></div>
+                    <% } %>
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.email %></div>
                     <% } %>
-                    <input class="signup-input" type="email" id="email" name="email" />
+                    <input class="login-input" type="email" id="email" name="email" />
                     <label for="password">Password</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.password %></div>
                     <% } %>
-                    <input class="signup-input" type="password" id="password" name="password" />
-                    <button class="signup-btn" type="submit">Sign Up</button>
-                    <p class="form-link">Don't have an account? <a class="form-link" href="/register">Register</a></p>
+                    <input class="login-input" type="password" id="password" name="password" />
+                    <a class="form-link" href="/register">Forgot Password?</a>
+                    <br>
+                    <button class="login-btn" type="submit">Login</button>
+                    <p class="form-link">Don't have an account? <a class="form-link" href="/register">Click to
+                            Register</a></p>
                 </form>
             </div>
         </div>
-
-        <div class="signup-img">
+        <!-- @olanetsoft -->
+        <div class="login-img">
 
         </div>
     </div>
 
-    <footer>
-        <%- include('../template/footer') %>
-    </footer>
+    <!-- @olanetsoft -->
+    <%- include('../template/footer') %>
+    <!-- @olanetsoft -->
 </body>
+
+</html>

@@ -118,4 +118,9 @@ dist
 
 .idea/
 .vscode
+<<<<<<< HEAD
 package-lock.json
+=======
+nbproject
+package-lock.json
+>>>>>>> 90500199c41818a7d219beaffa76d4ba54fff2ba

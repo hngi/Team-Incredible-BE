@@ -35,18 +35,20 @@
             </div>
             <div class="form">
                 <form class="signup-form" action="/register" method="POST">
-                    <label for="fullName">Full Name</label>
-                    <input class="signup-input" type="text" id="fullName" name="fullName" />
+
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.email %></div>
                     <% } %>
-                    <input class="signup-input" type="email" id="email" name="email" />
+                    <input class="signup-input" type="text" id="email" name="email"
+                        <%- (data) &&  `value=${data.email}` %>>
+
                     <label for="password">Password</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.password %></div>
                     <% } %>
                     <input class="signup-input" type="password" id="password" name="password" />
+
                     <label for="confirmPassword">Confirm Password</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.confirmPassword %></div>
