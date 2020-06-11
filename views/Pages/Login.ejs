@@ -40,7 +40,7 @@
                 <% } %>
                 <form class="login-form" action="/login" method="POST">
                     <%if (error && typeof error.response === 'string') { %>
-                    <div style="color: red;"><%= error.response %></div>
+                    <div  style="color: red; text-align: center;"><%= error.response %></div>
                     <% } %>
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
