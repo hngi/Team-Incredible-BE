@@ -166,6 +166,28 @@
   
   } */
 
+@media(min-width: 570px) {
+  .login-form-container, .signup-form-container {
+    width: 60% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 100vh !important;
+  }
+  .login-form, .signup-form {
+    padding: 5px !important;
+    /* text-align: center !important; */
+  }
+
+  .login-input, .signup-input {
+    height: 40px !important;
+    padding: 6px !important;
+    margin-bottom: 10px !important;
+  }
+  .login-title, .signup-title {
+    margin-top: 70px !important;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .login-form-container {
     flex-direction: column;
