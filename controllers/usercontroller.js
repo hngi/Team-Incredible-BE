@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-boolean-cast */
 const axios = require('axios');
 
-const apiUrl = 'https://hngi7-team-avengers.herokuapp.com/api/v1';
+const apiUrl = 'https://auth.microapi.dev/v1';
 
 // This will be an external dashborad url to task 9
 
