@@ -1,0 +1,278 @@
+c6d8b32,Anthony Anonde,11 hours ago,Merge pull request #80 from fosajeff/feat/about-page-view
+4a2c4c2,Jeffrey,12 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into feat/about-page-view
+cb4c590,Jeffrey,12 hours ago,add page responsiveneess for mobile
+4c8f094,Eleam Emmanuel,12 hours ago,Merge pull request #79 from Hybee22/test-signup
+e156044,Ibrahim Adekunle,12 hours ago,test: merged test script
+bf1288e,Eleam Emmanuel,12 hours ago,Merge pull request #78 from Xemicolon/develop
+96e5fc3,Ibrahim Adekunle,12 hours ago,Merge pull request #4 from hngi/develop
+f51d387,tonymj76,12 hours ago,hotfix
+ea10de5,Xemicolon,13 hours ago,Fixed all the issues on sign up page
+b7bb6a8,Xemicolon,13 hours ago,Fixed the sign up page
+270bcd7,Eleam Emmanuel,13 hours ago,Merge pull request #77 from Xemicolon/develop
+fb4ebe7,Xemicolon,13 hours ago,I saw terrible things
+038630c,Jeffrey,13 hours ago,fix merge conflict
+9e4cc37,Efosa Jeffrey,13 hours ago,Merge pull request #9 from dreysongz/feat/about-page-view
+dc61da7,Timothy Mayor,14 hours ago,Merge pull request #74 from Olanetsoft/develop
+62513f2,Eleam Emmanuel,14 hours ago,Merge pull request #73 from Frost199/sign-up
+d92acf5,olanetsoft,14 hours ago,INCLUDED POST ABILITY TO LOGIN PAGE
+51cdd04,Frost199,14 hours ago,fix: minimal changes to signup
+573b493,Frost199,14 hours ago,fix: Mobile view for login
+d4026ea,Eleam Emmanuel,14 hours ago,Merge pull request #72 from Olanetsoft/develop
+4f8225e,Frost199,15 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into readme
+9230e87,Eleam Emmanuel,15 hours ago,Merge pull request #71 from Xemicolon/develop
+637cc98,olanetsoft,15 hours ago,FIXED MARGIN ISSUES IN LOGIN PAGE
+0815406,Xemicolon,15 hours ago,Fixed input width on 767 screen
+b7e1aae,Frost199,15 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into readme
+53efcce,Timothy Mayor,15 hours ago,Merge pull request #70 from Xemicolon/develop
+c1339f2,Xemicolon,15 hours ago,Minor fix for spacing
+192f6cc,Xemicolon,15 hours ago,Minor fix
+ce6c9a7,Frost199,15 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into readme
+e5cf4fb,Timothy Mayor,15 hours ago,Merge pull request #69 from Olanetsoft/develop
+8924ce0,olanetsoft,15 hours ago,FIXED TYPO
+d4757ca,olanetsoft,15 hours ago,IMPLEMENTED THE LOGIN PAGE RESPONSIVENESS AND LAYOUTS ALSO INCLUDED
+d9b1fff,dreysongz,15 hours ago,fixed mobile overflow
+02b771d,Frost199,15 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into readme
+1c7ddb3,olanetsoft,15 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+67920e1,Timothy Mayor,16 hours ago,Merge pull request #67 from Xemicolon/develop
+41e79a9,Timothy Mayor,16 hours ago,Merge pull request #68 from Dami-js/signup-page-optimization
+99319dc,Okekunle Oluwatobiloba,16 hours ago,Optimzed Register Page
+691ba3e,Ibrahim Adekunle,16 hours ago,Merge pull request #3 from hngi/develop
+91c2055,Xemicolon,16 hours ago,Minor fix on sign up page
+fb0d543,Frost199,16 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into readme
+5bd40fd,Timothy Mayor,16 hours ago,Merge pull request #66 from Dami-js/about-page-optimization
+526918b,Timothy Mayor,16 hours ago,Merge pull request #65 from Xemicolon/develop
+8763b91,Xemicolon,16 hours ago,Sign Up page completed
+8f6e660,Okekunle Oluwatobiloba,16 hours ago,Optimized The About page
+af60525,Aduramimo Oludare,16 hours ago,Merge branch 'feat/about-page-view' into feat/about-page-view
+7c8606b,dreysongz,16 hours ago,fixed img responsiveness for 3rd microservice
+1d7b31d,olanetsoft,16 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+c23ba2c,tonymj76,16 hours ago,rm
+9ec95f4,Okekunle Oluwatobiloba,16 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage
+5bfd1f3,Anthony Anonde,16 hours ago,Merge pull request #64 from hngi/develop
+75b58bd,Anthony Anonde,16 hours ago,Merge pull request #63 from hngi/master
+d2f9d40,olanetsoft,16 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+19bb119,Timothy Mayor,17 hours ago,Merge pull request #62 from tobecci/develop
+77f8d86,olanetsoft,17 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+9224ccb,tonymj76,17 hours ago,update dep
+ea24267,tobecci,17 hours ago,SYNC: Merge remote-tracking branch 'upstream/develop' into develop
+aea2b22,Anthony Anonde,17 hours ago,Merge pull request #61 from Dami-js/homepage
+3ced19a,Okekunle Oluwatobiloba,17 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage
+3aed5e6,sjdammy,17 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage
+5904b14,robertechie,17 hours ago,Merge pull request #60 from Xemicolon/develop
+51188d4,Xemicolon,17 hours ago,Sign Up page
+c6f1913,sjdammy,17 hours ago,fixed call to action button mobile display
+ed204cf,tobecci,17 hours ago,FIX: removed commented code
+18206bc,robertechie,17 hours ago,Merge pull request #59 from Hybee22/hybee-test-scripts
+a233568,robertechie,17 hours ago,Merge pull request #57 from Dami-js/homepage-image-optimization
+cb83752,tobecci,17 hours ago,FEAT: Finished building Login page [Desktop]
+9270a0d,Anthony Anonde,18 hours ago,Merge pull request #58 from hngi/develop
+0a8737b,Ibrahim Adekunle,18 hours ago,Merge pull request #2 from hngi/develop
+1c9476a,Ibrahim Adekunle,18 hours ago,test: updated the test script and package.json file
+83a5d17,Anthony Anonde,18 hours ago,Merge pull request #56 from fosajeff/feat/about-page-view
+e980ec6,Okekunle Oluwatobiloba,18 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage-image-optimization
+6dcaaf3,Okekunle Oluwatobiloba,18 hours ago,optimized the images on the frontpage
+8d86f41,Jeffrey,18 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into feat/about-page-view
+f31cca5,Jeffrey,18 hours ago,refactor
+68b117d,olanetsoft,18 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+257d35e,robertechie,19 hours ago,Merge pull request #54 from Hybee22/hybee-test-scripts
+a014638,olanetsoft,19 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+827bcdf,Jeffrey,19 hours ago,fix conflict
+87cc6d1,Ibrahim Adekunle,19 hours ago,test: updated the test script and package.json file
+4151d76,Jeffrey,19 hours ago,refactor code
+20a31d2,Efosa Jeffrey,19 hours ago,Merge pull request #7 from onshimiye/feat/about-page-view
+5c9441b,robertechie,19 hours ago,Merge pull request #53 from Hybee22/hybee-test-scripts
+1c51748,onshimiye,19 hours ago,feat: spacing between image and text
+f288121,onshimiye,19 hours ago,feat: added missing images
+b269b50,Ibrahim Adekunle,20 hours ago,test: added tests for the signup ui components and api POST method
+fe68401,Efosa Jeffrey,20 hours ago,Merge pull request #6 from Sahmie/feat/about-page-view
+9ab10ce,Ibrahim Adekunle,20 hours ago,Merge pull request #1 from hngi/develop
+3cf966f,sahmie,20 hours ago,remove authorization section images
+7e48eef,sahmie,20 hours ago,fix conlict in aboutme.ejs
+8f79983,olanetsoft,20 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+dec4c72,sahmie,20 hours ago,add microservice section for authentication with images
+5eb22a1,Eleam Emmanuel,21 hours ago,Merge pull request #52 from Dami-js/homepage
+9e15330,olanetsoft,21 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+62f5d4f,sjdammy,21 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage
+120ed1d,Efosa Jeffrey,21 hours ago,Merge pull request #5 from dreysongz/feat/about-page-view
+71c8134,robertechie,21 hours ago,Merge pull request #51 from youngGaf/loginTest
+b27de8b,youngGaf,21 hours ago,commit to unit login test
+80df0e2,youngGaf,21 hours ago,Commint on unit test login
+93cb801,Aduramimo Oludare,21 hours ago,Merge branch 'feat/about-page-view' into feat/about-page-view
+1d85559,dreysongz,21 hours ago,Third microservice
+0619cd1,sjdammy,21 hours ago,adjusted navbar on landscape mobile view
+338018f,Jeffrey,22 hours ago,add media queries for about page
+fe385e3,tobecci,22 hours ago,FIX: |Login page| uncommented image
+36c29fc,dreysongz,22 hours ago,Dockerized microservices for managing company settings
+c08d3fd,dreysongz,22 hours ago,Dockerized microservices for managing company settings
+d3a0c10,youngGaf,22 hours ago,commit to unit login test
+d53459b,tobecci,22 hours ago,FEAT: Creating the login page
+73cd066,Anthony Anonde,23 hours ago,Merge pull request #44 from Frost199/readme
+d9a88ce,Efosa Jeffrey,24 hours ago,Merge pull request #3 from mosiac05/feat/about-page-view
+87ab1fb,Efosa Jeffrey,24 hours ago,Merge pull request #2 from Josh4324/joshdev
+2ad037a,Moses Obute,24 hours ago,mosiac05: Added view more button and get amplified area
+6f2aff7,Joshua Adesanya,24 hours ago,bug-fix
+7e50cca,Jeffrey,27 hours ago,add managing users micro service section
+84297ed,deeone2,28 hours ago,putting things together
+b8d17b0,deeone2,29 hours ago,implemented unit test recommendationd
+3b87195,Frost199,30 hours ago,docs: Update README
+335de0e,Efosa Jeffrey,30 hours ago,Merge pull request #1 from Josh4324/joshdev
+dc8a421,Joshua Adesanya,30 hours ago,feat/header
+1f5d719,Frost199,31 hours ago,test: fix server shutdown
+23e912c,Frost199,32 hours ago,fix: Update package.json
+4802907,Frost199,32 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into git-workflow
+afc03cb,olanetsoft,32 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+8be4753,Anthony Anonde,32 hours ago,Merge pull request #33 from Frost199/home-page
+f3627df,Frost199,32 hours ago,fix: Update to the css
+44c5f73,Frost199,32 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into git-workflow
+22ae7c4,tobecci,32 hours ago,SETUP: installed dependencies with npm
+e260a3c,Anthony Anonde,32 hours ago,Merge pull request #37 from Dami-js/homepage
+304c271,Frost199,33 hours ago,fix: updated branch
+0fb5e43,Frost199,33 hours ago,Merge branch 'homepage' of https://github.com/Dami-js/Team-Incredible-BE into home-page
+b208f79,sjdammy,33 hours ago,moved header, navbar and footer into partials
+24820e6,olanetsoft,33 hours ago,Merge remote-tracking branch 'upstream/develop' into develop
+5c990a9,olanetsoft,33 hours ago,.
+f6f48a3,sjdammy,33 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage
+9066471,Frost199,33 hours ago,fix: modify github workflow
+b2229d0,Frost199,33 hours ago,fix: resolve merge conflict with develop
+1dbefdd,Frost199,33 hours ago,Merge branch 'github-workflow' of https://github.com/Frost199/Team-Incredible-BE into home-page
+f465b89,Frost199,33 hours ago,feat: Add github build
+3e773a9,Eleam Emmanuel,34 hours ago,build: Setup github workflow
+ec0a585,Anthony Anonde,34 hours ago,Merge pull request #29 from MichaelOlatunji/docker
+989a770,Michael Olatunji,34 hours ago,Merge branch 'develop' into docker
+64da76d,Michael Olatunji,34 hours ago,Adding run_docker shell script
+c5f46b8,Frost199,34 hours ago,cleanup project files
+0258f6e,sjdammy,34 hours ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into homepage
+575dba1,sjdammy,34 hours ago,added the about section and footer section
+fc0e1bb,Anthony Anonde,34 hours ago,Merge pull request #26 from Myspheet/confirmPasswords
+018ce02,Michael Olatunji,35 hours ago,Merge branch 'develop' into docker
+e1ed7dd,Michael Olatunji,35 hours ago,about build docker image on aws ec2 instance
+bdee0f7,Myspheet,35 hours ago,Merge branch 'develop' into confirmPasswords
+80a1a0f,Seweje Damilola John,35 hours ago,Merge pull request #14 from kyle2f/patch-3
+e5c8024,sjdammy,35 hours ago,refoactored hero section
+bdbf8ab,Anthony Anonde,35 hours ago,Merge pull request #27 from thebolarin/dev
+555af63,kyle2f,2 days ago,Added footer to index.ejs file
+12cd3ba,tonymj76,2 days ago,components
+8d8c642,tonymj76,2 days ago,register page
+548090b,tonymj76,2 days ago,login page
+5f248e5,tonymj76,2 days ago,about
+0237c35,tonymj76,2 days ago,index page
+c57a62b,tonymj76,2 days ago,house keeping
+1236398,tonymj76,2 days ago,hot fix
+594db10,tonymj76,2 days ago,add pages route
+8b74dc2,Seweje Damilola John,2 days ago,Merge pull request #12 from programmerjide/homepage
+72c3f7d,Oladejo Olajide,2 days ago,Feat: added hero section in index.ejs and index.css with hero-image.png
+9f4e6ac,Michael Olatunji,2 days ago,modifiying dockerfile and adding gitignore
+38b9406,Michael Olatunji,2 days ago,Adding Dockerfile
+996b150,thebolarin,2 days ago,More test cases
+083cae7,thebolarin,2 days ago,More test cases
+30d8a42,sjdammy,2 days ago,refactored navbar view
+3d58008,Myspheet,2 days ago,Added validation for the signup page
+17bcf30,Seweje Damilola John,2 days ago,Merge pull request #9 from Frost199/home-page
+96b7a26,Seweje Damilola John,2 days ago,Merge pull request #8 from AbdussamiG/patch-6
+6978c59,Frost199,2 days ago,Merge branch 'homepage' of https://github.com/Dami-js/Team-Incredible-BE into home-page
+243da62,AbdussamiG,2 days ago,update to the navbar style.css file
+36bebd0,Seweje Damilola John,2 days ago,Merge pull request #7 from AbdussamiG/patch-5
+3d6b198,robertechie,2 days ago,Merge pull request #25 from ogunsoladebayo/develop
+d7588fc,AbdussamiG,2 days ago,update to the navbar html code
+9c29e26,Frost199,2 days ago,fix: Proper rendering of navbar
+b1bb09c,sjdammy,2 days ago,removed uneccessary pages folder
+7123ee0,Seweje Damilola John,2 days ago,Merge pull request #6 from AbdussamiG/master
+2113a46,Ogunsola,2 days ago,updating about page
+6f97472,Ogunsola,2 days ago,Merge remote-tracking branch 'upstream/develop' into develop
+206d2db,AbdussamiG,2 days ago,the style.css code for the navbar
+2653b6d,AbdussamiG,2 days ago,the index.html code for the navbar
+ee63b77,Timothy Mayor,2 days ago,Merge pull request #24 from youngGaf/master
+6cfbb58,Timothy Mayor,2 days ago,Merge pull request #23 from Hybee22/hybee-test
+9854073,youngGaf,2 days ago,Commit on unit login test by Gafar_01
+1ec6434,Anthony Anonde,2 days ago,Merge pull request #22 from Olanetsoft/new-branch
+7432089,Ogunsola,2 days ago,updating about page
+edfa3c5,sjdammy,2 days ago,removed duplicated styles
+553711b,Seweje Damilola John,2 days ago,Merge pull request #3 from Frost199/home-page
+78200dd,Ibrahim Adekunle,2 days ago,test: adding test for signup functionality
+afed0a7,Frost199,2 days ago,Merge branch 'homepage' of https://github.com/Dami-js/Team-Incredible-BE into home-page
+2e02099,olanetsoft,2 days ago,Updated Readme with Postman Login result- Conflict Fixed
+52102dc,tonymj76,2 days ago,hot fix
+3b7ca40,tonymj76,2 days ago,add urlendcoded
+3a9daed,olanetsoft,2 days ago,Updated Pages Folder with Login and register page
+5a9477a,tonymj76,2 days ago,add urlencoded
+a50ff91,robertechie,2 days ago,Merge pull request #21 from ogunsoladebayo/develop
+97107a6,Ogunsola,2 days ago,added about page rendering, setup about page and ejs partials
+43b86bd,Frost199,2 days ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into git-ignore
+a8f88c0,Ogunsola,2 days ago,added about page rendering, setup about page and ejs partials
+a1ec320,Anthony Anonde,2 days ago,Merge pull request #20 from Olanetsoft/new-branch
+73854fd,olanetsoft,2 days ago,Updated Readme with Postman SignUp result
+54789bf,Anthony Anonde,2 days ago,Merge pull request #19 from Olanetsoft/new-branch
+fc90b13,Anthony Anonde,2 days ago,Merge pull request #18 from sixpathdev/develop
+19848de,olanetsoft,2 days ago,Updated Readme with Postman Login result
+4dcba1e,sjdammy,2 days ago,added images folder
+001be1b,Frost199,2 days ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into git-ignore
+ac2c970,Miracle Gabriel,2 days ago,nodemon moved to devDependencies
+c70a03d,Miracle Gabriel,2 days ago,dead dependency removed
+6354c6d,Miracle Gabriel,2 days ago,excessive spacing removed
+6a27943,Miracle Gabriel,2 days ago,abbreviation used in route.js changed to full word
+4c8d2e2,Miracle Gabriel,2 days ago,Variable typo fixed
+c3d2cf5,Miracle Gabriel,2 days ago,Replaced body-parser middleware with the express.json()
+e999a07,robertechie,2 days ago,Merge pull request #15 from Frost199/git-ignore
+bfd1c79,sjdammy,2 days ago,created public folder for assets and moved index stylesheet
+58b4bc5,Seweje Damilola John,2 days ago,Merge pull request #2 from AbdussamiG/patch-3
+19bcc7f,robertechie,2 days ago,Merge pull request #9 from youngGaf/login-appTest
+d8db86d,Anthony Anonde,2 days ago,Merge pull request #14 from Olanetsoft/new-branch
+a2977b8,AbdussamiG,2 days ago,Removed meta tags
+4444905,robertechie,2 days ago,Merge pull request #16 from thebolarin/dev
+b1213c6,AbdussamiG,2 days ago,requested update
+711b4d1,AbdussamiG,2 days ago,added the html code for the navbar
+fe2ab4d,Odutusin moses,2 days ago,Delete this file
+d28ff09,Seweje Damilola John,2 days ago,Merge pull request #1 from AbdussamiG/patch-1
+40cb44e,AbdussamiG,2 days ago,added for the navbar
+ad59c06,sjdammy,2 days ago,linked stylesheet to page
+74079c0,thebolarin,2 days ago,Merge branch 'master' of https://github.com/hngi/Team-Incredible-BE into dev
+6538b43,thebolarin,2 days ago,Signup test
+5d108d2,sjdammy,2 days ago,added boilerplate for index page and stylesheet
+651b37d,Frost199,2 days ago,Merge branch 'develop' of https://github.com/hngi/Team-Incredible-BE into git-ignore
+63b8021,deeone2,2 days ago,assets folder added
+e40de15,olanetsoft,2 days ago,Fixed registered engine path
+7b0af0c,Anthony Anonde,2 days ago,Merge pull request #11 from hngi/develop
+6345796,youngGaf,2 days ago,Commit to test
+9f5e1ef,youngGaf,2 days ago,commits to match upstream
+91897fe,youngGaf,2 days ago,commits to match upstream
+ef485e5,tonymj76,2 days ago,add comment
+f9b4c68,tonymj76,2 days ago,hotfix
+df13540,tonymj76,2 days ago,update
+6caea5f,tonymj76,2 days ago,add files
+f054593,tonymj76,2 days ago,dep
+2a5da24,tonymj76,2 days ago,change port
+1a3bed3,tonymj76,2 days ago,add ejs engine
+85ad59a,youngGaf,2 days ago,updated app.test.js
+0dc47f0,youngGaf,2 days ago,Added mocha
+5ba6e47,AbdussamiG,2 days ago,Delete style.css
+14527b5,AbdussamiG,2 days ago,create styles.css
+fea32c2,youngGaf,2 days ago,my commit
+7ea92f0,AbdussamiG,2 days ago,Rename Pages/Front-Page/Navbar/index.html to Pages/front-page/index.html
+8461ded,AbdussamiG,2 days ago,Delete pages
+8e9298c,AbdussamiG,2 days ago,Delete navbar
+334baa8,AbdussamiG,2 days ago,Create navbar
+abd1d00,AbdussamiG,2 days ago,Create pages
+9001c29,AbdussamiG,2 days ago,created a style.css file
+1b2e73a,AbdussamiG,2 days ago,create index.html for the navber
+a07fdfb,Frost199,2 days ago,chore: Update to .gitignore
+30afd96,Anthony Anonde,2 days ago,Merge pull request #4 from hngi/setup
+a9ee78a,youngGaf,2 days ago,Commit by Gafar_01 Unit test1
+2984445,tonymj76,2 days ago,hotfix
+1bcbb2c,tonymj76,2 days ago,user model
+1a20b2b,tonymj76,2 days ago,auth
+7b3a473,tonymj76,2 days ago,controller
+b9c56c3,tonymj76,2 days ago,dep
+1a9c714,tonymj76,2 days ago,json test data
+b204288,tonymj76,2 days ago,server entrypoint
+4c55ecb,tonymj76,2 days ago,read me file
+3deab38,tonymj76,2 days ago,package
+c4ef5cb,tonymj76,2 days ago,hot fix
+a27267e,tonymj76,2 days ago,config file
+14eaada,tonymj76,2 days ago,app setup
+831d9e4,tonymj76,2 days ago,dev dep
+832c922,tonymj76,2 days ago,routes
+463c01d,tonymj76,2 days ago,lock
+2f5a471,tonymj76,2 days ago,eslint
+13a356c,Timothy Mayor,2 days ago,Merge pull request #1 from robertechie/master
+6ed73a7,deeone2,2 days ago,commitment
+62f7133,Timothy Mayor,3 days ago,Initial commit
