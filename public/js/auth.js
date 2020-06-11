@@ -7,15 +7,16 @@ class CreateApi{
         //  mode: "same-origin",
         //  credentials: "same-origin",
         userdata,
-         { headers: {
+         {headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
                 }
-            },
+            },{
+                timeout:1000
+            }
         )
 return savedata
-        
-
 }
+//login method will follow
 
 }
