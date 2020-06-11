@@ -120,3 +120,4 @@ dist
 .vscode
 nbproject
 package-lock.json
+log.csv
