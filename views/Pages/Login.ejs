@@ -46,12 +46,12 @@
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.email %></div>
                     <% } %>
-                    <input class="login-input" type="email" id="email" name="email" />
+                    <input class="login-input" type="email" id="email" name="email" required />
                     <label for="password">Password</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.password %></div>
                     <% } %>
-                    <input class="login-input" type="password" id="password" name="password" />
+                    <input class="login-input" type="password" id="password" name="password" required/>
                     <a class="form-link" href="/register">Forgot Password?</a>
                     <br>
                     <button class="login-btn" type="submit">Login</button>
