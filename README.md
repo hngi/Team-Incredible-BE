@@ -45,65 +45,46 @@ The test is targeted at the _./test/unit/**_ folder
 **Login**  :key:
 
 ```
- POST api/v1/login
-    Signing in with a verified email and password
-      ✓ should respond 200
-    Signing in with an uverified email and password
-      ✓ should respond with 404
+    Test the login page
+        Test to cheeck if email and password exists
+            Signing in with a verified email and password
+                ✓ should respond 200
+            Signing in with an unerified email and password
+            ✓ should respond with 404
 ``` 
 
 **Signup** :door:
 
 ```
-Signup Fields Tests
-    ✓ it should get the first name
-    ✓ it should get the last name
-    ✓ it should get the phone number format 1
-    ✓ it should get the phone number format 2
-    ✓ it should get a valid email
-    ✓ password should be 8 chars or more and must contain
-      at least 1 lowercase, uppercase, numeric and special characters
-    ✓ it should confirm password
-
   Test the signup page
+    Test to check if all fields
+      ✓ should verify if all fields are entered correctly
+      ✓ verify if it sends an error message if 
+        all fields are empty
+
     Test to check if password mactch
-      ✓ should return false if password and confirmpassword don't match
-      ✓ should return true if password and confirmpassword don't match
-    Test to check the length of string
-      ✓ should return false if length of string less than 5
-      ✓ should return true if length of string greater than 5
-    email should be a valid email
+      ✓ should return false if password and 
+        confirmpassword don't match
+      ✓ should return true if password and 
+        confirmpassword don't match
+      
+    Test to check if password fiels is not empty
+      ✓ verify if it sends an error message if 
+        password field is empty
+
+    Test to check if email is a valid email
       ✓ should return false if email is invalid
-      ✓ should return true if email is valid
+      ✓ should return true if email is valid'
 
-POST /api/v1/registration
-    ✓ should verify if all fields are entered correctly
-    ✓ verify if it sends an error message if first name field is 
-      not filled and entered
-    ✓ verify if it sends an error message if first name field  
-      contains only strings
-    ✓ verify if it sends an error message if last name field 
-      is not filled and entered
-    ✓ verify if it sends an error message if last name field 
-      contains only strings
-    ✓ verify if it sends an error message if email field is
-      not filled and entered
-    ✓ verify if it sends an error message if email field is not
-      in the right format
-    ✓ verify if it sends an error message if phone field
-      contains a string
-    ✓ verify if it sends an error message if password field is empty
-    ✓ verify if it sends an error message if password field does 
-      not math confirm password field
-    ✓ verify if it sends an error message if password field is weak
-    ✓ verify if it sends an error message if all fields are empty
+    Test to check if email field is not empty
+      ✓ verify if it sends an error message if email field is
+        not filled and entered
+    
+    Test to check if email is not in right format
+      ✓ verify if it sends an error message if email field is not
+        in the right format
 ```
 
 
-##### Result :tada:
-```
-27 passing ✓
- 0 failing x
-``` 
 
 ##  :eight_spoked_asterisk: Docker
