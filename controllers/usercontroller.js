@@ -5,7 +5,7 @@ const apiUrl = 'https://hngi7-team-avengers.herokuapp.com/api/v1';
 
 // This will be an external dashborad url to task 9
 
-const dashboardUrl = '/mydashboard';
+const dashboardUrl = 'https://dashboard.microapi.dev/';
 
 //  Middleware
 exports.isAuthenticated = (req, res, next) => {
@@ -50,7 +50,7 @@ exports.login = (req, res) => {
     res.redirect(`/dashboard?token=${token}`);
   }).catch((err) => {
     res.render('Pages/Login', {
-      error: err.response.data,
+      error: err.response ? err.response.data : '',
       successMsg: null,
     });
   });
@@ -61,16 +61,23 @@ exports.logout = (req, res) => {
   return res.redirect('/');
 };
 
+
 exports.dashboard = (req, res) => {
   const token = req.cookies.auth;
-  res.redirect(`${dashboardUrl}?token=${token}`);
+  res.redirect(307, `${dashboardUrl}?token=${token}`);
 };
 
 exports.googleauth = (req, res) => {
   axios.get(
-    `${apiUrl}/google-signin`,
+    `${apiUrl}/google/signin`,
   ).then((resp) => {
     const { response } = resp.data;
     res.redirect(response);
   });
+};
+
+exports.googlecallback = (req, res) => {
+  const { code } = req.query;
+  res.cookie('auth', code);
+  res.redirect('/dashboard');
 };

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IMAGENAME=microservice
-PORT=8000
+PORT=8001
 
 echo "Building $IMAGENAME docker image"
 docker build -t $IMAGENAME .

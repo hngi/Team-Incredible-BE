@@ -37,6 +37,7 @@ appRoute.post('/register', user.signup);
 appRoute.get('/logout', user.isAuthenticated, user.logout);
 appRoute.get('/dashboard', user.isAuthenticated, user.dashboard);
 appRoute.get('/googleauth', user.googleauth);
+appRoute.get('/google/callback', user.googlecallback);
 
 
 module.exports = appRoute;
