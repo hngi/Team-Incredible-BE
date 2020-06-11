@@ -40,9 +40,9 @@ yarn test
 ```
 The test is targeted at the _./test/unit/**_ folder
 
-Test written  
+##### Test written  :bulb:
 
-**Login**  
+**Login**  :key:
 
 ```
  POST api/v1/login
@@ -52,7 +52,7 @@ Test written
       ✓ should respond with 404
 ``` 
 
-**Signup**
+**Signup** :door:
 
 ```
 Signup Fields Tests
@@ -100,7 +100,7 @@ POST /api/v1/registration
 ```
 
 
-
+##### Result :tada:
 ```
 27 passing ✓
  0 failing x
