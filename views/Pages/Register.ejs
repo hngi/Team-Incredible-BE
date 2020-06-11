@@ -16,7 +16,7 @@
         <div class="signup-container">
 
             <h1 class="signup-title">
-                SignUp To MicroAPI
+                SignUP To MicroAPI
             </h1>
             <div class="google-signup-btn">
                 <img class="signup-icon"
@@ -24,7 +24,7 @@
                 <!-- <i class="fab fa-google signup-icon"></i> -->
                 <button class="google-btn">
                     <a href='/googleauth'>
-                       Signup with Google
+                        Signup with Google
                     </a>
                 </button>
             </div>
@@ -37,17 +37,18 @@
                 <form class="signup-form" action="/register" method="POST">
 
                     <label for="email">Email</label>
-                     <%if (error !== null) { %>
+                    <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.email %></div>
                     <% } %>
-                    <input class="signup-input" type="text" id="email" name="email" <%- (data) &&  `value=${data.email}` %>>
-                   
+                    <input class="signup-input" type="text" id="email" name="email"
+                        <%- (data) &&  `value=${data.email}` %>>
+
                     <label for="password">Password</label>
-                     <%if (error !== null) { %>
+                    <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.password %></div>
                     <% } %>
                     <input class="signup-input" type="password" id="password" name="password" />
-                   
+
                     <label for="confirmPassword">Confirm Password</label>
                     <%if (error !== null) { %>
                     <div style="color: red;"><%= error.response.confirmPassword %></div>
