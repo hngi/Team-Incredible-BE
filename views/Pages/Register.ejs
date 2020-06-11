@@ -34,7 +34,7 @@
                 <hr />
             </div>
             <div class="form">
-                <form class="signup-form" action="/register" method="POST">
+                <form id="regis" class="signup-form" action="/register" method="POST">
                     <label for="email">Email</label>
 
                     <input class="signup-input" type="text" id="email" name="email"
@@ -55,9 +55,9 @@
                     <button class="signup-btn" type="submit">Sign Up</button>
 
                     <div class="messages">
-                      
-                   </div>
-                
+
+                    </div>
+
 
                     <p class="form-link">Already have an account? <a class="form-link" href="/login">Login</a></p>
 
@@ -71,6 +71,10 @@
     </div>
 
     <footer>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/app.js"></script>
         <%- include('../template/footer') %>
     </footer>
 </body>

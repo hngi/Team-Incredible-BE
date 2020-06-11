@@ -38,7 +38,7 @@
                 <%if (successMsg !== null) { %>
                 <div style="color: green;"><%= successMsg %></div>
                 <% } %>
-                <form class="login-form" action="/login" method="POST">
+                <form id="login" class="login-form" action="/login" method="POST">
                     <%if (error && typeof error.response === 'string') { %>
                     <div  class='login-error-response'><%= error.response %></div>
                     <% } %>
@@ -65,7 +65,10 @@
 
         </div>
     </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/login.js"></script>
     <!-- @olanetsoft -->
     <%- include('../template/footer') %>
     <!-- @olanetsoft -->

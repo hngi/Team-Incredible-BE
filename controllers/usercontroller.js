@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-boolean-cast */
 const axios = require('axios');
 
-const apiUrl = 'https://hngi7-team-avengers.herokuapp.com/api/v1';
+const apiUrl = 'http://auth.microapi.dev/v1';
 
 // This will be an external dashboard url to task 9
 
@@ -17,7 +17,7 @@ exports.isAuthenticated = (req, res, next) => {
 
 exports.isLoggedIn = (req, res, next) => {
   if (!!req.cookies.auth) {
-    res.redirect('/dashboard');
+    res.redirect(dashboardUrl);
   }
   return next();
 };
@@ -30,12 +30,15 @@ exports.signup = (req, res) => {
   ).then(() => {
     const string = encodeURIComponent('You have successfully signup, please login');
     res.redirect(`/login?successMsg=${string}`);
-  }).catch((err) => {
+  }).then(() => {
     res.render('Pages/Register', {
       error: err.response.data,
       data,
     });
-  });
+  })
+    .catch((err) => {
+      console.log(err)
+    });
 };
 
 
@@ -48,11 +51,13 @@ exports.login = (req, res) => {
     const { token } = response.data;
     res.cookie('auth', token);
     return res.redirect(`/dashboard?token=${token}`);
-  }).catch((err) => {
+  }).then(() => {
     res.render('Pages/Login', {
       error: err.response ? err.response.data : '',
       successMsg: null,
     });
+  }).catch((err) => {
+    console.log(err)
   });
 };
 
