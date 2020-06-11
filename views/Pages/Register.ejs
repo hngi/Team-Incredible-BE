@@ -38,20 +38,20 @@
 
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.email %></div>
+                    <div class='signup-error'><%= error.response.email %></div>
                     <% } %>
                     <input class="signup-input" type="text" id="email" name="email"
                         <%- (data) &&  `value=${data.email}` %>>
 
                     <label for="password">Password</label>
                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.password %></div>
+                    <div class='signup-error'><%= error.response.password %></div>
                     <% } %>
                     <input class="signup-input" type="password" id="password" name="password" />
 
                     <label for="confirmPassword">Confirm Password</label>
                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.confirmPassword %></div>
+                    <div class='signup-error'><%= error.response.confirmPassword %></div>
                     <% } %>
                     <input class="signup-input" type="password" id="confirmPassword" name="confirmPassword" />
                     <button class="signup-btn" type="submit">Sign Up</button>

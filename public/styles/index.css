@@ -766,6 +766,12 @@ footer p:not(:last-child) {
   margin: 0 auto 15px auto;
 }
 
+.signup-form .signup-error {
+  color: #ff0000;
+  width: 80%;
+  margin: 0 auto 8px auto;
+}
+
 .signup-input {
   border: 1px solid #b8b8b8;
   padding: 10px;
