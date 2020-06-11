@@ -1,4 +1,3 @@
-/* eslint-disable */
 const express = require("express");
 const user = require("../controllers/usercontroller");
 
@@ -8,12 +7,12 @@ appRoute.get('/', (req, res) => {
   res.render('index', { variable: 'Hello Guys' });
 });
 
-appRoute.get('/mydashboard', (req,res)=>{
-    const token = req.query.token
-    res.render('Pages/Dash',{
-        token
-    })
-})
+appRoute.get('/mydashboard', (req, res) => {
+  const { token } = req.query;
+  res.render('Pages/Dash', {
+    token,
+  });
+});
 
 appRoute.get('/about', (req, res) => {
   res.render('Pages/About');
@@ -21,16 +20,16 @@ appRoute.get('/about', (req, res) => {
 
 appRoute.get('/register', user.isLoggedIn, (req, res) => {
   res.render('Pages/Register', {
-      error: null,
-      data: null
+    error: null,
+    data: null,
   });
 });
 
 appRoute.get('/login', user.isLoggedIn, (req, res) => {
-    const successMsg = req.query.successMsg
+  const { successMsg } = req.query;
   res.render('Pages/Login', {
-      successMsg,
-      error: null
+    successMsg,
+    error: null,
   });
 });
 appRoute.post('/login', user.login);
