@@ -38,7 +38,7 @@
                 <%if (successMsg !== null) { %>
                 <div style="color: green;"><%= successMsg %></div>
                 <% } %>
-                <form class="login-form" action="/login" method="POST">
+                <form id="regis" class="login-form" action="/login" method="POST">
                     <%if (error && typeof error.response === 'string') { %>
                     <div  style="color: red; text-align: center;"><%= error.response %></div>
                     <% } %>
@@ -65,7 +65,6 @@
 
         </div>
     </div>
-
     <!-- @olanetsoft -->
     <%- include('../template/footer') %>
     <!-- @olanetsoft -->

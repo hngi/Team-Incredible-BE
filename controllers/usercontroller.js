@@ -17,7 +17,7 @@ exports.isAuthenticated = (req, res, next) => {
 
 exports.isLoggedIn = (req, res, next) => {
   if (!!req.cookies.auth) {
-    res.redirect('/dashboard');
+    res.redirect(dashboardUrl);
   }
   return next();
 };
@@ -30,12 +30,16 @@ exports.signup = (req, res) => {
   ).then(() => {
     const string = encodeURIComponent('You have successfully signup, please login');
     res.redirect(`/login?successMsg=${string}`);
-  }).catch((err) => {
+  }).then(() => {
     res.render('Pages/Register', {
       error: err.response.data,
       data,
     });
-  });
+  })
+
+    .catch((err) => {
+      return console.log(err)
+    });
 };
 
 
