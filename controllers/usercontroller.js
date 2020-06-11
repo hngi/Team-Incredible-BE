@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-boolean-cast */
 const axios = require('axios');
 
-const apiUrl = 'https://auth.microapi.com/api/v1';
+const apiUrl = 'http://auth.microapi.dev/v1';
 
 // This will be an external dashboard url to task 9
 
@@ -36,9 +36,8 @@ exports.signup = (req, res) => {
       data,
     });
   })
-
     .catch((err) => {
-      return console.log(err)
+      console.log(err)
     });
 };
 
@@ -52,11 +51,13 @@ exports.login = (req, res) => {
     const { token } = response.data;
     res.cookie('auth', token);
     return res.redirect(`/dashboard?token=${token}`);
-  }).catch((err) => {
+  }).then(() => {
     res.render('Pages/Login', {
       error: err.response ? err.response.data : '',
       successMsg: null,
     });
+  }).catch((err) => {
+    console.log(err)
   });
 };
 
