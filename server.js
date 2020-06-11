@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
-const http = require('http');
-const config = require('./config');
-const app = require('./app');
+const http = require("http");
+const config = require("./config");
+const app = require("./app");
 
 const normalizerPort = (val) => {
   const port = parseInt(val, 10);
@@ -15,23 +15,24 @@ const normalizerPort = (val) => {
   return false;
 };
 const port = normalizerPort(config.port);
-app.set('port', port);
+app.set("port", port);
 
 const server = http.createServer(app);
 
 const errorHandler = (error) => {
-  if (error.syscal !== 'listen') {
+  if (error.syscal !== "listen") {
     throw error;
   }
 
   const address = server.address();
-  const bind = typeof address === 'string' ? `pipe ${address}` : `port: ${port}`;
+  const bind =
+    typeof address === "string" ? `pipe ${address}` : `port: ${port}`;
   switch (error.code) {
-    case 'EACCES':
+    case "EACCES":
       console.error(`${bind} requires elevated privileges.`);
       process.exit(1);
       break;
-    case 'EADDRINUSE':
+    case "EADDRINUSE":
       console.error(`${bind} is already in use.`);
       process.exit(1);
       break;
@@ -40,13 +41,13 @@ const errorHandler = (error) => {
   }
 };
 
-server.on('error', errorHandler);
-server.on('listening', () => {
+server.on("error", errorHandler);
+server.on("listening", () => {
   const address = server.address();
-  const bind = typeof address === 'string' ? `pipe ${address}` : `port ${port}`;
+  const bind = typeof address === "string" ? `pipe ${address}` : `port ${port}`;
   console.log(`Listening on ${bind}`);
 });
 
 server.listen(port);
 
-module.exports = server
+module.exports = server;

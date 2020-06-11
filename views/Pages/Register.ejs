@@ -19,9 +19,14 @@
                 SignUP To MicroAPI
             </h1>
             <div class="google-signup-btn">
-                <img class="signup-icon" src="<%= ('../images/giigke.png')%>" />
+                <img class="signup-icon"
+                    src="https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804664/incredible%20project/giigke_t85qnf.png" />
                 <!-- <i class="fab fa-google signup-icon"></i> -->
-                <button class="google-btn">Signup with Google</button>
+                <button class="google-btn">
+                    <a href='/googleauth'>
+                        Signup with Google
+                    </a>
+                </button>
             </div>
             <div class="or">
                 <hr />
@@ -33,9 +38,20 @@
                     <label for="fullName">Full Name</label>
                     <input class="signup-input" type="text" id="fullName" name="fullName" />
                     <label for="email">Email</label>
+                    <%if (error !== null) { %>
+                    <div style="color: red;"><%= error.response.email %></div>
+                    <% } %>
                     <input class="signup-input" type="email" id="email" name="email" />
                     <label for="password">Password</label>
+                    <%if (error !== null) { %>
+                    <div style="color: red;"><%= error.response.password %></div>
+                    <% } %>
                     <input class="signup-input" type="password" id="password" name="password" />
+                    <label for="confirmPassword">Confirm Password</label>
+                    <%if (error !== null) { %>
+                    <div style="color: red;"><%= error.response.confirmPassword %></div>
+                    <% } %>
+                    <input class="signup-input" type="password" id="confirmPassword" name="confirmPassword" />
                     <button class="signup-btn" type="submit">Sign Up</button>
                     <p class="form-link">Already have an account? <a class="form-link" href="/login">Login</a></p>
                 </form>

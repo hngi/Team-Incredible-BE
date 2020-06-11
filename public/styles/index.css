@@ -679,7 +679,6 @@ footer p:not(:last-child) {
   /* @tomii and @charles onuorah - footer section end */
 }
 
-
 /* @Xemicolon & @OlufemiPio */
 
 .signup-form-container {
@@ -713,10 +712,15 @@ footer p:not(:last-child) {
   cursor: pointer;
 }
 
+.google-btn a {
+  text-decoration: none;
+  color: red;
+}
+
 .google-btn:hover {
   border: 2px solid #bf2c2c;
   color: #bf2c2c;
-  transition: .5s all;
+  transition: 0.5s all;
 }
 
 .google-signup-btn img {
@@ -760,11 +764,10 @@ footer p:not(:last-child) {
   font-size: 16px;
   width: 80%;
   margin: 0 auto 15px auto;
-
 }
 
 .signup-input {
-  border: 1px solid #B8B8B8;
+  border: 1px solid #b8b8b8;
   padding: 10px;
   border-radius: 10px;
   height: 40px;
@@ -774,7 +777,7 @@ footer p:not(:last-child) {
 
 .signup-btn {
   padding: 25px;
-  background-color: #31AA52;
+  background-color: #31aa52;
   border-radius: 10px;
   font-size: 18px;
   color: #fff;
@@ -787,7 +790,7 @@ footer p:not(:last-child) {
 
 .signup-btn:hover {
   background-color: #2dc556;
-  transition: .5s background-color;
+  transition: 0.5s background-color;
 }
 
 .form-link {
@@ -797,27 +800,26 @@ footer p:not(:last-child) {
 }
 
 .form-link a {
-  color: #31AA52;
+  color: #31aa52;
   text-decoration: none;
 }
 
 .signup-img {
   width: 50%;
-  background-image: url(/images/flower.png);
+  background-image: url(https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804693/incredible%20project/flower_twa5ig.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .google-btn {
-    font-size: 18px;
     padding-left: 60px;
     width: auto;
   }
 
   .google-signup-btn img {
-    padding: 20px;
-    width: 65px;
+    padding: 15px;
+    width: 53px;
   }
 
   .signup-form {
@@ -827,7 +829,6 @@ footer p:not(:last-child) {
   .signup-form label {
     font-size: 16px;
     margin-bottom: 10px;
-
   }
 }
 
@@ -878,7 +879,6 @@ footer p:not(:last-child) {
 
   .google-btn {
     padding: 15px;
-    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
@@ -917,7 +917,6 @@ footer p:not(:last-child) {
 
   .form-link {
     font-size: 14px;
-
   }
 }
 
@@ -936,7 +935,6 @@ footer p:not(:last-child) {
 
   .google-btn {
     padding: 15px;
-    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
@@ -997,7 +995,6 @@ footer p:not(:last-child) {
 
   .google-btn {
     padding: 15px;
-    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
