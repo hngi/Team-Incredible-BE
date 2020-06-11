@@ -1,5 +1,6 @@
 /* @Tobecci & @Olanetsoft */
 
+
 .login-form-container {
   width: 100%;
   display: flex;
@@ -7,34 +8,46 @@
 
 .login-container {
   width: 50%;
-  padding: 50px 20px;
+  padding: 30px 0px 30px 0px;
   margin: 0 auto;
   text-align: center;
 }
 
 .login-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 30px;
-  margin-top: -30px;
+  margin-top: -15px;
 }
 
-.google-l-btn {
-  padding: 20px;
+.google-btn {
+  height: 55px;
+  padding: 0 20px;
   background-color: transparent;
   border: 2px solid red;
   border-radius: 10px;
-  font-size: 20px;
-  width: 70%;
+  font-size: 14px;
   color: red;
   font-weight: 700;
   padding-left: 50px;
+  cursor: pointer;
 }
 
-.google-l-btn img {
+.google-btn a {
+  text-decoration: none;
+  color: red;
+}
+
+.google-btn:hover {
+  border: 2px solid #bf2c2c;
+  color: #bf2c2c;
+  transition: 0.5s all;
+}
+
+.google-login-btn img {
   position: absolute;
-  padding: 18px 12px 12px 18px;
-  width: 60px;
+  padding: 18px 13px 0px 15px;
+  width: 45px;
 }
 
 .google-login-btn {
@@ -56,7 +69,7 @@
 
 .or span {
   padding: 0px 20px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -64,20 +77,29 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 45px;
+  padding: 15px;
 }
 
 .login-form label {
   font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto 15px auto;
+}
+
+.login-form .login-error {
+  color: #ff0000;
+  width: 80%;
+  margin: 0 auto 8px auto;
 }
 
 .login-input {
-  border: 2px solid #b8b8b8;
-  padding: 20px;
+  border: 1px solid #b8b8b8;
+  padding: 10px;
   border-radius: 10px;
-  margin-bottom: 50px;
+  height: 40px;
+  margin: 0 auto 25px auto;
+  width: 80%;
 }
 
 .login-btn {
@@ -88,10 +110,14 @@
   color: #fff;
   font-weight: 600;
   margin-bottom: 50px;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto 35px auto;
 }
 
 .login-btn:hover {
   background-color: #2dc556;
+  transition: 0.5s background-color;
 }
 
 .form-link {
@@ -113,15 +139,14 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .google-l-btn {
-    font-size: 18px;
+  .google-btn {
     padding-left: 60px;
     width: auto;
   }
 
   .google-login-btn img {
-    padding: 20px;
-    width: 65px;
+    padding: 15px;
+    width: 53px;
   }
 
   .login-form {
@@ -135,61 +160,36 @@
 }
 
 /* @media screen and (min-width: 320px) and (max-width: 767px) {
-    .login-form-container {
-      flex-direction: column;
-    }
-  
-    .login-container {
-      width: 100%;
-    }
-  
-    .login-img {
-      display: none;
-    }
-  
-    .google-btn {
-      padding: 15px;
-      font-size: 16px;
-      height: 50px;
-      padding-left: 55px;
-      width: auto;
-    }
-  
-    .google-login-btn img {
-      padding: 12px;
-      width: 50px;
-    }
-  
-    .login-form {
-      padding: 45px;
-    }
-  
-  } */
-
-@media(min-width: 570px) {
-
   .login-form-container {
-    width: 60% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    height: 100vh !important;
+    flex-direction: column;
+  }
+
+  .login-container {
+    width: 100%;
+  }
+
+  .login-img {
+    display: none;
+  }
+
+  .google-btn {
+    padding: 15px;
+    font-size: 16px;
+    height: 50px;
+    padding-left: 55px;
+    width: auto;
+  }
+
+  .google-login-btn img {
+    padding: 12px;
+    width: 50px;
   }
 
   .login-form {
-    padding: 5px !important;
-    /* text-align: center !important; */
+    padding: 45px;
   }
 
-  .login-input {
-    height: 40px !important;
-    padding: 6px !important;
-    margin-bottom: 10px !important;
-  }
-
-  .login-title {
-    margin-top: 70px !important;
-  }
-}
+} */
 
 @media screen and (max-width: 320px) {
   .login-form-container {
@@ -206,7 +206,6 @@
 
   .google-btn {
     padding: 15px;
-    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
@@ -254,7 +253,7 @@
   }
 
   .login-container {
-    width: 100%;
+    width: 100% !important;
   }
 
   .login-img {
@@ -263,7 +262,6 @@
 
   .google-btn {
     padding: 15px;
-    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
@@ -310,8 +308,12 @@
     flex-direction: column;
   }
 
+  /* .login-input {
+    width: auto;
+  } */
+
   .login-container {
-    width: 100%;
+    width: 85%;
   }
 
   .login-img {
@@ -320,7 +322,6 @@
 
   .google-btn {
     padding: 15px;
-    font-size: 16px;
     height: 50px;
     padding-left: 55px;
     width: auto;
