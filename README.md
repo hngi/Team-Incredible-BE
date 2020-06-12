@@ -2,15 +2,16 @@
 
 ![Node.js CI](https://github.com/hngi/Team-Incredible-BE/workflows/Node.js%20CI/badge.svg?branch=develop)
 
--   [:notebook_with_decorative_cover: Overview](#notebook_with_decorative_cover-overview)
--   [:gear: Installation and running server (Development)](#gear-installation-and-running-server)
--   [:cloud: API](#cloud-api)
--   [:eight_spoked_asterisk: Docker(Production)](#eight_spoked_asterisk-docker)
+-   [Overview :notebook_with_decorative_cover:](#overview-notebook_with_decorative_cover)
+-   [Installation and running server (Development) :gear:](#installation-and-running-server-gear)
+-   [API :cloud_with_lightning:](#api-cloud_with_lightning)
+-   [Docker(Production) :eight_spoked_asterisk:](#docker-eight_spoked_asterisk)
+-   [Links :link:](#links-link)
 
-## :notebook_with_decorative_cover: Overview
+## Overview :notebook_with_decorative_cover: 
 This is a the microdev.api website designed by Team-Incredibles
 
-## :gear: Installation and running server
+## Installation and running server :gear:
 * Clone the repo to your local machine using your _terminal_ or _command prompt_, and afterwards, navigate into the root folder  
 ```shell script
 $ cd Team-Incredible-BE
@@ -29,7 +30,7 @@ Listening on port 3000
 
 point your browser to ```localhost:3000```
 
-## :cloud: API
+## API :cloud_with_lightning: 
 Two API's were consumed for the development of this project
 * Login API
 * Registration API  
@@ -87,4 +88,37 @@ The test is targeted at the _./test/unit/**_ folder
 
 
 
-##  :eight_spoked_asterisk: Docker
+##  Docker :eight_spoked_asterisk:  
+So, the server is running on a linux os, and containerized with docker.  
+The following steps needs to be taken  
+
+* Run a ```$ ls -al``` command to see if _run_docker.sh_ is available in the projests' parent directory
+
+* Edit _run_docker.sh_ with the _nano_ command by inputting your desired name and port number in variables **IMAGENAME** and **Port**
+```$ nano run_docker.sh```
+
+* Make run_docker.sh an executable
+``$ chmod +x run_docker.sh`` which is in the project home directory
+
+* Edit your Nginx conf to proxy off **localhost:PORT** in _location_ block where 
+**PORT** (e.g 3000) is nodejs system default programmed port as found in the ```config.js``` file
+    ```
+     location / {
+                    proxy_pass http://localhost:Port;
+            }
+    ```
+
+* Execute the _run_doker.sh_ file
+```$ ./run_docker.sh```
+
+
+## Links :link:
+
+* Visit us at [Microapi](https://microapi.dev/)
+* [How to write an Nginx config file](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
+* [A better way to develop Node.js with Docker](https://hackernoon.com/a-better-way-to-develop-node-js-with-docker-cd29d3a0093)
+* [Writing tests with Mocha](https://mochajs.org/)
+
+
+### Contributors :book:
+* **Team-Incredible** :nerd_face:
