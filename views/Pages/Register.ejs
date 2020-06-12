@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-
     <%- include('../template/head') %>
 </head>
-
 <body>
     <header>
         <%- include('../template/header') %>
     </header>
     <div class="signup-form-container">
         <div class="signup-container">
-
-            <h1 class="signup-title">
-                SignUp To MicroAPI
-            </h1>
             <div class="google-signup-btn">
                 <img class="signup-icon"
                     src="https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804664/incredible%20project/giigke_t85qnf.png" />
-                <!-- <i class="fab fa-google signup-icon"></i> -->
                 <button class="google-btn">
                     <a href='/googleauth'>
-                       Signup with Google
+                        Signup with Google
                     </a>
                 </button>
             </div>
@@ -35,35 +27,30 @@
             </div>
             <div class="form">
                 <form class="signup-form" action="/register" method="POST">
-
                     <label for="email">Email</label>
-                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.email %></div>
-                    <% } %>
-                    <input class="signup-input" type="text" id="email" name="email" <%- (data) &&  `value=${data.email}` %>>
-                   
-                    <label for="password">Password</label>
-                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.password %></div>
-                    <% } %>
-                    <input class="signup-input" type="password" id="password" name="password" />
-                   
-                    <label for="confirmPassword">Confirm Password</label>
+
+                    <input class="signup-input" placeholder="Email address" type="email" id="email" name="email" required>
                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.confirmPassword %></div>
+                    <div class="email" style="color: red;"><%= error.response.email %></div>
                     <% } %>
-                    <input class="signup-input" type="password" id="confirmPassword" name="confirmPassword" />
+                    <label for="password">Password</label>
+                    <input class="signup-input" placeholder="Password" type="password" id="password" name="password" required />
+                    <%if (error !== null) { %>
+                    <div style="color: red;" class="password"><%= error.response.password %></div>
+                    <% } %>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input class="signup-input" placeholder="Confirm password" type="password" id="confirmPassword" name="confirmPassword" required />
+                    <%if (error !== null) { %>
+                    <div class="password" style="color: red;"><%= error.response.confirmPassword %></div>
+                    <% } %>
                     <button class="signup-btn" type="submit">Sign Up</button>
+                    <div class="messages"></div>
                     <p class="form-link">Already have an account? <a class="form-link" href="/login">Login</a></p>
                 </form>
             </div>
         </div>
-
-        <div class="signup-img">
-
-        </div>
+        <div class="signup-img"></div>
     </div>
-
     <footer>
         <%- include('../template/footer') %>
     </footer>

@@ -6,13 +6,16 @@
         <ul>
         	<li><a class="nav-link" href="/">Home</a></li>
         	<li><a class="nav-link" href="/about">About</a></li>
-        	<%if(isAuthenticated) { %>
+			<li><a class="nav-link" href="/login">Login</a></li>
+			<li> <a href="/register" class="btn btn-main">Register</a></li>
+			
+        	<!-- <%if(isAuthenticated) { %>
 			<li> <a href="/dashboard" class="btn btn-main">Dashboard</a></li>
 			<li> <a href="/logout" class="nav-link">Logout</a></li>
 			<% } else { %>
 			<li><a class="nav-link" href="/login">Login</a></li>
 			<li> <a href="/register" class="btn btn-main">Register</a></li>
-			<% } %>
+			<% } %> -->
 		</ul>
     </nav>
 </div>
