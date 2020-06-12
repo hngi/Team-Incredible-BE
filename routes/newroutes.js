@@ -43,6 +43,7 @@ appRoute.get('/forgotpassword', (req, res) => {
 
 appRoute.post('/login', user.login);
 appRoute.post('/register', user.signup);
+appRoute.post('/forget-password', user.forget);
 appRoute.get('/logout', user.isAuthenticated, user.logout);
 appRoute.get('/dashboard', user.isAuthenticated, user.dashboard);
 appRoute.get('/googleauth', user.googleauth);
