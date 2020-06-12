@@ -40,7 +40,7 @@
                 <% } %>
                 <form class="login-form" action="/login" method="POST">
                     <%if (error && typeof error.response === 'string') { %>
-                    <div  class='login-error-response'><%= error.response %></div>
+                    <div class='login-error-response'><%= error.response %></div>
                     <% } %>
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
@@ -51,12 +51,11 @@
                     <%if (error !== null) { %>
                     <div class='login-error'><%= error.response.password %></div>
                     <% } %>
-                    <input class="login-input" type="password" id="password" name="password" required/>
+                    <input class="login-input" type="password" id="password" name="password" required />
                     <a class="form-link forgot-password" href="/register">Forgot Password?</a>
                     <br>
                     <button class="login-btn" type="submit">Login</button>
-                    <p class="form-link">Don't have an account? <a class="form-link" href="/register">Click to
-                            Register</a></p>
+                    <p class="form-link">Don't have an account? <a class="form-link" href="/register">Register</a></p>
                 </form>
             </div>
         </div>
