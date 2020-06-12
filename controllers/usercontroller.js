@@ -32,7 +32,6 @@ exports.signup = (req, res) => {
   }).catch((err) => {
     res.render('Pages/Register', {
       error: err.response.data,
-      data,
     });
   });
 };
@@ -44,11 +43,10 @@ exports.forget = (req, res) => {
     data,
   ).then(() => {
     const string = encodeURIComponent(`Reset link sent to ${data.email}`);
-    res.redirect(`/Forgotpassword?successMsg=${string}`);
+    res.redirect(`/forgot-password?successMsg=${string}`);
   }).catch((err) => {
     res.render('Pages/Forgotpassword', {
       error: err.response.data,
-      data,
     });
   });
 };
@@ -65,8 +63,7 @@ exports.login = (req, res) => {
     return res.redirect('/dashboard');
   }).catch((err) => {
     res.render('Pages/Login', {
-      error: err.response ? err.response.data : '',
-      successMsg: null,
+      error: err.response.data,
     });
   });
 };
@@ -93,7 +90,7 @@ exports.googleauth = (req, res) => {
 
 exports.googlecallback = (req, res) => {
   const { code } = req.query;
-  if(!code) return res.redirect('/login');
+  if (!code) return res.redirect('/login');
   res.cookie('auth', code);
-  res.redirect('/dashboard');
+  return res.redirect('/dashboard');
 };

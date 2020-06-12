@@ -13,31 +13,26 @@ appRoute.get('/about', (req, res) => {
 });
 
 appRoute.get('/register', (req, res) => {
-  res.render('Pages/Register', {
-    error: null,
-    data: null,
-  });
+  res.render('Pages/Register');
 });
 
 appRoute.get('/login', (req, res) => {
   const { successMsg } = req.query;
   res.render('Pages/Login', {
     successMsg,
-    error: null,
   });
 });
 
-appRoute.get('/forgotpassword', (req, res) => {
+appRoute.get('/forgot-password', (req, res) => {
   const { successMsg } = req.query;
   res.render('Pages/Forgotpassword', {
     successMsg,
-    error: null,
   });
 });
 
 appRoute.post('/login', user.login);
 appRoute.post('/register', user.signup);
-appRoute.post('/forget-password', user.forget);
+appRoute.post('/forgot-password', user.forget);
 appRoute.get('/logout', user.isAuthenticated, user.logout);
 appRoute.get('/dashboard', user.isAuthenticated, user.dashboard);
 appRoute.get('/googleauth', user.googleauth);

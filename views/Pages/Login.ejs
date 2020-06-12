@@ -28,26 +28,29 @@
                 <hr />
             </div>
             <div class="form">
-                <%if (successMsg !== null) { %>
+                <%if (typeof error === 'string' && typeof error !== 'object') { %>
+                <div class="email" style="color: red;">An error has occurred, please try again in a few minutes</div>
+                <% } %>
+                <%if (typeof successMsg !== 'undefined') { %>
                 <div style="color: green;text-align: center;"><%= successMsg %></div>
                 <% } %>
                 <form class="login-form" action="/login" method="POST">
-                    <%if (error && typeof error.response === 'string') { %>
+                    <%if (typeof error !== 'undefined' && typeof error.response === 'string') { %>
                     <div class='login-error-response' style="text-align: center;"><%= error.response %></div>
                     <% } %>
                     <label for="email">Email</label>
-                    <%if (error !== null) { %>
+                    <%if (typeof error !== 'undefined' && typeof error === 'object') { %>
                     <div class='login-error'><%= error.response.email %></div>
                     <% } %>
                     <input class="login-input" type="email" placeholder="Email address" id="email" name="email"
                         required />
                     <label for="password">Password</label>
-                    <%if (error !== null) { %>
+                   <%if (typeof error !== 'undefined' && typeof error === 'object') { %>
                     <div class='login-error'><%= error.response.password %></div>
                     <% } %>
                     <input class="login-input" type="password" placeholder="Password" id="password" name="password"
                         required />
-                    <a class="form-link forgot-password" href="/forgotpassword">Forgot Password?</a>
+                    <a class="form-link forgot-password" href="/forgot-password">Forgot Password?</a>
                     <br>
                     <button class="login-btn" type="submit">Login</button>
                     <p class="form-link">Don't have an account?  <a class="form-link" href="/register">Click to
