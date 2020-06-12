@@ -76,7 +76,7 @@ exports.logout = (req, res) => {
 
 exports.dashboard = (req, res) => {
   const token = req.cookies.auth;
-  res.redirect(307, `${dashboardUrl}?token=${token}`);
+  return res.redirect(307, `${dashboardUrl}?token=${token}`);
 };
 
 exports.googleauth = (req, res) => {
