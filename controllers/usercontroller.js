@@ -83,6 +83,7 @@ exports.googleauth = (req, res) => {
 
 exports.googlecallback = (req, res) => {
   const { code } = req.query;
+  if(!code) return res.redirect('/login');
   res.cookie('auth', code);
   res.redirect('/dashboard');
 };
