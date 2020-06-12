@@ -18,7 +18,7 @@ const showAlert = (type, msg) => {
 class CreateApi {
     //save the information
     async Saveapi(userdata) {
-        const url = "http://auth.microapi.dev/v1/register";
+        const url = "https://auth.microapi.dev/v1/register";
 
         try {
             let savedata = await axios.post(url,
@@ -46,7 +46,7 @@ class CreateApi {
     //login method will follow
      //save the information
      async loginApi(userdata) {
-        const url = "http://auth.microapi.dev/v1/login";
+        const url = "https://auth.microapi.dev/v1/login";
 
         try {
             let savedata = await axios.post(url,
