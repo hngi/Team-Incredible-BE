@@ -18,20 +18,21 @@ appRoute.get('/about', (req, res) => {
   res.render('Pages/About');
 });
 
-appRoute.get('/register', user.isLoggedIn, (req, res) => {
+appRoute.get('/register', (req, res) => {
   res.render('Pages/Register', {
     error: null,
     data: null,
   });
 });
 
-appRoute.get('/login', user.isLoggedIn, (req, res) => {
+appRoute.get('/login',  (req, res) => {
   const { successMsg } = req.query;
   res.render('Pages/Login', {
     successMsg,
     error: null,
   });
 });
+
 appRoute.post('/login', user.login);
 appRoute.post('/register', user.signup);
 appRoute.get('/logout', user.isAuthenticated, user.logout);

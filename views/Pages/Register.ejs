@@ -35,25 +35,23 @@
             </div>
             <div class="form">
                 <form class="signup-form" action="/register" method="POST">
-
                     <label for="email">Email</label>
-                    <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.email %></div>
-                    <% } %>
+
                     <input class="signup-input" type="text" id="email" name="email"
                         <%- (data) &&  `value=${data.email}` %>>
-
+                    <%if (error !== null) { %>
+                    <div class="email" style="color: red;"><%= error.response.email %></div>
+                    <% } %>
                     <label for="password">Password</label>
-                    <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.password %></div>
-                    <% } %>
                     <input class="signup-input" type="password" id="password" name="password" />
-
-                    <label for="confirmPassword">Confirm Password</label>
                     <%if (error !== null) { %>
-                    <div style="color: red;"><%= error.response.confirmPassword %></div>
+                    <div style="color: red;" class="password"><%= error.response.password %></div>
                     <% } %>
+                    <label for="confirmPassword">Confirm Password</label>
                     <input class="signup-input" type="password" id="confirmPassword" name="confirmPassword" />
+                    <%if (error !== null) { %>
+                    <div class="password" style="color: red;"><%= error.response.confirmPassword %></div>
+                    <% } %>
                     <button class="signup-btn" type="submit">Sign Up</button>
 
                     <div class="messages">
