@@ -33,6 +33,14 @@ appRoute.get('/login', (req, res) => {
   });
 });
 
+appRoute.get('/forgotpassword', (req, res) => {
+  const { successMsg } = req.query;
+  res.render('Pages/Forgotpassword', {
+    successMsg,
+    error: null,
+  });
+});
+
 appRoute.post('/login', user.login);
 appRoute.post('/register', user.signup);
 appRoute.get('/logout', user.isAuthenticated, user.logout);
