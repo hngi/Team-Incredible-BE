@@ -400,7 +400,7 @@ describe('Test the signup page', function () {
 
 /**
  *
- * TEST 3
+ * TEST 3 AUTHOR- bolarin
  */
 
 
@@ -449,7 +449,6 @@ describe('POST /api/v1/registration', function () {
     request.agent(api)
            .post('/register')
            .send({
-            //  "email": 'johndoe@gmail.com',
              'password': 'garyTheSnail',
              'confirm_password': 'garyTheSnail',
            })
@@ -485,8 +484,6 @@ describe('POST /api/v1/registration', function () {
            .post('/register')
            .send({
              'email': 'johndoe@gmail.com',
-             // 'password': 'garyTheSnail',
-             // "confirm_password": 'garyTheSnail'
            })
            .expect('Content-Type', "text/html; charset=utf-8")
            .end((err, res) => {
