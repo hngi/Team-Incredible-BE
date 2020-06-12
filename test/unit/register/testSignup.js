@@ -19,15 +19,14 @@ const userSchema = Joi.object({
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
     .required(),
   password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
-  passwordConfirm: Joi.ref('password'),
-}).with('password', 'passwordConfirm');
+  confirmPassword: Joi.ref('password'),
+}).with('password', 'confirmPassword');
 
 const users = [
   {
     id: 1,
     email: 'adefemi101@gmail.com',
     password: '123456abc',
-    passwordConfirm: '123456abc',
   },
 ];
 
@@ -47,9 +46,7 @@ const createSendToken = (user, statusCode, res) => {
   res.status(statusCode).json({
     status: 'success',
     token,
-    data: {
-      user,
-    },
+    data: user,
   });
 };
 
@@ -67,7 +64,7 @@ app.post('/api/v1/users', (req, res) => {
     id: users.length + 1,
     email: req.body.email,
     password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
+    confirmPassword: req.body.confirmPassword,
   };
 
   users.push(user);
@@ -85,7 +82,7 @@ describe('User API', () => {
       const user = {
         email: 'hybee.dev@gmail.com',
         password: 'test1234',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
@@ -96,10 +93,29 @@ describe('User API', () => {
           if (err) console.log(err);
 
           res.should.have.status(201);
-          res.body.data.user.should.be.a('object');
+          res.body.data.should.be.a('object');
           res.body.should.have.property('token');
-          res.body.data.user.should.have.property('id');
-          res.body.data.user.should.have.property('email');
+          res.body.data.should.have.property('id');
+          res.body.data.should.have.property('email');
+        });
+      done();
+    });
+
+    it('It should NOT create a new user in the DB with same email', (done) => {
+      let emails = users.map((el) => el.email);
+
+      const user = {
+        email: 'hybee.dev@gmail.com',
+        password: 'test1234',
+        confirmPassword: 'test1234',
+      };
+
+      chai
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
+        .send(user)
+        .end((err, res) => {
+          if (emails[1] === user.email) res.should.have.status(400);
         });
       done();
     });
@@ -108,16 +124,14 @@ describe('User API', () => {
       const user = {
         email: '',
         password: 'test1234',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
           res.should.have.status(400);
         });
       done();
@@ -127,17 +141,19 @@ describe('User API', () => {
       const user = {
         email: 'hybee.dev@gmail.com',
         password: '',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
           res.should.have.status(400);
+          res.body.response.should.have.property('password');
+          res.body.response.password.should.be.eq(
+            'Password must be more than 5 characters'
+          );
         });
       done();
     });
@@ -146,17 +162,17 @@ describe('User API', () => {
       const user = {
         email: 'hybee.dev@gmail.com',
         password: 'test1234',
-        passwordConfirm: 'test12348',
+        confirmPassword: 'test12348',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
           res.should.have.status(400);
+          res.body.response.should.have.property('confirmPassword');
+          res.body.response.confirmPassword.should.be.eq('Password must match');
         });
       done();
     });
@@ -217,12 +233,12 @@ const functions = {
     return `${getField(password)}`;
   },
 
-  confirmPassword: (passwordConfirm) => {
-    if (!validateInput(passwordConfirm, true, false)) {
+  confirmPassword: (confirmPassword) => {
+    if (!validateInput(confirmPassword, true, false)) {
       return false;
     }
 
-    return `${getField(passwordConfirm)}`;
+    return `${getField(confirmPassword)}`;
   },
 };
 
