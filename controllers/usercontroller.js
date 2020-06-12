@@ -59,13 +59,13 @@ exports.login = (req, res) => {
 exports.forgot_password = (req, res) => {
   const data = req.body;
   axios.post(
-    `${apiUrl}/forgot_password`,
+    `${apiUrl}/forget_password`,
     data,
   ).then(() => {
-    const string = encodeURIComponent('You have successfully changed your password, please login');
+    // const string = encodeURIComponent('You have successfully changed your password, please login');
     res.redirect(`/login?successMsg=${string}`);
   }).catch((err) => {
-    res.render('Pages/Register', {
+    res.render('Pages/fPassword', {
       error: err.response.data,
       data,
     });
