@@ -1,5 +1,5 @@
-const express = require("express");
-const user = require("../controllers/usercontroller");
+const express = require('express');
+const user = require('../controllers/usercontroller');
 
 const appRoute = express.Router();
 
@@ -25,7 +25,7 @@ appRoute.get('/register', user.isLoggedIn, (req, res) => {
   });
 });
 
-appRoute.get('/login', user.isLoggedIn, (req, res) => {
+appRoute.get('/login', (req, res) => {
   const { successMsg } = req.query;
   res.render('Pages/Login', {
     successMsg,
