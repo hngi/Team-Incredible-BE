@@ -32,14 +32,7 @@ appRoute.get('/login', user.isLoggedIn, (req, res) => {
     error: null,
   });
 });
-appRoute.get('/forgot_password', user.isLoggedIn, (req, res) => {
-  res.render('Pages/fPassword', {
-    error: null,
-    data: null,
-  });
-});
 appRoute.post('/login', user.login);
-appRoute.post('/forgot_password', user.forgot_password);
 appRoute.post('/register', user.signup);
 appRoute.get('/logout', user.isAuthenticated, user.logout);
 appRoute.get('/dashboard', user.isAuthenticated, user.dashboard);
