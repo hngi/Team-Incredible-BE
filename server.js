@@ -49,4 +49,7 @@ server.on('listening', () => {
 
 server.listen(port);
 
+app.all('*', (req, res) => {
+  res.render('Pages/404-page');
+});
 module.exports = server;
