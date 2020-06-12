@@ -403,235 +403,147 @@ describe('Test the signup page', function () {
  * TEST 3
  */
 
-const request = require('supertest');
 
-let appTest;
+const request = require('supertest');
+const expect = require("chai").expect;
+const api = 'https://hngi7-team-avengers.herokuapp.com/api/v1';
+
 
 const userCredentials = {
-  first_name: 'Jane',
-  last_name: 'Doe',
-  email: 'johndoe@gmail.com',
-  phone: '07023455569',
-  password: 'garyTheSnail',
-  cpassword: 'garyTheSnail',
+  email: 'odutusinmoes@gmail.com',
+  password: 'test1234',
+  confirm_password: 'test123',
 };
+
 
 describe('POST /api/v1/registration', function () {
   beforeEach(function (done) {
-    appTest = require('../../../server');
+    api;
     userCredentials;
     done();
   });
 
-  afterEach(async () => {
-    await appTest.close();
-  });
-
+  // afterEach(async () => {
+  //   await api.close();
+  // });
+  
   it('should verify if all fields are entered correctly', function (done) {
     request
-      .agent(appTest)
-      .post('/register')
-      .send(userCredentials)
-      .expect(200)
-      .expect('Content-Type', /json/)
-      .expect('message', 'Registration successful');
-    done();
-  });
+    .agent(api)
+           .post('/register')
+           .send(userCredentials)
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(201); 
+            res.body.data.user.should.be.a('object');
+            res.body.should.not.to.empty;
+          });
+        done();
+      });
 
-  it('verify if it sends an error message if first name field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        last_name: 'Doe',
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+ 
 
-  it('verify if it sends an error message if first name field contains only strings', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: '123Jane',
-        last_name: 'Doe',
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
-
-  it('verify if it sends an error message if last name field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        // "last_name": "Doe",
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
-
-  it('verify if it sends an error message if last name field contains only strings', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: '123Jane',
-        last_name: 'D3546oe',
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
 
   it('verify if it sends an error message if email field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        // "email": 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+    request.agent(api)
+           .post('/register')
+           .send({
+            //  "email": 'johndoe@gmail.com',
+             'password': 'garyTheSnail',
+             'confirm_password': 'garyTheSnail',
+           })
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(400); 
+          });
+        done();
+      });
+
 
   it('verify if it sends an error message if email field is not in the right format', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+    request.agent(api)
+           .post('/register')
+           .send({
+             'email': 'johndoe',
+             'password': 'garyTheSnail',
+             'confirm_password': 'garyTheSnail',
+           })
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(400); 
+           
+          });
+        done();
+      });
 
-  it('verify if it sends an error message if phone field contains a string', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: 'gary',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
 
   it('verify if it sends an error message if password field is empty', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        // 'password': 'garyTheSnail',
-        // "cpassword": 'garyTheSnail'
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+    request.agent(api)
+           .post('/register')
+           .send({
+             'email': 'johndoe@gmail.com',
+             // 'password': 'garyTheSnail',
+             // "confirm_password": 'garyTheSnail'
+           })
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(400); 
+          });
+        done();
+      });
 
   it('verify if it sends an error message if password field does not math confirm password field', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSn',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', "Password didn't correspond");
-    done();
-  });
+    request.agent(api)
+           .post('/register')
+           .send({
+             'email': 'johndoe@gmail.com',
+             'password': 'garyTheSnail',
+             'confirm_password': 'garyTheSn',
+           })
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(201); 
+            res.body.data.user.should.be.a('object');
+          });
+        done();
+      });
+
 
   it('verify if it sends an error message if password field is weak', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        password: 'ga',
-        cpassword: 'ga',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'Password is weak');
-    done();
-  });
+    request.agent(api)
+           .post('/register')
+           .send({
+             'email': 'johndoe@gmail.com',
+             'password': 'ga',
+             'confirm_password': 'ga',
+           })
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(400); 
+            res.body.data.user.should.be.a('object');
+          });
+        done();
+      });
 
   it('verify if it sends an error message if all fields are empty', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: '',
-        last_name: '',
-        email: '',
-        phone: '',
-        password: '',
-        cpassword: '',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+    request.agent(api)
+           .post('/register')
+           .send({
+             'email': '',
+             'password': '',
+             'confirm_password': '',
+           })
+           .expect('Content-Type', "text/html; charset=utf-8")
+           .end((err, res) => {
+            if (err) console.log(err);
+            res.should.have.status(400); 
+          });
+        done();
+      });
 });
