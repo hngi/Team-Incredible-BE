@@ -33,18 +33,20 @@
                 <% } %>
                 <form class="login-form" action="/login" method="POST">
                     <%if (error && typeof error.response === 'string') { %>
-                    <div  class='login-error-response'><%= error.response %></div>
+                    <div class='login-error-response'><%= error.response %></div>
                     <% } %>
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
                     <div class='login-error'><%= error.response.email %></div>
                     <% } %>
-                    <input class="login-input" type="email" placeholder="Email address" id="email" name="email" required />
+                    <input class="login-input" type="email" placeholder="Email address" id="email" name="email"
+                        required />
                     <label for="password">Password</label>
                     <%if (error !== null) { %>
                     <div class='login-error'><%= error.response.password %></div>
                     <% } %>
-                    <input class="login-input" type="password" placeholder="Password" id="password" name="password" required/>
+                    <input class="login-input" type="password" placeholder="Password" id="password" name="password"
+                        required />
                     <a class="form-link forgot-password" href="/forgotpassword">Forgot Password?</a>
                     <br>
                     <button class="login-btn" type="submit">Login</button>
@@ -60,4 +62,5 @@
     <%- include('../template/footer') %>
     <!-- @olanetsoft -->
 </body>
-</html>
+
+</html>p

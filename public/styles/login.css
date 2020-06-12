@@ -129,8 +129,9 @@
 
 .form-link {
     text-align: center;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #888;
 }
 
 .form-link.forgot-password {
@@ -139,8 +140,11 @@
     display: block;
     margin: 10px auto 16px auto;
     text-align: left;
-    color: #000000;
     cursor: pointer;
+}
+
+.form-link.forgot-password:hover {
+    color: #31aa52;
 }
 
 .form-link a {
@@ -228,7 +232,7 @@
     }
 
     .form-link {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -284,7 +288,7 @@
     }
 
     .form-link {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -345,6 +349,6 @@
     }
 
     .form-link {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
