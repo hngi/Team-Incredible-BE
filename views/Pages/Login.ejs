@@ -33,7 +33,7 @@
                 <% } %>
                 <form class="login-form" action="/login" method="POST">
                     <%if (error && typeof error.response === 'string') { %>
-                    <div class='login-error-response'><%= error.response %></div>
+                    <div class='login-error-response' style="text-align: center;"><%= error.response %></div>
                     <% } %>
                     <label for="email">Email</label>
                     <%if (error !== null) { %>
@@ -62,5 +62,4 @@
     <%- include('../template/footer') %>
     <!-- @olanetsoft -->
 </body>
-
-</html>p
+</html>
