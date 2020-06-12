@@ -121,4 +121,4 @@ The following steps needs to be taken
 
 
 ### Contributors :book:
-* **Team-Incredibles** :nerd_face:
+* **Team-Incredible** :nerd_face:
