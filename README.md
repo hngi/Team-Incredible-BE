@@ -2,11 +2,11 @@
 
 ![Node.js CI](https://github.com/hngi/Team-Incredible-BE/workflows/Node.js%20CI/badge.svg?branch=develop)
 
--   [Overview :notebook_with_decorative_cover: ](#notebook_with_decorative_cover-overview)
--   [Installation and running server (Development) :gear:](#gear-installation-and-running-server)
--   [API :cloud_with_lightning:](#cloud-api)
--   [Docker(Production) :eight_spoked_asterisk:](#eight_spoked_asterisk-docker)
--   [Links :link:](#link-links)
+-   [Overview :notebook_with_decorative_cover:](#overview-notebook_with_decorative_cover)
+-   [Installation and running server (Development) :gear:](#installation-and-running-server-gear)
+-   [API :cloud_with_lightning:](#api-cloud_with_lightning)
+-   [Docker(Production) :eight_spoked_asterisk:](#docker-eight_spoked_asterisk)
+-   [Links :link:](#links-link)
 
 ## Overview :notebook_with_decorative_cover: 
 This is a the microdev.api website designed by Team-Incredibles
