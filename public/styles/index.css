@@ -778,6 +778,10 @@ footer p:not(:last-child) {
   margin: 0 auto 8px auto;
 }
 
+.forget-password_container {
+  margin-top: 60px !important;
+}
+
 .signup-input {
   border: 1px solid #b8b8b8;
   padding: 10px;
