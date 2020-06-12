@@ -31,7 +31,8 @@ exports.signup = (req, res) => {
     res.redirect(`/login?successMsg=${string}`);
   }).catch((err) => {
     res.render('Pages/Register', {
-      error: err.response.data,
+      error: err.response ? err.response.data : '',
+      msg: !err.response ? 'An error has occurred, please try again later' : '',
     });
   });
 };
@@ -46,7 +47,8 @@ exports.forget = (req, res) => {
     res.redirect(`/forgot-password?successMsg=${string}`);
   }).catch((err) => {
     res.render('Pages/Forgotpassword', {
-      error: err.response.data,
+      error: err.response ? err.response.data : '',
+      msg: !err.response ? 'An error has occurred, please try again later' : '',
     });
   });
 };
@@ -63,7 +65,8 @@ exports.login = (req, res) => {
     return res.redirect('/dashboard');
   }).catch((err) => {
     res.render('Pages/Login', {
-      error: err.response.data,
+      error: err.response ? err.response.data : '',
+      msg: !err.response ? 'An error has occurred, please try again later' : '',
     });
   });
 };
@@ -85,6 +88,10 @@ exports.googleauth = (req, res) => {
   ).then((resp) => {
     const { response } = resp.data;
     res.redirect(response);
+  }).catch(() => {
+    res.render('Pages/Login', {
+      msg: 'An error has occurred, please try again later',
+    });
   });
 };
 

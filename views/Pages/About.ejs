@@ -142,10 +142,14 @@
     </div>
     <div class="amplified">
         <p>Get Amplified Now</p>
-        <div class="action">
-            <a href="/register" class="btn btn-main"> Register </a>
-            <a href="/login" class="btn btn-main btn-main--outline">Log In</a>
-        </div>
+            <div class="action">
+                <%if(isAuthenticated) { %>
+                        <a href="/dashboard" class="btn btn-main">Get Started</a>
+                <% } else { %>
+                    <a href="/register" class="btn btn-main"> Register </a>
+                    <a href="/login" class="btn btn-main btn-main--outline">Log In</a>
+                <% } %>
+            </div>
     </div>
 
     <footer>

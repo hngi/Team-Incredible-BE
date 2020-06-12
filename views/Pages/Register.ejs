@@ -26,8 +26,8 @@
                 <hr />
             </div>
             
-                <%if (typeof error === 'string' && typeof error !== 'object') { %>
-                <div class="email" style="color: red;">An error has occurred, please try again in a few minutes</div>
+                <%if (typeof msg !== 'undefined' && typeof msg == 'string') { %>
+                <div class="email" style="color: red;"><%= msg %></div>
                 <% } %>
                 <div class="form">
                 <form class="signup-form" action="/register" method="POST">
