@@ -1,11 +1,11 @@
 /* eslint-disable no-extra-boolean-cast */
 const axios = require('axios');
 
-const apiUrl = 'https://hngi7-team-avengers.herokuapp.com/api/v1';
+const apiUrl = 'https://auth.microapi.dev/v1';
 
-// This will be an external dashborad url to task 9
+// This will be an external dashboard url to task 9
 
-const dashboardUrl = '/mydashboard';
+const dashboardUrl = 'https://dashboard.microapi.dev/';
 
 //  Middleware
 exports.isAuthenticated = (req, res, next) => {
@@ -38,6 +38,22 @@ exports.signup = (req, res) => {
   });
 };
 
+exports.forget = (req, res) => {
+  const data = req.body;
+  axios.post(
+    `${apiUrl}/forgot-password`,
+    data,
+  ).then(() => {
+    const string = encodeURIComponent(`Reset link sent to ${data.email}`);
+    res.redirect(`/Forgotpassword?successMsg=${string}`);
+  }).catch((err) => {
+    res.render('Pages/Forgotpassword', {
+      error: err.response.data,
+      data,
+    });
+  });
+};
+
 
 exports.login = (req, res) => {
   const data = req.body;
@@ -47,10 +63,10 @@ exports.login = (req, res) => {
   ).then((response) => {
     const { token } = response.data;
     res.cookie('auth', token);
-    res.redirect('/dashboard');
+    return res.redirect(`/dashboard?token=${token}`);
   }).catch((err) => {
     res.render('Pages/Login', {
-      error: err.response.data,
+      error: err.response ? err.response.data : '',
       successMsg: null,
     });
   });
@@ -61,16 +77,24 @@ exports.logout = (req, res) => {
   return res.redirect('/');
 };
 
+
 exports.dashboard = (req, res) => {
   const token = req.cookies.auth;
-  res.redirect(`${dashboardUrl}?token=${token}`);
+  res.redirect(307, `${dashboardUrl}?token=${token}`);
 };
 
 exports.googleauth = (req, res) => {
   axios.get(
-    `${apiUrl}/google-signin`,
+    `${apiUrl}/google/signin`,
   ).then((resp) => {
     const { response } = resp.data;
     res.redirect(response);
   });
+};
+
+exports.googlecallback = (req, res) => {
+  const { code } = req.query;
+  if (!code) return res.redirect('/login');
+  res.cookie('auth', code);
+  return res.redirect('/dashboard');
 };

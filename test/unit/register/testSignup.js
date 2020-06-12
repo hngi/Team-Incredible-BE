@@ -15,25 +15,18 @@ const server = app.listen(port, () =>
 const Joi = require('@hapi/joi');
 
 const userSchema = Joi.object({
-  firstName: Joi.string().min(3).required(),
-  lastName: Joi.string().max(30).required(),
   email: Joi.string()
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
     .required(),
-  phoneNumber: Joi.string(),
   password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
-  passwordConfirm: Joi.ref('password'),
-}).with('password', 'passwordConfirm');
+  confirmPassword: Joi.ref('password'),
+}).with('password', 'confirmPassword');
 
 const users = [
   {
     id: 1,
-    firstName: 'Ibrahim',
-    lastName: 'Adekunle',
     email: 'adefemi101@gmail.com',
-    phoneNumber: '+2348131180177',
     password: '123456abc',
-    passwordConfirm: '123456abc',
   },
 ];
 
@@ -53,9 +46,7 @@ const createSendToken = (user, statusCode, res) => {
   res.status(statusCode).json({
     status: 'success',
     token,
-    data: {
-      user,
-    },
+    data: user,
   });
 };
 
@@ -71,12 +62,9 @@ app.post('/api/v1/users', (req, res) => {
 
   const user = {
     id: users.length + 1,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
     email: req.body.email,
-    phoneNumber: req.body.phoneNumber,
     password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm,
+    confirmPassword: req.body.confirmPassword,
   };
 
   users.push(user);
@@ -92,12 +80,9 @@ describe('User API', () => {
   describe('POST /api/v1/users', () => {
     it('It should create a new user in the DB', (done) => {
       const user = {
-        firstName: 'Olawale',
-        lastName: 'Hybee',
         email: 'hybee.dev@gmail.com',
-        phoneNumber: '09012378814',
         password: 'test1234',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
@@ -108,78 +93,45 @@ describe('User API', () => {
           if (err) console.log(err);
 
           res.should.have.status(201);
-          res.body.data.user.should.be.a('object');
+          res.body.data.should.be.a('object');
           res.body.should.have.property('token');
-          res.body.data.user.should.have.property('id');
-          res.body.data.user.should.have.property('firstName');
-          res.body.data.user.should.have.property('lastName');
-          res.body.data.user.should.have.property('email');
-          res.body.data.user.should.have.property('phoneNumber');
+          res.body.data.should.have.property('id');
+          res.body.data.should.have.property('email');
         });
       done();
     });
 
-    it('It should NOT create a new user with firstName less than 3 characters in the DB', (done) => {
+    it('It should NOT create a new user in the DB with same email', (done) => {
+      let emails = users.map((el) => el.email);
+
       const user = {
-        firstName: 'Ol',
-        lastName: 'Hybee',
         email: 'hybee.dev@gmail.com',
-        phoneNumber: '09012378814',
         password: 'test1234',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
-          res.should.have.status(400);
-        });
-      done();
-    });
-
-    it('It should NOT create a new user without a lastName field', (done) => {
-      const user = {
-        firstName: 'Ola',
-        lastName: '',
-        email: 'hybee.dev@gmail.com',
-        phoneNumber: '09012378814',
-        password: 'test1234',
-        passwordConfirm: 'test1234',
-      };
-
-      chai
-        .request(server)
-        .post('/api/v1/users')
-        .send(user)
-        .end((err, res) => {
-          if (err) console.log(err);
-
-          res.should.have.status(400);
+          if (emails[1] === user.email) res.should.have.status(400);
         });
       done();
     });
 
     it('It should NOT create a new user without an email field', (done) => {
       const user = {
-        firstName: 'Ola',
-        lastName: 'Hybee',
         email: '',
-        phoneNumber: '09012378814',
         password: 'test1234',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
           res.should.have.status(400);
         });
       done();
@@ -187,44 +139,40 @@ describe('User API', () => {
 
     it('It should NOT create a new user without a password field', (done) => {
       const user = {
-        firstName: 'Ola',
-        lastName: 'Hybee',
         email: 'hybee.dev@gmail.com',
-        phoneNumber: '09012378814',
         password: '',
-        passwordConfirm: 'test1234',
+        confirmPassword: 'test1234',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
           res.should.have.status(400);
+          res.body.response.should.have.property('password');
+          res.body.response.password.should.be.eq(
+            'Password must be more than 5 characters'
+          );
         });
       done();
     });
 
     it('It should NOT create a new user without confirming the password field', (done) => {
       const user = {
-        firstName: 'Ola',
-        lastName: 'Hybee',
         email: 'hybee.dev@gmail.com',
-        phoneNumber: '09012378814',
         password: 'test1234',
-        passwordConfirm: 'test12348',
+        confirmPassword: 'test12348',
       };
 
       chai
-        .request(server)
-        .post('/api/v1/users')
+        .request('https://auth.microapi.dev/v1')
+        .post('/register')
         .send(user)
         .end((err, res) => {
-          if (err) console.log(err);
-
           res.should.have.status(400);
+          res.body.response.should.have.property('confirmPassword');
+          res.body.response.confirmPassword.should.be.eq('Password must match');
         });
       done();
     });
@@ -260,10 +208,6 @@ const getField = (name) => {
   return `${name}`;
 };
 
-const validatePassword = () => {};
-
-// const checkField =
-
 const functions = {
   checkName: (name) => {
     if (!validateInput(name, true, false)) {
@@ -289,42 +233,16 @@ const functions = {
     return `${getField(password)}`;
   },
 
-  confirmPassword: (passwordConfirm) => {
-    if (!validateInput(passwordConfirm, true, false)) {
+  confirmPassword: (confirmPassword) => {
+    if (!validateInput(confirmPassword, true, false)) {
       return false;
     }
 
-    return `${getField(passwordConfirm)}`;
+    return `${getField(confirmPassword)}`;
   },
 };
 
 describe('Signup Fields Tests', () => {
-  it('it should get the first name', (done) => {
-    const firstName = functions.checkName('Ibrahim');
-    firstName.should.be.a('string');
-    done();
-  });
-
-  it('it should get the last name', (done) => {
-    const lastName = functions.checkName('Adekunle');
-    lastName.should.be.a('string');
-    done();
-  });
-
-  it('it should get the phone number format 1', (done) => {
-    const phoneNumber = functions.checkName('+2348131180177');
-    phoneNumber.should.be.a('string');
-    phoneNumber.should.match(/^\+(?:[0-9] ?){6,14}[0-9]$/);
-    done();
-  });
-
-  it('it should get the phone number format 2', (done) => {
-    const phoneNumber = functions.checkName('08131180177');
-    phoneNumber.should.be.a('string');
-    phoneNumber.should.match(/^[0]\d{10}$/);
-    done();
-  });
-
   it('it should get a valid email', (done) => {
     const email = functions.checkEmail('adefemi101@gmail.com');
     email.should.match(
@@ -370,7 +288,7 @@ const validateEmailField = (email) =>
   );
 
 describe('Test the signup page', function () {
-  describe('Test to check if password mactch', () => {
+  describe('Test to check if password match', () => {
     it("should return false if password and confirmpassword don't match", () => {
       assert.equal(confirmPassword('Hello', 'Hell'), false);
     });
@@ -400,238 +318,136 @@ describe('Test the signup page', function () {
 
 /**
  *
- * TEST 3
+ * TEST 3 by bolarin
  */
 
 const request = require('supertest');
 
-let appTest;
+
 
 const userCredentials = {
-  first_name: 'Jane',
-  last_name: 'Doe',
   email: 'johndoe@gmail.com',
-  phone: '07023455569',
   password: 'garyTheSnail',
-  cpassword: 'garyTheSnail',
+  confirmPassword: 'garyTheSnail',
 };
 
 describe('POST /api/v1/registration', function () {
   beforeEach(function (done) {
-    appTest = require('../../../server');
     userCredentials;
     done();
   });
 
-  afterEach(async () => {
-    await appTest.close();
-  });
+  // The first test below  should bring back a status code of 200 but we are not allowed to test into their API
 
-  it('should verify if all fields are entered correctly', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send(userCredentials)
-      .expect(200)
-      .expect('Content-Type', /json/)
-      .expect('message', 'Registration successful');
-    done();
-  });
+  // it('should verify if all fields are entered correctly', function (done) {
+  //   request
+  //     .agent('https://auth.microapi.dev/v1')
+  //     .post('/register')
+  //     .send(userCredentials)
+  //     .end((err, res) => {
+  //       if (err) console.log(err);
+  //       res.should.have.status(200); 
+  //     });
+  //   done();
+  // });
 
-  it('verify if it sends an error message if first name field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        last_name: 'Doe',
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+  it('verify if it sends an error message if email field is not filled correctly', function (done) {
 
-  it('verify if it sends an error message if first name field contains only strings', function (done) {
+    
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: '123Jane',
-        last_name: 'Doe',
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
-
-  it('verify if it sends an error message if last name field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        // "last_name": "Doe",
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
-
-  it('verify if it sends an error message if last name field contains only strings', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: '123Jane',
-        last_name: 'D3546oe',
-        email: 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
-
-  it('verify if it sends an error message if email field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        // "email": 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
-
-  it('verify if it sends an error message if email field is not in the right format', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
         email: 'johndoe',
-        phone: '07023455569',
         password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
+        confirmPassword: 'garyTheSnail',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
-  it('verify if it sends an error message if phone field contains a string', function (done) {
+  it('verify if it sends an error message if email field is empty', function (done) {
+
+    
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: 'gary',
+        email: '',
         password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
+        confirmPassword: 'garyTheSnail',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if password field is empty', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        // 'password': 'garyTheSnail',
-        // "cpassword": 'garyTheSnail'
+        email: 'johndoe@gmail.com',
+        password: '',
+        confirmPassword: ''
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if password field does not math confirm password field', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSn',
+        email: 'johndoe@gmail.com',
+        password: 'gary12',
+        confirmPassword: 'garyTheSn',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', "Password didn't correspond");
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if password field is weak', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
+        email: 'johndoe@gmail.com',
         password: 'ga',
-        cpassword: 'ga',
+        confirmPassword: 'ga',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'Password is weak');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if all fields are empty', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: '',
-        last_name: '',
         email: '',
-        phone: '',
         password: '',
-        cpassword: '',
+        confirmPassword: '',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 });
