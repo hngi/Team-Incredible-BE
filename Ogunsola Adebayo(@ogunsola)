@@ -1,0 +1,6 @@
+My commits
+
+added about page route
+
+app.get('/about', (req, res) => {
+  res.render('about', { variable: 'This is the about page' });
