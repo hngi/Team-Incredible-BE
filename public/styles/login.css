@@ -159,6 +159,12 @@
     background-size: cover;
 }
 
+@media screen and (max-width: 381px) {
+    nav li:nth-child(4) {
+        top: 8px;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .google-btn {
         padding-left: 60px;

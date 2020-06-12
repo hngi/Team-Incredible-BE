@@ -38,6 +38,22 @@ exports.signup = (req, res) => {
   });
 };
 
+exports.forget = (req, res) => {
+  const data = req.body;
+  axios.post(
+    `${apiUrl}/forgot-password`,
+    data,
+  ).then(() => {
+    const string = encodeURIComponent(`Reset link sent to ${data.email}`);
+    res.redirect(`/Forgotpassword?successMsg=${string}`);
+  }).catch((err) => {
+    res.render('Pages/Forgotpassword', {
+      error: err.response.data,
+      data,
+    });
+  });
+};
+
 
 exports.login = (req, res) => {
   const data = req.body;

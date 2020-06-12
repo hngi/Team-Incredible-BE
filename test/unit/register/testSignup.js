@@ -318,149 +318,136 @@ describe('Test the signup page', function () {
 
 /**
  *
- * TEST 3
+ * TEST 3 by bolarin
  */
 
 const request = require('supertest');
 
-let appTest;
+
 
 const userCredentials = {
-  first_name: 'Jane',
-  last_name: 'Doe',
   email: 'johndoe@gmail.com',
-  phone: '07023455569',
   password: 'garyTheSnail',
-  cpassword: 'garyTheSnail',
+  confirmPassword: 'garyTheSnail',
 };
 
 describe('POST /api/v1/registration', function () {
   beforeEach(function (done) {
-    appTest = require('../../../server');
     userCredentials;
     done();
   });
 
-  afterEach(async () => {
-    await appTest.close();
-  });
+  // The first test below  should bring back a status code of 200 but we are not allowed to test into their API
 
-  it('should verify if all fields are entered correctly', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send(userCredentials)
-      .expect(200)
-      .expect('Content-Type', /json/)
-      .expect('message', 'Registration successful');
-    done();
-  });
+  // it('should verify if all fields are entered correctly', function (done) {
+  //   request
+  //     .agent('https://auth.microapi.dev/v1')
+  //     .post('/register')
+  //     .send(userCredentials)
+  //     .end((err, res) => {
+  //       if (err) console.log(err);
+  //       res.should.have.status(200); 
+  //     });
+  //   done();
+  // });
 
-  it('verify if it sends an error message if email field is not filled and entered', function (done) {
-    request
-      .agent(appTest)
-      .post('/register')
-      .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        // "email": 'johndoe@gmail.com',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
-      })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
-    done();
-  });
+  it('verify if it sends an error message if email field is not filled correctly', function (done) {
 
-  it('verify if it sends an error message if email field is not in the right format', function (done) {
+    
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
         email: 'johndoe',
-        phone: '07023455569',
         password: 'garyTheSnail',
-        cpassword: 'garyTheSnail',
+        confirmPassword: 'garyTheSnail',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
+    done();
+  });
+
+  it('verify if it sends an error message if email field is empty', function (done) {
+
+    
+    request
+      .agent('https://auth.microapi.dev/v1')
+      .post('/register')
+      .send({
+        email: '',
+        password: 'garyTheSnail',
+        confirmPassword: 'garyTheSnail',
+      })
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if password field is empty', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        // 'password': 'garyTheSnail',
-        // "cpassword": 'garyTheSnail'
+        email: 'johndoe@gmail.com',
+        password: '',
+        confirmPassword: ''
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if password field does not math confirm password field', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
-        password: 'garyTheSnail',
-        cpassword: 'garyTheSn',
+        email: 'johndoe@gmail.com',
+        password: 'gary12',
+        confirmPassword: 'garyTheSn',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', "Password didn't correspond");
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if password field is weak', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'johndoe',
-        phone: '07023455569',
+        email: 'johndoe@gmail.com',
         password: 'ga',
-        cpassword: 'ga',
+        confirmPassword: 'ga',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'Password is weak');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 
   it('verify if it sends an error message if all fields are empty', function (done) {
     request
-      .agent(appTest)
+      .agent('https://auth.microapi.dev/v1')
       .post('/register')
       .send({
-        first_name: '',
-        last_name: '',
         email: '',
-        phone: '',
         password: '',
-        cpassword: '',
+        confirmPassword: '',
       })
-      .expect(400)
-      .expect('Content-Type', /json/)
-      .expect('msg', 'please include all fields');
+      .end((err, res) => {
+        if (err) console.log(err);
+        res.should.have.status(400); 
+      });
     done();
   });
 });
