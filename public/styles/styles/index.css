@@ -379,11 +379,6 @@ footer p:not(:last-child) {
 /* TABLETS  */
 
 /* Portrait and Landscape */
-@media screen and (min-width: 400px) {
-  .hero-btn {
-    margin-left: 2rem;
-  }
-}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
@@ -705,6 +700,12 @@ footer p:not(:last-child) {
   margin-bottom: 30px;
 }
 
+.password,
+.email {
+  margin: -10px auto 30px auto;
+  width: 80%;
+}
+
 .google-btn {
   height: 55px;
   padding: 0 20px;
@@ -772,12 +773,6 @@ footer p:not(:last-child) {
   margin: 0 auto 15px auto;
 }
 
-.signup-form .signup-error {
-  color: #ff0000;
-  width: 80%;
-  margin: 0 auto 8px auto;
-}
-
 .signup-input {
   border: 1px solid #b8b8b8;
   padding: 10px;
@@ -798,12 +793,6 @@ footer p:not(:last-child) {
   cursor: pointer;
   width: 80%;
   margin: 0 auto 35px auto;
-}
-
-.password,
-.email {
-  width: 80%;
-  margin: -15px auto 35px auto;
 }
 
 .signup-btn:hover {
