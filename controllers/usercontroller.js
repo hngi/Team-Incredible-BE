@@ -3,8 +3,7 @@ const axios = require('axios');
 
 const apiUrl = 'https://auth.microapi.dev/v1';
 
-// This will be an external dashboard url to task 9
-
+// This is an external dashboard url to task 9
 const dashboardUrl = 'https://dashboard.microapi.dev/';
 
 //  Middleware
@@ -47,7 +46,7 @@ exports.login = (req, res) => {
   ).then((response) => {
     const { token } = response.data;
     res.cookie('auth', token);
-    return res.redirect(`/dashboard?token=${token}`);
+    return res.redirect('/dashboard');
   }).catch((err) => {
     res.render('Pages/Login', {
       error: err.response ? err.response.data : '',

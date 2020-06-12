@@ -7,12 +7,6 @@ appRoute.get('/', (req, res) => {
   res.render('index', { variable: 'Hello Guys' });
 });
 
-appRoute.get('/mydashboard', (req, res) => {
-  const { token } = req.query;
-  res.render('Pages/Dash', {
-    token,
-  });
-});
 
 appRoute.get('/about', (req, res) => {
   res.render('Pages/About');
