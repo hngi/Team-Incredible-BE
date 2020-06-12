@@ -1,7 +1,8 @@
 /* eslint-disable no-extra-boolean-cast */
 const axios = require('axios');
 
-const apiUrl = 'http://auth.microapi.dev/v1';
+
+const apiUrl = 'https://auth.microapi.dev/v1';
 
 // This will be an external dashboard url to task 9
 
@@ -83,6 +84,7 @@ exports.googleauth = (req, res) => {
 
 exports.googlecallback = (req, res) => {
   const { code } = req.query;
+  if (!code) return res.redirect('/login');
   res.cookie('auth', code);
   res.redirect('/dashboard');
 };
