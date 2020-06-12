@@ -75,7 +75,7 @@ display: flex;
 label{
     font-family: 'Poppins-Regular';
     font-size: 24px;
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 #login-form{
