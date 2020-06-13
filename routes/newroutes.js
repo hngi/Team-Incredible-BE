@@ -30,6 +30,14 @@ appRoute.get('/forgot-password', (req, res) => {
   });
 });
 
+appRoute.get('/changepassword', (req, res) => {
+  const { token } = req.query;
+  if (!token) return res.redirect('/login');
+  res.cookie('changepasstoken', token);
+  return res.render('Pages/Changepassword');
+});
+
+
 appRoute.post('/login', user.login);
 appRoute.post('/register', user.signup);
 appRoute.post('/forgot-password', user.forget);
@@ -37,6 +45,7 @@ appRoute.get('/logout', user.isAuthenticated, user.logout);
 appRoute.get('/dashboard', user.isAuthenticated, user.dashboard);
 appRoute.get('/googleauth', user.googleauth);
 appRoute.get('/google/callback', user.googlecallback);
+appRoute.post('/changepassword', user.changepassword);
 
 
 module.exports = appRoute;
