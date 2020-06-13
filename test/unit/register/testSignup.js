@@ -152,7 +152,7 @@ describe('User API', () => {
           res.should.have.status(400);
           res.body.response.should.have.property('password');
           res.body.response.password.should.be.eq(
-            'Password must be more than 5 characters'
+            'Password is required'
           );
         });
       done();
