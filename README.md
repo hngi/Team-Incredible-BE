@@ -116,7 +116,7 @@ The following steps needs to be taken
 
 * Visit us at <a href="https://microapi.dev/" target="_blank">Microapi</a>
 * <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/" target="_blank">How to write an Nginx config file</a>
-* <a href="https://hackernoon.com/a-better-way-to-develop-node-js-with-docker-cd29d3a0093" target="_blank">A better way to develop Node.js with Docker</a>[A better way to develop Node.js with Docker]()
+* <a href="https://hackernoon.com/a-better-way-to-develop-node-js-with-docker-cd29d3a0093" target="_blank">A better way to develop Node.js with Docker</a>
 * <a href="https://mochajs.org/" target="_blank">Writing tests with Mocha</a>
 
 
