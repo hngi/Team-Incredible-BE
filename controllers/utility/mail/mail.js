@@ -10,7 +10,7 @@ const transport = nodemailer.createTransport({
 
 exports.sendMail = (to, subject, html) => {
   const mailOptions = {
-    from: 'microapidev@gmail.com',
+    from: 'auth@microapi.dev',
     to,
     subject,
     html,
