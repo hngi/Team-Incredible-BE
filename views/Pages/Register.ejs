@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <%- include('../template/head') %>
 </head>
+
 <body>
     <header>
         <%- include('../template/header') %>
@@ -25,24 +27,27 @@
                 <span>OR</span>
                 <hr />
             </div>
-            
-                <%if (typeof msg !== 'undefined' && typeof msg == 'string') { %>
-                <div class="email" style="color: red;"><%= msg %></div>
-                <% } %>
-                <div class="form">
+
+            <%if (typeof msg !== 'undefined' && typeof msg == 'string') { %>
+            <div class="email" style="color: red;"><%= msg %></div>
+            <% } %>
+            <div class="form">
                 <form class="signup-form" action="/register" method="POST">
                     <label for="email">Email</label>
-                    <input class="signup-input" placeholder="Email address" type="email" id="email" name="email" required>
+                    <input class="signup-input" placeholder="Email address" type="email" id="email" name="email"
+                        required>
                     <%if (typeof error !== 'undefined' && typeof error === 'object' && Object.keys(error).length > 0) { %>
                     <div class="email" style="color: red;"><%= error.response.email %></div>
                     <% } %>
                     <label for="password">Password</label>
-                    <input class="signup-input" placeholder="Password" type="password" id="password" name="password" required />
+                    <input class="signup-input" placeholder="Password" type="password" id="password" name="password"
+                        required />
                     <%if (typeof error !== 'undefined' && typeof error === 'object' && Object.keys(error).length > 0) { %>
                     <div style="color: red;" class="password"><%= error.response.password %></div>
                     <% } %>
                     <label for="confirmPassword">Confirm Password</label>
-                    <input class="signup-input" placeholder="Confirm password" type="password" id="confirmPassword" name="confirmPassword" required />
+                    <input class="signup-input" placeholder="Confirm password" type="password" id="confirmPassword"
+                        name="confirmPassword" required />
                     <%if (typeof error !== 'undefined' && typeof error === 'object' && Object.keys(error).length > 0) { %>
                     <div class="password" style="color: red;"><%= error.response.confirmPassword %></div>
                     <% } %>
@@ -55,6 +60,10 @@
         <div class="signup-img"></div>
     </div>
     <footer>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/app.js"></script>
         <%- include('../template/footer') %>
     </footer>
 </body>

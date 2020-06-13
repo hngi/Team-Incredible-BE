@@ -4,6 +4,7 @@
 <!-- @olanetsoft -->
 <%- include('../template/head') %>
 <!-- @olanetsoft -->
+
 <body>
     <!-- @olanetsoft -->
     <header>
@@ -45,7 +46,7 @@
                     <input class="login-input" type="email" placeholder="Email address" id="email" name="email"
                         required />
                     <label for="password">Password</label>
-                   <%if (typeof error !== 'undefined' && typeof error === 'object') { %>
+                    <%if (typeof error !== 'undefined' && typeof error === 'object') { %>
                     <div class='login-error'><%= error.response.password %></div>
                     <% } %>
                     <input class="login-input" type="password" placeholder="Password" id="password" name="password"
@@ -53,7 +54,7 @@
                     <a class="form-link forgot-password" href="/forgot-password">Forgot Password?</a>
                     <br>
                     <button class="login-btn" type="submit">Login</button>
-                    <p class="form-link">Don't have an account?  <a class="form-link" href="/register">Click to
+                    <p class="form-link">Don't have an account? <a class="form-link" href="/register">Click to
                             Register</a></p>
                 </form>
             </div>
@@ -65,4 +66,5 @@
     <%- include('../template/footer') %>
     <!-- @olanetsoft -->
 </body>
+
 </html>

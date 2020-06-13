@@ -3,6 +3,7 @@ const axios = require('axios');
 const mailer = require('./utility/mail/mail');
 const fPassTemplate = require('./utility/mail/forgot-password');
 
+
 const apiUrl = 'https://auth.microapi.dev/v1';
 
 // This is an external dashboard url to task 9
@@ -14,14 +15,14 @@ const baseUrl = 'http://localhost:3000';
 //  Middleware
 exports.isAuthenticated = (req, res, next) => {
   if (req.cookies.auth) {
-   res.redirect('/dashboard');
+    res.redirect('/dashboard');
   }
   next();
 };
 
 exports.isLoggedIn = (req, res, next) => {
   if (!!req.cookies.auth) {
-    res.redirect('/dashboard');
+    res.redirect(dashboardUrl);
   }
   return next();
 };
@@ -34,7 +35,7 @@ exports.signup = (req, res) => {
   ).then(() => {
     const string = encodeURIComponent('You have successfully signup, please login');
     res.redirect(`/login?successMsg=${string}`);
-  }).catch((err) => {
+  }).then(() => {
     res.render('Pages/Register', {
       error: err.response ? err.response.data : '',
       msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
@@ -81,7 +82,10 @@ exports.changepassword = (req, res) => {
       error: err.response ? err.response.data : '',
       msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
     });
-  });
+  })
+    .catch((err) => {
+      console.log(err)
+    });
 };
 
 
@@ -100,6 +104,8 @@ exports.login = (req, res) => {
       msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
 
     });
+  }).catch((err) => {
+    console.log(err)
   });
 };
 
