@@ -15,7 +15,6 @@ const baseUrl = 'http://localhost:3000';
 exports.isAuthenticated = (req, res, next) => {
   if (req.cookies.auth) {
    res.redirect('/dashboard');
-    //next();
   }
   next();
 };
