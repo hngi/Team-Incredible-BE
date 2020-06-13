@@ -25,22 +25,25 @@
                 <span>OR</span>
                 <hr />
             </div>
-            <div class="form">
+            
+                <%if (typeof msg !== 'undefined' && typeof msg == 'string') { %>
+                <div class="email" style="color: red;"><%= msg %></div>
+                <% } %>
+                <div class="form">
                 <form class="signup-form" action="/register" method="POST">
                     <label for="email">Email</label>
-
                     <input class="signup-input" placeholder="Email address" type="email" id="email" name="email" required>
-                    <%if (error !== null) { %>
+                    <%if (typeof error !== 'undefined' && typeof error === 'object' && Object.keys(error).length > 0) { %>
                     <div class="email" style="color: red;"><%= error.response.email %></div>
                     <% } %>
                     <label for="password">Password</label>
                     <input class="signup-input" placeholder="Password" type="password" id="password" name="password" required />
-                    <%if (error !== null) { %>
+                    <%if (typeof error !== 'undefined' && typeof error === 'object' && Object.keys(error).length > 0) { %>
                     <div style="color: red;" class="password"><%= error.response.password %></div>
                     <% } %>
                     <label for="confirmPassword">Confirm Password</label>
                     <input class="signup-input" placeholder="Confirm password" type="password" id="confirmPassword" name="confirmPassword" required />
-                    <%if (error !== null) { %>
+                    <%if (typeof error !== 'undefined' && typeof error === 'object' && Object.keys(error).length > 0) { %>
                     <div class="password" style="color: red;"><%= error.response.confirmPassword %></div>
                     <% } %>
                     <button class="signup-btn" type="submit">Sign Up</button>

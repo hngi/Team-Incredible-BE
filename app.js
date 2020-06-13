@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-boolean-cast */
 const path = require('path');
 const express = require('express');
 const cookieParser = require('cookie-parser');
