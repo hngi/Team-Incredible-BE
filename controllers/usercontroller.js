@@ -1,10 +1,15 @@
 /* eslint-disable no-extra-boolean-cast */
 const axios = require('axios');
+const mailer = require('./utility/mail/mail');
+const fPassTemplate = require('./utility/mail/forgot-password');
 
 const apiUrl = 'https://auth.microapi.dev/v1';
 
 // This is an external dashboard url to task 9
 const dashboardUrl = 'https://dashboard.microapi.dev/';
+
+// Our url
+const baseUrl = 'http://localhost:3000';
 
 //  Middleware
 exports.isAuthenticated = (req, res, next) => {
@@ -42,14 +47,39 @@ exports.forget = (req, res) => {
   axios.post(
     `${apiUrl}/forgot-password`,
     data,
-  ).then(() => {
-    const string = encodeURIComponent(`Reset link sent to ${data.email}`);
-    res.redirect(`/forgot-password?successMsg=${string}`);
+  ).then((response) => {
+    const token = response.data.url.split('change-password/')[1];
+    const url = `${baseUrl}/changepassword?token=${token}`;
+    const userEmail = data.email;
+    const subject = 'MicroApi Reset Password';
+    const template = fPassTemplate(userEmail, url);
+    const mailMsg = mailer.sendMail(userEmail, subject, template);
+    // save token fuction here
+    res.redirect(`/forgot-password?successMsg=${mailMsg}`);
   }).catch((err) => {
     res.render('Pages/Forgotpassword', {
       error: err.response ? err.response.data : '',
       msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
+    });
+  });
+};
 
+
+exports.changepassword = (req, res) => {
+  const data = req.body;
+  const { changepasstoken } = req.cookies;
+  if (!changepasstoken) return res.redirect('login');
+  // confirmation token fucntion here
+  axios.post(
+    `${apiUrl}/change-password/${changepasstoken}`,
+    data,
+  ).then(() => {
+    const msg = encodeURIComponent('You have successfully changed your password, please login');
+    return res.redirect(`/login?successMsg=${msg}`);
+  }).catch((err) => {
+    return res.render('Pages/Changepassword', {
+      error: err.response ? err.response.data : '',
+      msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
     });
   });
 };
