@@ -8,13 +8,16 @@ const apiUrl = 'https://auth.microapi.dev/v1';
 // This is an external dashboard url to task 9
 const dashboardUrl = 'https://dashboard.microapi.dev/';
 
+// Our url
+const baseUrl = 'http://localhost:3000';
 
 //  Middleware
 exports.isAuthenticated = (req, res, next) => {
-  if (!!req.cookies.auth) {
-    next();
+  if (req.cookies.auth) {
+   res.redirect('/dashboard');
+    //next();
   }
-  return res.redirect('/login');
+  next();
 };
 
 exports.isLoggedIn = (req, res, next) => {
@@ -46,13 +49,13 @@ exports.forget = (req, res) => {
     `${apiUrl}/forgot-password`,
     data,
   ).then((response) => {
-    const baseUrl = `${req.protocol}://${req.headers.host}`;
     const token = response.data.url.split('change-password/')[1];
     const url = `${baseUrl}/changepassword?token=${token}`;
     const userEmail = data.email;
     const subject = 'MicroApi Reset Password';
     const template = fPassTemplate(userEmail, url);
     const mailMsg = mailer.sendMail(userEmail, subject, template);
+    // save token fuction here
     res.redirect(`/forgot-password?successMsg=${mailMsg}`);
   }).catch((err) => {
     res.render('Pages/Forgotpassword', {
@@ -67,6 +70,7 @@ exports.changepassword = (req, res) => {
   const data = req.body;
   const { changepasstoken } = req.cookies;
   if (!changepasstoken) return res.redirect('login');
+  // confirmation token fucntion here
   axios.post(
     `${apiUrl}/change-password/${changepasstoken}`,
     data,

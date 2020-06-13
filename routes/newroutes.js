@@ -3,34 +3,34 @@ const user = require('../controllers/usercontroller');
 
 const appRoute = express.Router();
 
-appRoute.get('/', (req, res) => {
+appRoute.get('/',user.isAuthenticated, (req, res) => {
   res.render('index', { variable: 'Hello Guys' });
 });
 
 
-appRoute.get('/about', (req, res) => {
+appRoute.get('/about', user.isAuthenticated, (req, res) => {
   res.render('Pages/About');
 });
 
-appRoute.get('/register', (req, res) => {
+appRoute.get('/register', user.isAuthenticated, (req, res) => {
   res.render('Pages/Register');
 });
 
-appRoute.get('/login', (req, res) => {
+appRoute.get('/login', user.isAuthenticated, (req, res) => {
   const { successMsg } = req.query;
   res.render('Pages/Login', {
     successMsg,
   });
 });
 
-appRoute.get('/forgot-password', (req, res) => {
+appRoute.get('/forgot-password', user.isAuthenticated, (req, res) => {
   const { successMsg } = req.query;
   res.render('Pages/Forgotpassword', {
     successMsg,
   });
 });
 
-appRoute.get('/changepassword', (req, res) => {
+appRoute.get('/changepassword', user.isAuthenticated, (req, res) => {
   const { token } = req.query;
   if (!token) return res.redirect('/login');
   res.cookie('changepasstoken', token);
@@ -38,14 +38,14 @@ appRoute.get('/changepassword', (req, res) => {
 });
 
 
-appRoute.post('/login', user.login);
-appRoute.post('/register', user.signup);
+appRoute.post('/login', user.isAuthenticated, user.login);
+appRoute.post('/register',user.isAuthenticated, user.signup);
 appRoute.post('/forgot-password', user.forget);
-appRoute.get('/logout', user.isAuthenticated, user.logout);
-appRoute.get('/dashboard', user.isAuthenticated, user.dashboard);
-appRoute.get('/googleauth', user.googleauth);
-appRoute.get('/google/callback', user.googlecallback);
-appRoute.post('/changepassword', user.changepassword);
+appRoute.get('/logout', user.logout);
+appRoute.get('/dashboard', user.dashboard);
+appRoute.get('/googleauth', user.isAuthenticated, user.googleauth);
+appRoute.get('/google/callback', user.isAuthenticated,user.googlecallback);
+appRoute.post('/changepassword', user.isAuthenticated, user.changepassword);
 
 
 module.exports = appRoute;
