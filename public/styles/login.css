@@ -104,13 +104,13 @@
     border: 1px solid #b8b8b8;
     padding: 10px;
     border-radius: 10px;
-    height: 40px;
+    height: 48px;
     margin: 0 auto 25px auto;
     width: 80%;
 }
 
 .login-btn {
-    padding: 25px;
+    padding: 15px;
     background-color: #31aa52;
     border-radius: 10px;
     font-size: 18px;
@@ -129,8 +129,9 @@
 
 .form-link {
     text-align: center;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #888;
 }
 
 .form-link.forgot-password {
@@ -139,8 +140,11 @@
     display: block;
     margin: 10px auto 16px auto;
     text-align: left;
-    color: #000000;
     cursor: pointer;
+}
+
+.form-link.forgot-password:hover {
+    color: #31aa52;
 }
 
 .form-link a {
@@ -153,6 +157,12 @@
     background-image: url(https://res.cloudinary.com/oluwatobiloba/image/upload/v1591804693/incredible%20project/flower_twa5ig.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media screen and (max-width: 381px) {
+    nav li:nth-child(4) {
+        top: 8px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -228,7 +238,7 @@
     }
 
     .form-link {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -284,7 +294,7 @@
     }
 
     .form-link {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -345,6 +355,6 @@
     }
 
     .form-link {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
