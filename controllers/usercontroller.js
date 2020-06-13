@@ -32,7 +32,7 @@ exports.signup = (req, res) => {
   }).catch((err) => {
     res.render('Pages/Register', {
       error: err.response ? err.response.data : '',
-      msg: !err.response ? 'An error has occurred, please try again later' : '',
+      msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
     });
   });
 };
@@ -48,7 +48,8 @@ exports.forget = (req, res) => {
   }).catch((err) => {
     res.render('Pages/Forgotpassword', {
       error: err.response ? err.response.data : '',
-      msg: !err.response ? 'An error has occurred, please try again later' : '',
+      msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
+
     });
   });
 };
@@ -66,7 +67,8 @@ exports.login = (req, res) => {
   }).catch((err) => {
     res.render('Pages/Login', {
       error: err.response ? err.response.data : '',
-      msg: !err.response ? 'An error has occurred, please try again later' : '',
+      msg: !err.response || typeof err.response.data === 'string' ? 'An error has occurred, please try again later' : '',
+
     });
   });
 };
